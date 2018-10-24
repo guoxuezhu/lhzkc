@@ -23,7 +23,6 @@ public class MainActivity extends BaseActivity implements MainMvpView {
         mMainPresenter.attachView(this);
     }
 
-
     @Override
     protected void onDestroy() {
         mMainPresenter.detachView();//？

@@ -27,7 +27,6 @@ public class MvpApplication extends MultiDexApplication {
         context = this;
         setupComponent();
         prefs = new SharePreferenceUtil(this, "zkcSaveDates");
-
     }
 
     private void setupComponent() {

@@ -12,7 +12,6 @@ import com.lh.lhzkc.injection.component.DaggerActivityComponent;
 import com.lh.lhzkc.injection.module.ActivityModule;
 import com.umeng.analytics.MobclickAgent;
 
-
 public class BaseActivity extends AppCompatActivity {
 
     private ActivityComponent mActivityComponent;

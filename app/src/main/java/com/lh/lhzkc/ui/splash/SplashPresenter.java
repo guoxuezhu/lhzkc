@@ -10,7 +10,6 @@ public class SplashPresenter implements Presenter<SplashMvpView> {
     private SplashMvpView sMvpView;
     private MvpClient mvpClient;
 
-
     @Inject
     public SplashPresenter(MvpClient client) {
         this.mvpClient = client;

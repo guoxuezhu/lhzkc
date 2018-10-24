@@ -16,7 +16,6 @@ import io.reactivex.annotations.NonNull;
 import io.reactivex.exceptions.Exceptions;
 import io.reactivex.schedulers.Schedulers;
 
-
 /**
  * Created by gxz
  */
