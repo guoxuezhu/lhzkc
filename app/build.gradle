@@ -1,21 +1,59 @@
 apply plugin: 'com.android.application'
 
 android {
+
+    signingConfigs {
+        release {
+            keyAlias 'lhzkc'
+            keyPassword 'lihongzkc'
+            storeFile file('../key/lhzkc.jks')
+            storePassword 'zkclihong'
+        }
+    }
+
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.lh.lhzkc"
         minSdkVersion 15
         targetSdkVersion 28
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
         release {
             minifyEnabled false
+            multiDexEnabled true
+            buildConfigField 'boolean', 'JAVA_LOG_ENABLED', 'false'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+
+        debug {
+            buildConfigField 'boolean', 'JAVA_LOG_ENABLED', 'true'
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "lhzkc-${variant.name}-${variant.versionName}.apk"
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lintOptions {
+        lintConfig rootProject.file('gradle/lint.xml')
+        disable 'MissingTranslation'
+        abortOnError false
+    }
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
+
 }
 
 dependencies {
@@ -25,4 +63,40 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+
+    implementation 'javax.annotation:javax.annotation-api:1.2'
+    //Dagger2
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.11'
+    implementation 'com.google.dagger:dagger:2.11'
+    //Butterknife
+    implementation 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor "com.jakewharton:butterknife-compiler:8.4.0"
+    //RxAndroid
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.2'
+    //Retrofit 2.0
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    implementation "com.github.bumptech.glide:okhttp3-integration:4.8.0"
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+
+    implementation 'com.android.support:multidex:1.0.1'
+    implementation 'com.google.guava:guava:23.0'
+
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+
+    //数据库//http://blog.csdn.net/axuanqq/article/details/51344299
+    //implementation 'org.greenrobot:greendao:3.2.2'
+
+    //umeng
+    implementation 'com.umeng.analytics:analytics:latest.integration'
+
+
 }
