@@ -1,9 +1,11 @@
 package com.lh.lhzkc.ui.splash;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.lh.lhzkc.R;
 import com.lh.lhzkc.ui.base.BaseActivity;
+import com.lh.lhzkc.ui.main.MainActivity;
 
 import javax.inject.Inject;
 
@@ -22,6 +24,10 @@ public class SplashActivity extends BaseActivity implements SplashMvpView {
         ButterKnife.bind(this);
         activityComponent().inject(this);
         mSplashPresenter.attachView(this);
+
+
+        startActivity(new Intent(this, MainActivity.class));
+        finish();
 
     }
 
