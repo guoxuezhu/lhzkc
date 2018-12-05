@@ -22,7 +22,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".ui.main.MainActivity" />
 
         <meta-data
@@ -31,6 +30,9 @@
         <meta-data
             android:name="UMENG_CHANNEL"
             android:value="Channel ID" />
+
+        <activity android:name=".ui.admin.AdminActivity" />
+        <activity android:name=".ui.teacher.TeacherActivity"></activity>
     </application>
 
 </manifest>

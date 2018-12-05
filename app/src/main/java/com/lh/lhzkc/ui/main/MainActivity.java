@@ -1,13 +1,15 @@
 package com.lh.lhzkc.ui.main;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.lh.lhzkc.R;
+import com.lh.lhzkc.ui.admin.AdminActivity;
 import com.lh.lhzkc.ui.base.BaseActivity;
+import com.lh.lhzkc.ui.teacher.TeacherActivity;
 import com.lh.lhzkc.utils.ELog;
 
 import javax.inject.Inject;
@@ -35,8 +37,7 @@ public class MainActivity extends BaseActivity implements MainMvpView {
             switch (msg.what) {
                 case 1:
                     String kahao = msg.obj.toString();
-                    ELog.i("========kahao=========" + kahao);
-                    ic_kahao.setText(kahao.toString());
+                    ic_kahao.setText(kahao);
                     break;
             }
         }
@@ -50,18 +51,27 @@ public class MainActivity extends BaseActivity implements MainMvpView {
         activityComponent().inject(this);
         mMainPresenter.attachView(this);
 
-        startReadIC();
-    }
 
-    private void startReadIC() {
         DeviceMonitorService.flow().subscribeOn(Schedulers.io())
                 .subscribeOn(AndroidSchedulers.mainThread())
                 .subscribe((kahao) -> {
+                    ELog.i("========kahao=========" + kahao);
+                    ReadIC(kahao);
                     Message msg = new Message();
-                    msg.obj = kahao.trim().toString();
+                    msg.obj = kahao.trim();
                     msg.what = 1;
                     mHandler.sendMessage(msg);
                 });
+
+    }
+
+    private void ReadIC(String kahao) {
+        if (kahao.equals("2847172473")) {
+            startActivity(new Intent(this, AdminActivity.class));
+        } else if (kahao.equals("2868067108")) {
+            startActivity(new Intent(this, TeacherActivity.class));
+        }
+        finish();
 
     }
 

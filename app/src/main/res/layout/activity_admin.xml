@@ -5,20 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.main.MainActivity">
+    tools:context=".ui.admin.AdminActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:gravity="center"
-        android:text="学生操作界面"
+        android:text="管理员操作界面"
         android:textSize="30sp" />
 
-    <TextView
-        android:id="@+id/ic_kahao"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text=""
-        android:textSize="30sp" />
 </LinearLayout>

@@ -1,6 +1,5 @@
 package android_serialport_api;
 
-
 import java.io.Closeable;
 import java.io.File;
 import java.io.FileInputStream;
@@ -38,7 +37,18 @@ public class DeviceMonitorService {
                                     try {
                                         while (run && (len = in.read(buffer, 0, 64)) > 0) {
                                             if (len > 0) {
-                                                myemitter.onNext(new String(buffer, 0, len));
+                                                // len=6    取中间件4个字节转10进制 为 卡号
+                                                byte[] bs = new byte[4];
+                                                System.arraycopy(buffer, 1, bs, 0, 4);
+                                                String ret = "";
+                                                for (int j = 0; j < bs.length; j++) {
+                                                    String hex = Integer.toHexString(bs[j] & 0xFF);
+                                                    if (hex.length() == 1) {
+                                                        hex = '0' + hex;
+                                                    }
+                                                    ret += hex.toUpperCase();
+                                                }
+                                                myemitter.onNext(Long.parseLong(ret, 16) + "");
                                                 sleep(500);
                                             } else {
                                             }
