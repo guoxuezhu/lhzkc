@@ -25,6 +25,7 @@
             android:orientation="vertical">
 
             <ImageButton
+                android:id="@+id/btn_shangke"
                 android:layout_width="@dimen/btn_bg_1"
                 android:layout_height="@dimen/btn_bg_1"
                 android:background="@drawable/btn_status_1"
@@ -47,6 +48,7 @@
 
 
             <ImageButton
+                android:id="@+id/btn_xiake"
                 android:layout_width="@dimen/btn_bg_1"
                 android:layout_height="@dimen/btn_bg_1"
                 android:background="@drawable/btn_status_1"
@@ -78,6 +80,7 @@
             android:orientation="vertical">
 
             <ImageButton
+                android:id="@+id/btn_zixi"
                 android:layout_width="@dimen/btn_bg_1"
                 android:layout_height="@dimen/btn_bg_1"
                 android:background="@drawable/btn_status_1"
@@ -99,6 +102,7 @@
             android:orientation="vertical">
 
             <ImageButton
+                android:id="@+id/btn_xiuxi"
                 android:layout_width="@dimen/btn_bg_1"
                 android:layout_height="@dimen/btn_bg_1"
                 android:background="@drawable/btn_status_1"

@@ -11,9 +11,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 
-/**
- * 打印log日志
- */
+
 public class HttpUtil {
 
 
@@ -34,18 +32,15 @@ public class HttpUtil {
         call.enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
-
+                ELog.e("======HttpUtil====onFailure=======" + e.toString());
             }
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 String responseText = response.body().string();
-                ELog.e("==========数据=======" + responseText);
+                ELog.e("=======HttpUtil===ok=======" + responseText);
             }
         });
-
-
-
 
 
     }

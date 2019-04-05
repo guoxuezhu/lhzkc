@@ -10,6 +10,8 @@
     <color name="black">#ff000000</color>
     <color name="red">#ffff0000</color>
 
+    <color name="touming_color">#00ffffff</color>
+
 
     <color name="xian_color">#c7c5c5</color>
     <color name="di_color">#f0f0f0</color>
