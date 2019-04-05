@@ -1,9 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/splash_bg"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".ui.LuboActivity">
 
-</android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/luzhi"
+                android:layout_width="@dimen/btn_bg_1"
+                android:layout_height="@dimen/btn_bg_1"
+                android:background="@drawable/btn_status_1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/imgbtn_lb_lz" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="录制"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/home_btn_marginLeft"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <ImageButton
+                android:id="@+id/zanting"
+                android:layout_width="@dimen/btn_bg_1"
+                android:layout_height="@dimen/btn_bg_1"
+                android:background="@drawable/btn_status_1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/imgbtn_lb_zt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暂停"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/tingzhi"
+                android:layout_width="@dimen/btn_bg_1"
+                android:layout_height="@dimen/btn_bg_1"
+                android:background="@drawable/btn_status_1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/imgbtn_lb_tz" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="停止"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/home_btn_marginLeft"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/zhibo"
+                android:layout_width="@dimen/btn_bg_1"
+                android:layout_height="@dimen/btn_bg_1"
+                android:background="@drawable/btn_status_1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/imgbtn_lb_zb" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="直播"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
