@@ -7,9 +7,9 @@
     android:background="@mipmap/splash_bg"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:paddingLeft="50dp"
-    android:paddingTop="350dp"
-    android:paddingRight="50dp"
+    android:paddingLeft="10dp"
+    android:paddingTop="270dp"
+    android:paddingRight="10dp"
     tools:context=".ui.JuzhenActivity">
 
 
@@ -18,15 +18,15 @@
         android:layout_height="wrap_content"
         android:text="一键模式"
         android:textColor="@color/white"
-        android:textSize="@dimen/text_size_20" />
+        android:textSize="@dimen/text_size_14" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/layout_bg_1"
         android:gravity="center_horizontal"
-        android:padding="@dimen/dp_10"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="@dimen/dp_10">
 
 
         <LinearLayout
@@ -37,58 +37,64 @@
 
             <CheckBox
                 android:id="@+id/spbtn_all_lubo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/juzhen_btn_width"
+                android:layout_height="@dimen/juzhen_btn_height"
                 android:background="@drawable/checked_status_1"
                 android:button="@null"
                 android:gravity="center"
                 android:text="录播"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_10" />
 
 
             <CheckBox
                 android:id="@+id/spbtn_all_diannao"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/juzhen_btn_width"
+                android:layout_height="@dimen/juzhen_btn_height"
+                android:layout_marginLeft="@dimen/dp_5"
                 android:background="@drawable/checked_status_1"
                 android:button="@null"
                 android:gravity="center"
-                android:layout_marginLeft="@dimen/dp_10"
                 android:text="老师电脑"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_10" />
 
 
             <CheckBox
                 android:id="@+id/spbtn_all_touping"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/juzhen_btn_width"
+                android:layout_height="@dimen/juzhen_btn_height"
+                android:layout_marginLeft="@dimen/dp_5"
                 android:background="@drawable/checked_status_1"
                 android:button="@null"
                 android:gravity="center"
-                android:layout_marginLeft="@dimen/dp_10"
                 android:text="老师投屏"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_10" />
 
             <CheckBox
                 android:id="@+id/spbtn_all_zu_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/juzhen_btn_width"
+                android:layout_height="@dimen/juzhen_btn_height"
+                android:layout_marginLeft="@dimen/dp_5"
                 android:background="@drawable/checked_status_1"
                 android:button="@null"
                 android:gravity="center"
-                android:layout_marginLeft="@dimen/dp_10"
                 android:text="小组一"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_10" />
 
             <CheckBox
                 android:id="@+id/spbtn_all_zu_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/juzhen_btn_width"
+                android:layout_height="@dimen/juzhen_btn_height"
+                android:layout_marginLeft="@dimen/dp_5"
                 android:background="@drawable/checked_status_1"
                 android:button="@null"
                 android:gravity="center"
                 android:text="小组二"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_10" />
 
         </LinearLayout>
 
@@ -101,47 +107,51 @@
 
             <CheckBox
                 android:id="@+id/spbtn_all_zu_3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/juzhen_btn_width"
+                android:layout_height="@dimen/juzhen_btn_height"
                 android:background="@drawable/checked_status_1"
                 android:button="@null"
                 android:gravity="center"
                 android:text="小组三"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_10" />
 
 
             <CheckBox
                 android:id="@+id/spbtn_all_zu_4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/juzhen_btn_width"
+                android:layout_height="@dimen/juzhen_btn_height"
+                android:layout_marginLeft="@dimen/dp_5"
                 android:background="@drawable/checked_status_1"
                 android:button="@null"
                 android:gravity="center"
-                android:layout_marginLeft="@dimen/dp_10"
                 android:text="小组四"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_10" />
 
             <CheckBox
                 android:id="@+id/spbtn_all_zu_5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/juzhen_btn_width"
+                android:layout_height="@dimen/juzhen_btn_height"
+                android:layout_marginLeft="@dimen/dp_5"
                 android:background="@drawable/checked_status_1"
                 android:button="@null"
                 android:gravity="center"
-                android:layout_marginLeft="@dimen/dp_10"
                 android:text="小组五"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_10" />
 
             <CheckBox
                 android:id="@+id/spbtn_all_zu_6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/juzhen_btn_width"
+                android:layout_height="@dimen/juzhen_btn_height"
+                android:layout_marginLeft="@dimen/dp_5"
                 android:background="@drawable/checked_status_1"
                 android:button="@null"
                 android:gravity="center"
-                android:layout_marginLeft="@dimen/dp_10"
                 android:text="小组六"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_10" />
 
 
         </LinearLayout>
@@ -152,48 +162,45 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="自由模式"
         android:layout_marginTop="@dimen/dp_10"
+        android:text="自由模式"
         android:textColor="@color/white"
-        android:textSize="@dimen/text_size_20" />
+        android:textSize="@dimen/text_size_14" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/dp_10"
         android:orientation="horizontal">
 
 
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:background="@drawable/layout_bg_1"
             android:gravity="center_horizontal"
-            android:padding="@dimen/dp_10"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="@dimen/dp_10">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="视频输入"
                 android:textColor="@color/white"
-                android:textSize="@dimen/text_size_20" />
+                android:textSize="@dimen/text_size_12" />
 
 
             <CheckBox
                 android:id="@+id/spbtn_dan_in_lubo"
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/juzhen_btn_width"
+                android:layout_height="@dimen/juzhen_btn_height"
                 android:layout_marginTop="@dimen/dp_10"
-                android:layout_height="wrap_content"
                 android:background="@drawable/checked_status_1"
                 android:button="@null"
                 android:gravity="center"
                 android:text="录播"
-                android:textColor="@color/black" />
-
-
-
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_10" />
 
 
             <LinearLayout
@@ -206,26 +213,26 @@
 
                 <CheckBox
                     android:id="@+id/spbtn_dan_in_diannao"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/juzhen_btn_width"
+                    android:layout_height="@dimen/juzhen_btn_height"
                     android:background="@drawable/checked_status_1"
                     android:button="@null"
                     android:gravity="center"
                     android:text="老师电脑"
                     android:textColor="@color/text_color_1"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/text_size_10" />
 
                 <CheckBox
                     android:id="@+id/spbtn_dan_in_touping"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/juzhen_btn_width"
+                    android:layout_height="@dimen/juzhen_btn_height"
                     android:layout_marginLeft="@dimen/dp_10"
                     android:background="@drawable/checked_status_1"
                     android:button="@null"
                     android:gravity="center"
                     android:text="老师投屏"
                     android:textColor="@color/text_color_1"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/text_size_10" />
 
 
             </LinearLayout>
@@ -240,26 +247,26 @@
 
                 <CheckBox
                     android:id="@+id/spbtn_dan_in_zu_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/juzhen_btn_width"
+                    android:layout_height="@dimen/juzhen_btn_height"
                     android:background="@drawable/checked_status_1"
                     android:button="@null"
                     android:gravity="center"
                     android:text="小组一"
                     android:textColor="@color/text_color_1"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/text_size_10" />
 
                 <CheckBox
                     android:id="@+id/spbtn_dan_in_zu_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/juzhen_btn_width"
+                    android:layout_height="@dimen/juzhen_btn_height"
                     android:layout_marginLeft="@dimen/dp_10"
                     android:background="@drawable/checked_status_1"
                     android:button="@null"
                     android:gravity="center"
                     android:text="小组二"
                     android:textColor="@color/text_color_1"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/text_size_10" />
 
 
             </LinearLayout>
@@ -274,26 +281,26 @@
 
                 <CheckBox
                     android:id="@+id/spbtn_dan_in_zu_3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/juzhen_btn_width"
+                    android:layout_height="@dimen/juzhen_btn_height"
                     android:background="@drawable/checked_status_1"
                     android:button="@null"
                     android:gravity="center"
                     android:text="小组三"
                     android:textColor="@color/text_color_1"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/text_size_10" />
 
                 <CheckBox
                     android:id="@+id/spbtn_dan_in_zu_4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/juzhen_btn_width"
+                    android:layout_height="@dimen/juzhen_btn_height"
                     android:layout_marginLeft="@dimen/dp_10"
                     android:background="@drawable/checked_status_1"
                     android:button="@null"
                     android:gravity="center"
                     android:text="小组四"
                     android:textColor="@color/text_color_1"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/text_size_10" />
 
 
             </LinearLayout>
@@ -308,75 +315,62 @@
 
                 <CheckBox
                     android:id="@+id/spbtn_dan_in_zu_5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/juzhen_btn_width"
+                    android:layout_height="@dimen/juzhen_btn_height"
                     android:background="@drawable/checked_status_1"
                     android:button="@null"
                     android:gravity="center"
                     android:text="小组五"
                     android:textColor="@color/text_color_1"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/text_size_10" />
 
                 <CheckBox
                     android:id="@+id/spbtn_dan_in_zu_6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/juzhen_btn_width"
+                    android:layout_height="@dimen/juzhen_btn_height"
                     android:layout_marginLeft="@dimen/dp_10"
                     android:background="@drawable/checked_status_1"
                     android:button="@null"
                     android:gravity="center"
                     android:text="小组六"
                     android:textColor="@color/text_color_1"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/text_size_10" />
 
 
             </LinearLayout>
 
 
-
-
-
-
-
-
-
-
-
         </LinearLayout>
-
 
 
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_weight="1"
             android:background="@drawable/layout_bg_1"
             android:gravity="center_horizontal"
-            android:padding="@dimen/dp_10"
-            android:layout_marginLeft="@dimen/dp_10"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="@dimen/dp_10">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="视频输出"
                 android:textColor="@color/white"
-                android:textSize="@dimen/text_size_20" />
+                android:textSize="@dimen/text_size_12" />
 
 
             <CheckBox
                 android:id="@+id/spbtn_dan_out_lubo"
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/juzhen_btn_width"
+                android:layout_height="@dimen/juzhen_btn_height"
                 android:layout_marginTop="@dimen/dp_10"
-                android:layout_height="wrap_content"
                 android:background="@drawable/checked_status_1"
                 android:button="@null"
                 android:gravity="center"
                 android:text="录播"
                 android:textColor="@color/black" />
-
-
-
 
 
             <LinearLayout
@@ -389,26 +383,26 @@
 
                 <CheckBox
                     android:id="@+id/spbtn_dan_out_diannao"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/juzhen_btn_width"
+                    android:layout_height="@dimen/juzhen_btn_height"
                     android:background="@drawable/checked_status_1"
                     android:button="@null"
                     android:gravity="center"
                     android:text="老师电脑"
                     android:textColor="@color/text_color_1"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/text_size_10" />
 
                 <CheckBox
                     android:id="@+id/spbtn_dan_out_touping"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/juzhen_btn_width"
+                    android:layout_height="@dimen/juzhen_btn_height"
                     android:layout_marginLeft="@dimen/dp_10"
                     android:background="@drawable/checked_status_1"
                     android:button="@null"
                     android:gravity="center"
                     android:text="老师投屏"
                     android:textColor="@color/text_color_1"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/text_size_10" />
 
 
             </LinearLayout>
@@ -423,26 +417,26 @@
 
                 <CheckBox
                     android:id="@+id/spbtn_dan_out_zu_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/juzhen_btn_width"
+                    android:layout_height="@dimen/juzhen_btn_height"
                     android:background="@drawable/checked_status_1"
                     android:button="@null"
                     android:gravity="center"
                     android:text="小组一"
                     android:textColor="@color/text_color_1"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/text_size_10" />
 
                 <CheckBox
                     android:id="@+id/spbtn_dan_out_zu_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/juzhen_btn_width"
+                    android:layout_height="@dimen/juzhen_btn_height"
                     android:layout_marginLeft="@dimen/dp_10"
                     android:background="@drawable/checked_status_1"
                     android:button="@null"
                     android:gravity="center"
                     android:text="小组二"
                     android:textColor="@color/text_color_1"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/text_size_10" />
 
 
             </LinearLayout>
@@ -457,26 +451,26 @@
 
                 <CheckBox
                     android:id="@+id/spbtn_dan_out_zu_3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/juzhen_btn_width"
+                    android:layout_height="@dimen/juzhen_btn_height"
                     android:background="@drawable/checked_status_1"
                     android:button="@null"
                     android:gravity="center"
                     android:text="小组三"
                     android:textColor="@color/text_color_1"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/text_size_10" />
 
                 <CheckBox
                     android:id="@+id/spbtn_dan_out_zu_4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/juzhen_btn_width"
+                    android:layout_height="@dimen/juzhen_btn_height"
                     android:layout_marginLeft="@dimen/dp_10"
                     android:background="@drawable/checked_status_1"
                     android:button="@null"
                     android:gravity="center"
                     android:text="小组四"
                     android:textColor="@color/text_color_1"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/text_size_10"/>
 
 
             </LinearLayout>
@@ -491,26 +485,26 @@
 
                 <CheckBox
                     android:id="@+id/spbtn_dan_out_zu_5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/juzhen_btn_width"
+                    android:layout_height="@dimen/juzhen_btn_height"
                     android:background="@drawable/checked_status_1"
                     android:button="@null"
                     android:gravity="center"
                     android:text="小组五"
                     android:textColor="@color/text_color_1"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/text_size_10" />
 
                 <CheckBox
                     android:id="@+id/spbtn_dan_out_zu_6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/juzhen_btn_width"
+                    android:layout_height="@dimen/juzhen_btn_height"
                     android:layout_marginLeft="@dimen/dp_10"
                     android:background="@drawable/checked_status_1"
                     android:button="@null"
                     android:gravity="center"
                     android:text="小组六"
                     android:textColor="@color/text_color_1"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/text_size_10" />
 
 
             </LinearLayout>
@@ -520,11 +514,6 @@
 
 
     </LinearLayout>
-
-
-
-
-
 
 
 </LinearLayout>

@@ -7,9 +7,9 @@
     android:background="@mipmap/splash_bg"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:paddingLeft="50dp"
-    android:paddingTop="350dp"
-    android:paddingRight="50dp"
+    android:paddingLeft="10dp"
+    android:paddingTop="270dp"
+    android:paddingRight="10dp"
     tools:context=".ui.HuanjingActivity">
 
 
@@ -33,14 +33,16 @@
                 android:layout_height="wrap_content"
                 android:text="温度"
                 android:textColor="@color/white"
-                android:textSize="@dimen/text_size_20" />
+                android:textSize="@dimen/text_size_14" />
 
 
             <TextView
                 android:id="@+id/tv_wsd_wd"
-                android:layout_width="200dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/et_bg_ip" />
+                android:background="@drawable/et_bg_ip"
+                android:paddingLeft="@dimen/dp_5"
+                android:textColor="@color/white" />
 
 
         </LinearLayout>
@@ -57,14 +59,16 @@
                 android:layout_height="wrap_content"
                 android:text="湿度"
                 android:textColor="@color/white"
-                android:textSize="@dimen/text_size_20" />
+                android:textSize="@dimen/text_size_14" />
 
 
             <TextView
                 android:id="@+id/tv_wsd_sd"
-                android:layout_width="200dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/et_bg_ip" />
+                android:background="@drawable/et_bg_ip"
+                android:paddingLeft="@dimen/dp_5"
+                android:textColor="@color/white" />
 
 
         </LinearLayout>
@@ -81,14 +85,16 @@
                 android:layout_height="wrap_content"
                 android:text="PM2.5"
                 android:textColor="@color/white"
-                android:textSize="@dimen/text_size_20" />
+                android:textSize="@dimen/text_size_14" />
 
 
             <TextView
                 android:id="@+id/tv_wsd_pm"
-                android:layout_width="200dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/et_bg_ip" />
+                android:background="@drawable/et_bg_ip"
+                android:paddingLeft="@dimen/dp_5"
+                android:textColor="@color/white" />
 
 
         </LinearLayout>
@@ -115,8 +121,8 @@
 
             <ImageButton
                 android:id="@+id/huanjng_btn_kaiguan"
-                android:layout_width="@dimen/btn_bg_1"
-                android:layout_height="@dimen/btn_bg_1"
+                android:layout_width="@dimen/btn_bg_2"
+                android:layout_height="@dimen/btn_bg_2"
                 android:background="@drawable/btn_status_1"
                 android:scaleType="fitCenter"
                 android:src="@drawable/imgbtn_kt_kg" />
@@ -138,8 +144,8 @@
 
             <ImageButton
                 android:id="@+id/huanjng_btn_fengsu"
-                android:layout_width="@dimen/btn_bg_1"
-                android:layout_height="@dimen/btn_bg_1"
+                android:layout_width="@dimen/btn_bg_2"
+                android:layout_height="@dimen/btn_bg_2"
                 android:background="@drawable/btn_status_1"
                 android:scaleType="fitCenter"
                 android:src="@drawable/imgbtn_kt_fs" />
@@ -160,8 +166,8 @@
 
             <ImageButton
                 android:id="@+id/huanjng_btn_fengxiang"
-                android:layout_width="@dimen/btn_bg_1"
-                android:layout_height="@dimen/btn_bg_1"
+                android:layout_width="@dimen/btn_bg_2"
+                android:layout_height="@dimen/btn_bg_2"
                 android:background="@drawable/btn_status_1"
                 android:scaleType="fitCenter"
                 android:src="@drawable/imgbtn_kt_fx" />
@@ -194,8 +200,8 @@
 
             <ImageButton
                 android:id="@+id/huanjng_btn_moshi"
-                android:layout_width="@dimen/btn_bg_1"
-                android:layout_height="@dimen/btn_bg_1"
+                android:layout_width="@dimen/btn_bg_2"
+                android:layout_height="@dimen/btn_bg_2"
                 android:background="@drawable/btn_status_1"
                 android:scaleType="fitCenter"
                 android:src="@drawable/imgbtn_kt_ms" />
@@ -217,8 +223,8 @@
 
             <ImageButton
                 android:id="@+id/huanjng_btn_wd_jia"
-                android:layout_width="@dimen/btn_bg_1"
-                android:layout_height="@dimen/btn_bg_1"
+                android:layout_width="@dimen/btn_bg_2"
+                android:layout_height="@dimen/btn_bg_2"
                 android:background="@drawable/btn_status_1"
                 android:scaleType="fitCenter"
                 android:src="@drawable/imgbtn_kt_wd_jia" />
@@ -239,8 +245,8 @@
 
             <ImageButton
                 android:id="@+id/huanjng_btn_wd_jian"
-                android:layout_width="@dimen/btn_bg_1"
-                android:layout_height="@dimen/btn_bg_1"
+                android:layout_width="@dimen/btn_bg_2"
+                android:layout_height="@dimen/btn_bg_2"
                 android:background="@drawable/btn_status_1"
                 android:scaleType="fitCenter"
                 android:src="@drawable/imgbtn_kt_wd_jian" />

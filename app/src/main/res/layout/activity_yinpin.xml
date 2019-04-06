@@ -7,9 +7,9 @@
     android:background="@mipmap/splash_bg"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:paddingLeft="50dp"
-    android:paddingTop="350dp"
-    android:paddingRight="50dp"
+    android:paddingLeft="10dp"
+    android:paddingTop="270dp"
+    android:paddingRight="10dp"
     tools:context=".ui.YinpinActivity">
 
 
@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:text="总音量"
         android:textColor="@color/white"
-        android:textSize="@dimen/text_size_20" />
+        android:textSize="@dimen/text_size_14" />
 
 
     <LinearLayout
@@ -34,8 +34,8 @@
 
         <Button
             android:id="@+id/zyl_jia"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/yinpin_btn_width"
+            android:layout_height="@dimen/yinpin_btn_height"
             android:background="@drawable/btn_status_2"
             android:text="音量＋"
             android:textColor="@color/black" />
@@ -43,8 +43,8 @@
 
         <Button
             android:id="@+id/zyl_jian"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/yinpin_btn_width"
+            android:layout_height="@dimen/yinpin_btn_height"
             android:layout_marginLeft="@dimen/dp_10"
             android:layout_marginRight="@dimen/dp_10"
             android:background="@drawable/btn_status_2"
@@ -54,8 +54,8 @@
 
         <CheckBox
             android:id="@+id/zyl_jingyin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/yinpin_btn_width"
+            android:layout_height="@dimen/yinpin_btn_height"
             android:background="@drawable/checked_status_1"
             android:button="@null"
             android:gravity="center"
@@ -68,10 +68,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="音响"
         android:layout_marginTop="@dimen/dp_10"
+        android:text="音响"
         android:textColor="@color/white"
-        android:textSize="@dimen/text_size_20" />
+        android:textSize="@dimen/text_size_14" />
 
 
     <LinearLayout
@@ -87,8 +87,8 @@
 
         <Button
             android:id="@+id/yx_jia"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/yinpin_btn_width"
+            android:layout_height="@dimen/yinpin_btn_height"
             android:background="@drawable/btn_status_2"
             android:text="音量＋"
             android:textColor="@color/black" />
@@ -96,8 +96,8 @@
 
         <Button
             android:id="@+id/yx_jian"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/yinpin_btn_width"
+            android:layout_height="@dimen/yinpin_btn_height"
             android:layout_marginLeft="@dimen/dp_10"
             android:layout_marginRight="@dimen/dp_10"
             android:background="@drawable/btn_status_2"
@@ -107,8 +107,8 @@
 
         <CheckBox
             android:id="@+id/yx_jingyin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/yinpin_btn_width"
+            android:layout_height="@dimen/yinpin_btn_height"
             android:background="@drawable/checked_status_1"
             android:button="@null"
             android:gravity="center"
@@ -122,10 +122,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="麦克风"
         android:layout_marginTop="@dimen/dp_10"
+        android:text="麦克风"
         android:textColor="@color/white"
-        android:textSize="@dimen/text_size_20" />
+        android:textSize="@dimen/text_size_14" />
 
 
     <LinearLayout
@@ -141,8 +141,8 @@
 
         <Button
             android:id="@+id/mkf_jia"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/yinpin_btn_width"
+            android:layout_height="@dimen/yinpin_btn_height"
             android:background="@drawable/btn_status_2"
             android:text="音量＋"
             android:textColor="@color/black" />
@@ -150,8 +150,8 @@
 
         <Button
             android:id="@+id/mkf_jian"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/yinpin_btn_width"
+            android:layout_height="@dimen/yinpin_btn_height"
             android:layout_marginLeft="@dimen/dp_10"
             android:layout_marginRight="@dimen/dp_10"
             android:background="@drawable/btn_status_2"
@@ -161,8 +161,8 @@
 
         <CheckBox
             android:id="@+id/mkf_jingyin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/yinpin_btn_width"
+            android:layout_height="@dimen/yinpin_btn_height"
             android:background="@drawable/checked_status_1"
             android:button="@null"
             android:gravity="center"
