@@ -26,22 +26,22 @@ public class LuboActivity extends Activity {
 
     @OnClick(R.id.luzhi)
     public void luzhi() {
-        HttpUtil.myPost("33");
+        HttpUtil.myPost("LUB1");
     }
 
     @OnClick(R.id.zanting)
     public void zanting() {
-        HttpUtil.myPost("34");
+        HttpUtil.myPost("LUB2");
     }
 
     @OnClick(R.id.tingzhi)
     public void tingzhi() {
-        HttpUtil.myPost("35");
+        HttpUtil.myPost("LUB3");
     }
 
     @OnClick(R.id.zhibo)
     public void zhibo() {
-        HttpUtil.myPost("36");
+        HttpUtil.myPost("LUB4");
     }
 
 
