@@ -29,7 +29,7 @@ public class SharePreferenceUtil {
     }
 
     public String getZKIP() {
-        return sp.getString("zkip", null);
+        return sp.getString("zkip", "");
     }
 
 

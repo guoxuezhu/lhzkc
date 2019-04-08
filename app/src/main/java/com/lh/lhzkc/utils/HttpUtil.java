@@ -18,6 +18,10 @@ public class HttpUtil {
 
     public static void myPost(String zkbtnType) {
 
+        if (MyApplication.prefs.getZKIP().equals("")) {
+            return;
+        }
+
         OkHttpClient okHttpClient = new OkHttpClient();
         FormBody body = new FormBody.Builder()
                 .add("zkbtn", zkbtnType)
