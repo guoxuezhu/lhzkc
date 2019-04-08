@@ -114,11 +114,11 @@ public class ShebeiActivity extends Activity {
 
     @OnClick(R.id.btn_qianmen_open)
     public void btn_qianmen_open() {
-        //HttpUtil.myPost("20");
+        HttpUtil.myPost("46");
     }
 
     @OnClick(R.id.btn_houmen_open)
     public void btn_houmen_open() {
-        //HttpUtil.myPost("20");
+        HttpUtil.myPost("47");
     }
 }
