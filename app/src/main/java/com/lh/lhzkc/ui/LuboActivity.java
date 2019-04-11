@@ -3,14 +3,21 @@ package com.lh.lhzkc.ui;
 import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.CheckBox;
 
 import com.lh.lhzkc.R;
 import com.lh.lhzkc.utils.HttpUtil;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class LuboActivity extends Activity {
+
+    @BindView(R.id.zhibo)
+    CheckBox zhibo;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +28,6 @@ public class LuboActivity extends Activity {
 
 
     }
-
 
 
     @OnClick(R.id.luzhi)
@@ -41,19 +47,12 @@ public class LuboActivity extends Activity {
 
     @OnClick(R.id.zhibo)
     public void zhibo() {
-        HttpUtil.myPost("LUB4");
+        if (zhibo.isChecked()) {
+            HttpUtil.myPost("LUB4");
+        } else {
+            HttpUtil.myPost("LUB5");
+        }
     }
-
-
-
-
-
-
-
-
-
-
-
 
 
 }

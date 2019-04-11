@@ -3,6 +3,7 @@ package com.lh.lhzkc.ui;
 import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import com.lh.lhzkc.R;
@@ -31,6 +32,8 @@ public class HuanjingActivity extends Activity {
     @BindView(R.id.tv_wsd_pm)
     TextView tv_wsd_pm;
 
+    @BindView(R.id.huanjng_btn_kaiguan)
+    CheckBox huanjng_btn_kaiguan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,7 +87,11 @@ public class HuanjingActivity extends Activity {
 
     @OnClick(R.id.huanjng_btn_kaiguan)
     public void huanjng_btn_kaiguan() {
-        HttpUtil.myPost("39");
+        if (huanjng_btn_kaiguan.isChecked()) {
+            HttpUtil.myPost("39");
+        } else {
+            HttpUtil.myPost("48");
+        }
     }
 
 

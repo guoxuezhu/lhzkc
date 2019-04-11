@@ -101,13 +101,16 @@
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
-            <ImageButton
+            <CheckBox
                 android:id="@+id/zhibo"
                 android:layout_width="@dimen/btn_bg_1"
                 android:layout_height="@dimen/btn_bg_1"
-                android:background="@drawable/btn_status_1"
-                android:scaleType="fitCenter"
-                android:src="@drawable/imgbtn_lb_zb" />
+                android:button="@null"
+                android:drawableLeft="@drawable/lb_zb"
+                android:drawableStart="@drawable/lb_zb"
+                android:padding="10dp"
+                android:background="@drawable/checked_status_2"/>
+
 
             <TextView
                 android:layout_width="wrap_content"

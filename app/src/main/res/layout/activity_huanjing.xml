@@ -119,13 +119,15 @@
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
-            <ImageButton
+            <CheckBox
                 android:id="@+id/huanjng_btn_kaiguan"
                 android:layout_width="@dimen/btn_bg_2"
                 android:layout_height="@dimen/btn_bg_2"
-                android:background="@drawable/btn_status_1"
-                android:scaleType="fitCenter"
-                android:src="@drawable/imgbtn_kt_kg" />
+                android:button="@null"
+                android:drawableLeft="@drawable/imgbtn_kt_kg"
+                android:drawableStart="@drawable/imgbtn_kt_kg"
+                android:padding="10dp"
+                android:background="@drawable/checked_status_2"/>
 
             <TextView
                 android:layout_width="wrap_content"
