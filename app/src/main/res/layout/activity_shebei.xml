@@ -7,7 +7,7 @@
     android:background="@mipmap/splash_bg"
     android:gravity="center_horizontal"
     android:orientation="horizontal"
-    android:paddingTop="270dp"
+    android:paddingTop="200dp"
     tools:context=".ui.ShebeiActivity">
 
 

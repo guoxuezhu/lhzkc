@@ -86,7 +86,7 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_all_lubo)
     public void spbtn_all_lubo() {
-        HttpUtil.myPost("VIDC1");
+        HttpUtil.myPost("VIDC8");
         spbtn_all_lubo.setChecked(true);
         spbtn_all_diannao.setChecked(false);
         spbtn_all_touping.setChecked(false);
@@ -101,7 +101,7 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_all_diannao)
     public void spbtn_all_diannao() {
-        HttpUtil.myPost("VIDC2");
+        HttpUtil.myPost("VIDC9");
         spbtn_all_lubo.setChecked(false);
         spbtn_all_diannao.setChecked(true);
         spbtn_all_touping.setChecked(false);
@@ -116,7 +116,7 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_all_touping)
     public void spbtn_all_touping() {
-        HttpUtil.myPost("VIDC3");
+        HttpUtil.myPost("VIDC1");
         spbtn_all_lubo.setChecked(false);
         spbtn_all_diannao.setChecked(false);
         spbtn_all_touping.setChecked(true);
@@ -131,7 +131,7 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_all_zu_1)
     public void spbtn_all_zu_1() {
-        HttpUtil.myPost("VIDC4");
+        HttpUtil.myPost("VIDC2");
         spbtn_all_lubo.setChecked(false);
         spbtn_all_diannao.setChecked(false);
         spbtn_all_touping.setChecked(false);
@@ -146,7 +146,7 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_all_zu_2)
     public void spbtn_all_zu_2() {
-        HttpUtil.myPost("VIDC5");
+        HttpUtil.myPost("VIDC3");
         spbtn_all_lubo.setChecked(false);
         spbtn_all_diannao.setChecked(false);
         spbtn_all_touping.setChecked(false);
@@ -161,7 +161,7 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_all_zu_3)
     public void spbtn_all_zu_3() {
-        HttpUtil.myPost("VIDC6");
+        HttpUtil.myPost("VIDC4");
         spbtn_all_lubo.setChecked(false);
         spbtn_all_diannao.setChecked(false);
         spbtn_all_touping.setChecked(false);
@@ -176,7 +176,7 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_all_zu_4)
     public void spbtn_all_zu_4() {
-        HttpUtil.myPost("VIDC7");
+        HttpUtil.myPost("VIDC5");
         spbtn_all_lubo.setChecked(false);
         spbtn_all_diannao.setChecked(false);
         spbtn_all_touping.setChecked(false);
@@ -191,7 +191,7 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_all_zu_5)
     public void spbtn_all_zu_5() {
-        HttpUtil.myPost("VIDC8");
+        HttpUtil.myPost("VIDC6");
         spbtn_all_lubo.setChecked(false);
         spbtn_all_diannao.setChecked(false);
         spbtn_all_touping.setChecked(false);
@@ -206,7 +206,7 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_all_zu_6)
     public void spbtn_all_zu_6() {
-        HttpUtil.myPost("VIDC9");
+        HttpUtil.myPost("VIDC7");
         spbtn_all_lubo.setChecked(false);
         spbtn_all_diannao.setChecked(false);
         spbtn_all_touping.setChecked(false);
@@ -247,6 +247,7 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_dan_in_lubo)
     public void spbtn_dan_in_lubo() {
+        HttpUtil.myPost("51");
         spbtn_dan_in_lubo.setChecked(true);
         spbtn_dan_in_diannao.setChecked(false);
         spbtn_dan_in_touping.setChecked(false);
@@ -261,6 +262,7 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_dan_in_diannao)
     public void spbtn_dan_in_diannao() {
+        HttpUtil.myPost("50");
         spbtn_dan_in_lubo.setChecked(false);
         spbtn_dan_in_diannao.setChecked(true);
         spbtn_dan_in_touping.setChecked(false);
@@ -276,6 +278,7 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_dan_in_touping)
     public void spbtn_dan_in_touping() {
+        HttpUtil.myPost("51");
         spbtn_dan_in_lubo.setChecked(false);
         spbtn_dan_in_diannao.setChecked(false);
         spbtn_dan_in_touping.setChecked(true);
@@ -290,6 +293,7 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_dan_in_zu_1)
     public void spbtn_dan_in_zu_1() {
+        HttpUtil.myPost("51");
         spbtn_dan_in_lubo.setChecked(false);
         spbtn_dan_in_diannao.setChecked(false);
         spbtn_dan_in_touping.setChecked(false);
@@ -305,6 +309,7 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_dan_in_zu_2)
     public void spbtn_dan_in_zu_2() {
+        HttpUtil.myPost("51");
         spbtn_dan_in_lubo.setChecked(false);
         spbtn_dan_in_diannao.setChecked(false);
         spbtn_dan_in_touping.setChecked(false);
@@ -319,6 +324,7 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_dan_in_zu_3)
     public void spbtn_dan_in_zu_3() {
+        HttpUtil.myPost("51");
         spbtn_dan_in_lubo.setChecked(false);
         spbtn_dan_in_diannao.setChecked(false);
         spbtn_dan_in_touping.setChecked(false);
@@ -334,6 +340,7 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_dan_in_zu_4)
     public void spbtn_dan_in_zu_4() {
+        HttpUtil.myPost("51");
         spbtn_dan_in_lubo.setChecked(false);
         spbtn_dan_in_diannao.setChecked(false);
         spbtn_dan_in_touping.setChecked(false);
@@ -349,6 +356,7 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_dan_in_zu_5)
     public void spbtn_dan_in_zu_5() {
+        HttpUtil.myPost("51");
         spbtn_dan_in_lubo.setChecked(false);
         spbtn_dan_in_diannao.setChecked(false);
         spbtn_dan_in_touping.setChecked(false);
@@ -364,6 +372,7 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_dan_in_zu_6)
     public void spbtn_dan_in_zu_6() {
+        HttpUtil.myPost("51");
         spbtn_dan_in_lubo.setChecked(false);
         spbtn_dan_in_diannao.setChecked(false);
         spbtn_dan_in_touping.setChecked(false);
@@ -390,7 +399,7 @@ public class JuzhenActivity extends Activity {
 
 
     @OnClick(R.id.spbtn_dan_out_lubo)
-    public void spbtn_out_in_lubo() {
+    public void spbtn_dan_out_lubo() {
         spbtn_dan_out_lubo.setChecked(true);
         spbtn_dan_out_diannao.setChecked(false);
         spbtn_dan_out_touping.setChecked(false);
@@ -525,23 +534,23 @@ public class JuzhenActivity extends Activity {
 
     private void sendDan(int i) {
         if (spbtn_dan_in_lubo.isChecked()) {
-            HttpUtil.myPost("VIDA1," + i);
-        } else if (spbtn_dan_in_diannao.isChecked()) {
-            HttpUtil.myPost("VIDA2," + i);
-        } else if (spbtn_dan_in_touping.isChecked()) {
-            HttpUtil.myPost("VIDA3," + i);
-        } else if (spbtn_dan_in_zu_1.isChecked()) {
-            HttpUtil.myPost("VIDA4," + i);
-        } else if (spbtn_dan_in_zu_2.isChecked()) {
-            HttpUtil.myPost("VIDA5," + i);
-        } else if (spbtn_dan_in_zu_3.isChecked()) {
-            HttpUtil.myPost("VIDA6," + i);
-        } else if (spbtn_dan_in_zu_4.isChecked()) {
-            HttpUtil.myPost("VIDA7," + i);
-        } else if (spbtn_dan_in_zu_5.isChecked()) {
             HttpUtil.myPost("VIDA8," + i);
-        } else if (spbtn_dan_in_zu_6.isChecked()) {
+        } else if (spbtn_dan_in_diannao.isChecked()) {
             HttpUtil.myPost("VIDA9," + i);
+        } else if (spbtn_dan_in_touping.isChecked()) {
+            HttpUtil.myPost("VIDA1," + i);
+        } else if (spbtn_dan_in_zu_1.isChecked()) {
+            HttpUtil.myPost("VIDA2," + i);
+        } else if (spbtn_dan_in_zu_2.isChecked()) {
+            HttpUtil.myPost("VIDA3," + i);
+        } else if (spbtn_dan_in_zu_3.isChecked()) {
+            HttpUtil.myPost("VIDA4," + i);
+        } else if (spbtn_dan_in_zu_4.isChecked()) {
+            HttpUtil.myPost("VIDA5," + i);
+        } else if (spbtn_dan_in_zu_5.isChecked()) {
+            HttpUtil.myPost("VIDA6," + i);
+        } else if (spbtn_dan_in_zu_6.isChecked()) {
+            HttpUtil.myPost("VIDA7," + i);
         }
     }
 

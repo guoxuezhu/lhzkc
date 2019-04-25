@@ -7,7 +7,7 @@
     android:background="@mipmap/splash_bg"
     android:gravity="center"
     android:orientation="vertical"
-    android:paddingTop="@dimen/dp_50"
+    android:paddingTop="70dp"
     tools:context=".ui.ChangjingActivity">
 
 
