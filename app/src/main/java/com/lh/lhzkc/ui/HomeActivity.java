@@ -24,6 +24,8 @@ public class HomeActivity extends Activity {
         setContentView(R.layout.activity_home);
 
         ButterKnife.bind(this);
+
+
         zk_ip.setText(MyApplication.prefs.getZKIP());
     }
 
@@ -35,7 +37,7 @@ public class HomeActivity extends Activity {
     }
 
     private void baocunIp() {
-        MyApplication.prefs.setZKIP(zk_ip.getText().toString());
+        MyApplication.prefs.setZKIP(zk_ip.getText().toString() + "");
     }
 
 

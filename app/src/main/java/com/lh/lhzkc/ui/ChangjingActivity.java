@@ -3,8 +3,9 @@ package com.lh.lhzkc.ui;
 import android.app.Activity;
 import android.os.Bundle;
 
+import com.lh.lhzkc.MyApplication;
 import com.lh.lhzkc.R;
-import com.lh.lhzkc.utils.HttpUtil;
+import com.lh.lhzkc.utils.MqttManager;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -22,37 +23,25 @@ public class ChangjingActivity extends Activity {
     }
 
 
-
     @OnClick(R.id.btn_shangke)
     public void btn_shangke() {
-        HttpUtil.myPost("1");
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "1".getBytes());
     }
 
     @OnClick(R.id.btn_xiake)
     public void btn_xiake() {
-        HttpUtil.myPost("2");
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "2".getBytes());
     }
 
     @OnClick(R.id.btn_zixi)
     public void btn_zixi() {
-        HttpUtil.myPost("3");
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "3".getBytes());
     }
 
     @OnClick(R.id.btn_xiuxi)
     public void btn_xiuxi() {
-        HttpUtil.myPost("4");
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "4".getBytes());
     }
-
-
-
-
-
-
-
-
-
-
-
 
 
 }

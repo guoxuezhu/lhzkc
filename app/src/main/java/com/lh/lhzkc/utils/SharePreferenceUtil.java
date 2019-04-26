@@ -33,4 +33,20 @@ public class SharePreferenceUtil {
     }
 
 
+    public String getUdid() {
+        return sp.getString("uuid", null);
+    }
+
+    public void setUdid(String uuid) {
+        editor.putString("uuid", uuid);
+        editor.commit();
+    }
+
+    public void setzkname(String zkname) {
+        editor.putString("zkname", zkname);
+        editor.commit();
+    }
+    public String getzkname() {
+        return sp.getString("zkname", "");
+    }
 }
