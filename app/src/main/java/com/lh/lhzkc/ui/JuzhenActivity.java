@@ -85,6 +85,11 @@ public class JuzhenActivity extends Activity {
 
 
     }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 
     @OnClick(R.id.spbtn_all_lubo)
     public void spbtn_all_lubo() {

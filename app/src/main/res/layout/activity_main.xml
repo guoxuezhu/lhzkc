@@ -28,9 +28,9 @@
             android:id="@+id/zk_name"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_5"
             android:background="@drawable/et_bg_ip"
             android:inputType="number"
+            android:paddingLeft="@dimen/dp_5"
             android:textColor="@color/white" />
 
     </LinearLayout>
@@ -53,8 +53,8 @@
             android:id="@+id/zk_mqtt_user"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_5"
             android:background="@drawable/et_bg_ip"
+            android:paddingLeft="@dimen/dp_5"
             android:text=""
             android:textColor="@color/white" />
 
@@ -79,8 +79,8 @@
             android:id="@+id/zk_mqtt_mima"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_5"
             android:background="@drawable/et_bg_ip"
+            android:paddingLeft="@dimen/dp_5"
             android:text=""
             android:textColor="@color/white" />
 

@@ -94,6 +94,10 @@ public class YinpinActivity extends Activity {
             MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS32".getBytes());
         }
     }
-
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 
 }

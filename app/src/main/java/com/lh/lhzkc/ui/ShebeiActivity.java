@@ -112,4 +112,10 @@ public class ShebeiActivity extends Activity {
     public void btn_houmen_open() {
         MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS47".getBytes());
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 }

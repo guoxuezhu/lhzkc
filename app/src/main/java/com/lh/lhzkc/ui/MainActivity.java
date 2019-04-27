@@ -1,13 +1,18 @@
 package com.lh.lhzkc.ui;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.lh.lhzkc.MyApplication;
 import com.lh.lhzkc.R;
+import com.lh.lhzkc.utils.ELog;
 import com.lh.lhzkc.utils.MqttManager;
 
 import butterknife.BindView;
@@ -27,6 +32,32 @@ public class MainActivity extends Activity {
     private String URL = "wss://cmt7p9p.mqtt.iot.gz.baidubce.com:8884/mqtt";
 
     private String TOPIC = "mytopic/DeviceId-numer";
+    private ProgressDialog progressDialog;
+
+    Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            switch (msg.what) {
+                case 1:
+                    if (progressDialog != null) {
+                        progressDialog.dismiss();
+                        progressDialog = null;
+                    }
+                    Toast.makeText(MainActivity.this, "连接成功", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(MainActivity.this, HomeActivity.class));
+                    finish();
+                    break;
+                case 2:
+                    if (progressDialog != null) {
+                        progressDialog.dismiss();
+                        progressDialog = null;
+                    }
+                    Toast.makeText(MainActivity.this, "连接失败", Toast.LENGTH_SHORT).show();
+                    break;
+            }
+        }
+    };
 
 
     @Override
@@ -68,19 +99,39 @@ public class MainActivity extends Activity {
             Toast.makeText(this, "请输入MQTT密码", Toast.LENGTH_SHORT).show();
             return;
         }
-
-        MyApplication.prefs.setMqttuser(zk_mqtt_user.getText().toString().trim());
-        MyApplication.prefs.setMqttMima(zk_mqtt_mima.getText().toString().trim());
-        MyApplication.prefs.setzkname(TOPIC + zk_name.getText().toString().trim());
-
-        boolean subscriber = MqttManager.getInstance().creatConnect(URL, MyApplication.prefs.getMqttuser(),
-                MyApplication.prefs.getMqttMima(), MyApplication.prefs.getUdid());
-        if (subscriber) {
-            Toast.makeText(this, "连接成功", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(this, HomeActivity.class));
-            finish();
+        if (progressDialog == null) {
+            progressDialog = new ProgressDialog(this);
         }
+        progressDialog.show();
+        progressDialog.setMessage("连接中.......");
+        progressDialog.setCanceledOnTouchOutside(false);
+
+        new Thread() {
+            @Override
+            public void run() {
+                super.run();
+
+                MyApplication.prefs.setMqttuser(zk_mqtt_user.getText().toString().trim());
+                MyApplication.prefs.setMqttMima(zk_mqtt_mima.getText().toString().trim());
+                MyApplication.prefs.setzkname(TOPIC + zk_name.getText().toString().trim());
+
+
+                boolean subscriber = MqttManager.getInstance().creatConnect(URL, MyApplication.prefs.getMqttuser(),
+                        MyApplication.prefs.getMqttMima(), MyApplication.prefs.getUdid());
+
+                ELog.d("========111==========" + subscriber);
+                if (subscriber) {
+                    handler.sendEmptyMessage(1);
+                } else {
+                    handler.sendEmptyMessage(2);
+                }
+
+
+            }
+        }.start();
+
 
     }
+
 
 }

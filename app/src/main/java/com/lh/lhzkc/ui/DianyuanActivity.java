@@ -32,5 +32,9 @@ public class DianyuanActivity extends Activity {
     public void dy_all_close() {
         MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS38".getBytes());
     }
-
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 }

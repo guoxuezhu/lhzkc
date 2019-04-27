@@ -30,7 +30,11 @@ public class LuboActivity extends Activity {
 
 
     }
-
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 
     @OnClick(R.id.luzhi)
     public void luzhi() {

@@ -7,6 +7,9 @@ import android.widget.EditText;
 
 import com.lh.lhzkc.MyApplication;
 import com.lh.lhzkc.R;
+import com.lh.lhzkc.utils.MqttManager;
+
+import org.eclipse.paho.client.mqttv3.MqttException;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -82,5 +85,19 @@ public class HomeActivity extends Activity {
         baocunIp();
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        try {
+            MqttManager.getInstance().disConnect();
+        } catch (MqttException e) {
+            e.printStackTrace();
+        }
+    }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 }
