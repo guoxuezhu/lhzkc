@@ -6,9 +6,11 @@ import android.os.Bundle;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
+import com.lh.lhzkc.MyApplication;
 import com.lh.lhzkc.R;
 import com.lh.lhzkc.utils.ELog;
 import com.lh.lhzkc.utils.HttpUtil;
+import com.lh.lhzkc.utils.MqttManager;
 
 import java.io.IOException;
 
@@ -88,40 +90,40 @@ public class HuanjingActivity extends Activity {
     @OnClick(R.id.huanjng_btn_kaiguan)
     public void huanjng_btn_kaiguan() {
         if (huanjng_btn_kaiguan.isChecked()) {
-            HttpUtil.myPost("39");
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS39".getBytes());
         } else {
-            HttpUtil.myPost("48");
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS48".getBytes());
         }
     }
 
 
     @OnClick(R.id.huanjng_btn_moshi)
     public void huanjng_btn_moshi() {
-        HttpUtil.myPost("40");
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS40".getBytes());
     }
 
 
     @OnClick(R.id.huanjng_btn_fengsu)
     public void huanjng_btn_fengsu() {
-        HttpUtil.myPost("41");
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS41".getBytes());
     }
 
 
     @OnClick(R.id.huanjng_btn_wd_jia)
     public void huanjng_btn_wd_jia() {
-        HttpUtil.myPost("43");
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS43".getBytes());
     }
 
 
     @OnClick(R.id.huanjng_btn_wd_jian)
     public void huanjng_btn_wd_jian() {
-        HttpUtil.myPost("44");
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS44".getBytes());
     }
 
 
     @OnClick(R.id.huanjng_btn_fengxiang)
     public void huanjng_btn_fengxiang() {
-        HttpUtil.myPost("42");
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS42".getBytes());
     }
 
 

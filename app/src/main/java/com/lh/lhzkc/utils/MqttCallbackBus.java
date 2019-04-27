@@ -19,7 +19,6 @@ public class MqttCallbackBus implements MqttCallback {
 
     @Override
     public void messageArrived(String topic, MqttMessage message) {
-        ELog.i("=====messageArrived=======11=========" + topic.toString());
         ELog.i("=====messageArrived================" + message.toString());
 //        Gson gson = new Gson();
 //        MqttMsg mqttMsg = gson.fromJson(message.toString(), MqttMsg.class);

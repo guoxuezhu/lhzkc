@@ -25,22 +25,22 @@ public class ChangjingActivity extends Activity {
 
     @OnClick(R.id.btn_shangke)
     public void btn_shangke() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "1".getBytes());
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS1".getBytes());
     }
 
     @OnClick(R.id.btn_xiake)
     public void btn_xiake() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "2".getBytes());
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS2".getBytes());
     }
 
     @OnClick(R.id.btn_zixi)
     public void btn_zixi() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "3".getBytes());
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS3".getBytes());
     }
 
     @OnClick(R.id.btn_xiuxi)
     public void btn_xiuxi() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "4".getBytes());
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS4".getBytes());
     }
 
 

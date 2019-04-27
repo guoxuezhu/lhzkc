@@ -5,8 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.CheckBox;
 
+import com.lh.lhzkc.MyApplication;
 import com.lh.lhzkc.R;
 import com.lh.lhzkc.utils.HttpUtil;
+import com.lh.lhzkc.utils.MqttManager;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -86,7 +88,7 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_all_lubo)
     public void spbtn_all_lubo() {
-        HttpUtil.myPost("VIDC8");
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "VIDC8".getBytes());
         spbtn_all_lubo.setChecked(true);
         spbtn_all_diannao.setChecked(false);
         spbtn_all_touping.setChecked(false);
@@ -101,7 +103,7 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_all_diannao)
     public void spbtn_all_diannao() {
-        HttpUtil.myPost("VIDC9");
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "VIDC9".getBytes());
         spbtn_all_lubo.setChecked(false);
         spbtn_all_diannao.setChecked(true);
         spbtn_all_touping.setChecked(false);
@@ -116,7 +118,7 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_all_touping)
     public void spbtn_all_touping() {
-        HttpUtil.myPost("VIDC1");
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "VIDC1".getBytes());
         spbtn_all_lubo.setChecked(false);
         spbtn_all_diannao.setChecked(false);
         spbtn_all_touping.setChecked(true);
@@ -131,7 +133,7 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_all_zu_1)
     public void spbtn_all_zu_1() {
-        HttpUtil.myPost("VIDC2");
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "VIDC2".getBytes());
         spbtn_all_lubo.setChecked(false);
         spbtn_all_diannao.setChecked(false);
         spbtn_all_touping.setChecked(false);
@@ -146,7 +148,7 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_all_zu_2)
     public void spbtn_all_zu_2() {
-        HttpUtil.myPost("VIDC3");
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "VIDC3".getBytes());
         spbtn_all_lubo.setChecked(false);
         spbtn_all_diannao.setChecked(false);
         spbtn_all_touping.setChecked(false);
@@ -161,7 +163,7 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_all_zu_3)
     public void spbtn_all_zu_3() {
-        HttpUtil.myPost("VIDC4");
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "VIDC4".getBytes());
         spbtn_all_lubo.setChecked(false);
         spbtn_all_diannao.setChecked(false);
         spbtn_all_touping.setChecked(false);
@@ -176,7 +178,7 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_all_zu_4)
     public void spbtn_all_zu_4() {
-        HttpUtil.myPost("VIDC5");
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "VIDC5".getBytes());
         spbtn_all_lubo.setChecked(false);
         spbtn_all_diannao.setChecked(false);
         spbtn_all_touping.setChecked(false);
@@ -191,7 +193,7 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_all_zu_5)
     public void spbtn_all_zu_5() {
-        HttpUtil.myPost("VIDC6");
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "VIDC6".getBytes());
         spbtn_all_lubo.setChecked(false);
         spbtn_all_diannao.setChecked(false);
         spbtn_all_touping.setChecked(false);
@@ -206,7 +208,7 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_all_zu_6)
     public void spbtn_all_zu_6() {
-        HttpUtil.myPost("VIDC7");
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "VIDC7".getBytes());
         spbtn_all_lubo.setChecked(false);
         spbtn_all_diannao.setChecked(false);
         spbtn_all_touping.setChecked(false);
@@ -247,7 +249,7 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_dan_in_lubo)
     public void spbtn_dan_in_lubo() {
-        HttpUtil.myPost("51");
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS51".getBytes());
         spbtn_dan_in_lubo.setChecked(true);
         spbtn_dan_in_diannao.setChecked(false);
         spbtn_dan_in_touping.setChecked(false);
@@ -262,7 +264,7 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_dan_in_diannao)
     public void spbtn_dan_in_diannao() {
-        HttpUtil.myPost("50");
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS50".getBytes());
         spbtn_dan_in_lubo.setChecked(false);
         spbtn_dan_in_diannao.setChecked(true);
         spbtn_dan_in_touping.setChecked(false);
@@ -278,7 +280,7 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_dan_in_touping)
     public void spbtn_dan_in_touping() {
-        HttpUtil.myPost("51");
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS51".getBytes());
         spbtn_dan_in_lubo.setChecked(false);
         spbtn_dan_in_diannao.setChecked(false);
         spbtn_dan_in_touping.setChecked(true);
@@ -293,7 +295,7 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_dan_in_zu_1)
     public void spbtn_dan_in_zu_1() {
-        HttpUtil.myPost("51");
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS51".getBytes());
         spbtn_dan_in_lubo.setChecked(false);
         spbtn_dan_in_diannao.setChecked(false);
         spbtn_dan_in_touping.setChecked(false);
@@ -309,7 +311,7 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_dan_in_zu_2)
     public void spbtn_dan_in_zu_2() {
-        HttpUtil.myPost("51");
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS51".getBytes());
         spbtn_dan_in_lubo.setChecked(false);
         spbtn_dan_in_diannao.setChecked(false);
         spbtn_dan_in_touping.setChecked(false);
@@ -324,7 +326,7 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_dan_in_zu_3)
     public void spbtn_dan_in_zu_3() {
-        HttpUtil.myPost("51");
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS51".getBytes());
         spbtn_dan_in_lubo.setChecked(false);
         spbtn_dan_in_diannao.setChecked(false);
         spbtn_dan_in_touping.setChecked(false);
@@ -340,7 +342,7 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_dan_in_zu_4)
     public void spbtn_dan_in_zu_4() {
-        HttpUtil.myPost("51");
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS51".getBytes());
         spbtn_dan_in_lubo.setChecked(false);
         spbtn_dan_in_diannao.setChecked(false);
         spbtn_dan_in_touping.setChecked(false);
@@ -356,7 +358,7 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_dan_in_zu_5)
     public void spbtn_dan_in_zu_5() {
-        HttpUtil.myPost("51");
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS51".getBytes());
         spbtn_dan_in_lubo.setChecked(false);
         spbtn_dan_in_diannao.setChecked(false);
         spbtn_dan_in_touping.setChecked(false);
@@ -372,7 +374,7 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_dan_in_zu_6)
     public void spbtn_dan_in_zu_6() {
-        HttpUtil.myPost("51");
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS51".getBytes());
         spbtn_dan_in_lubo.setChecked(false);
         spbtn_dan_in_diannao.setChecked(false);
         spbtn_dan_in_touping.setChecked(false);
@@ -534,23 +536,23 @@ public class JuzhenActivity extends Activity {
 
     private void sendDan(int i) {
         if (spbtn_dan_in_lubo.isChecked()) {
-            HttpUtil.myPost("VIDA8," + i);
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, ("VIDA8," + i).getBytes());
         } else if (spbtn_dan_in_diannao.isChecked()) {
-            HttpUtil.myPost("VIDA9," + i);
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, ("VIDA9," + i).getBytes());
         } else if (spbtn_dan_in_touping.isChecked()) {
-            HttpUtil.myPost("VIDA1," + i);
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, ("VIDA1," + i).getBytes());
         } else if (spbtn_dan_in_zu_1.isChecked()) {
-            HttpUtil.myPost("VIDA2," + i);
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, ("VIDA2," + i).getBytes());
         } else if (spbtn_dan_in_zu_2.isChecked()) {
-            HttpUtil.myPost("VIDA3," + i);
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, ("VIDA3," + i).getBytes());
         } else if (spbtn_dan_in_zu_3.isChecked()) {
-            HttpUtil.myPost("VIDA4," + i);
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, ("VIDA4," + i).getBytes());
         } else if (spbtn_dan_in_zu_4.isChecked()) {
-            HttpUtil.myPost("VIDA5," + i);
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, ("VIDA5," + i).getBytes());
         } else if (spbtn_dan_in_zu_5.isChecked()) {
-            HttpUtil.myPost("VIDA6," + i);
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, ("VIDA6," + i).getBytes());
         } else if (spbtn_dan_in_zu_6.isChecked()) {
-            HttpUtil.myPost("VIDA7," + i);
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, ("VIDA7," + i).getBytes());
         }
     }
 

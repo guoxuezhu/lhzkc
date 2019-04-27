@@ -5,8 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.CheckBox;
 
+import com.lh.lhzkc.MyApplication;
 import com.lh.lhzkc.R;
 import com.lh.lhzkc.utils.HttpUtil;
+import com.lh.lhzkc.utils.MqttManager;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -35,61 +37,61 @@ public class YinpinActivity extends Activity {
 
     @OnClick(R.id.zyl_jia)
     public void zyl_jia() {
-        HttpUtil.myPost("21");
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS21".getBytes());
     }
 
     @OnClick(R.id.zyl_jian)
     public void zyl_jian() {
-        HttpUtil.myPost("22");
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS22".getBytes());
     }
 
     @OnClick(R.id.zyl_jingyin)
     public void zyl_jingyin() {
         if (zyl_jingyin.isChecked()) {
-            HttpUtil.myPost("23");
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS23".getBytes());
         } else {
-            HttpUtil.myPost("24");
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS24".getBytes());
         }
     }
 
 
     @OnClick(R.id.yx_jia)
     public void yx_jia() {
-        HttpUtil.myPost("25");
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS25".getBytes());
     }
 
 
     @OnClick(R.id.yx_jian)
     public void yx_jian() {
-        HttpUtil.myPost("26");
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS26".getBytes());
     }
 
     @OnClick(R.id.yx_jingyin)
     public void yx_jingyin() {
         if (yx_jingyin.isChecked()) {
-            HttpUtil.myPost("27");
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS27".getBytes());
         } else {
-            HttpUtil.myPost("28");
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS28".getBytes());
         }
     }
 
     @OnClick(R.id.mkf_jia)
     public void mkf_jia() {
-        HttpUtil.myPost("29");
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS29".getBytes());
     }
 
 
     @OnClick(R.id.mkf_jian)
     public void mkf_jian() {
-        HttpUtil.myPost("30");
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS30".getBytes());
     }
 
     @OnClick(R.id.mkf_jingyin)
     public void mkf_jingyin() {
         if (mkf_jingyin.isChecked()) {
-            HttpUtil.myPost("31");
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS31".getBytes());
         } else {
-            HttpUtil.myPost("32");
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS32".getBytes());
         }
     }
 

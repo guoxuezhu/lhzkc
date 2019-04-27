@@ -19,19 +19,69 @@
 
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:text="中控位置:"
             android:textColor="@color/white" />
 
         <EditText
             android:id="@+id/zk_name"
-            android:layout_width="150dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dp_5"
             android:background="@drawable/et_bg_ip"
-            android:digits="0123456789."
             android:inputType="number"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="MQTT用户:"
+            android:textColor="@color/white" />
+
+        <EditText
+            android:id="@+id/zk_mqtt_user"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:background="@drawable/et_bg_ip"
+            android:text=""
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="MQTT密码:"
+            android:textColor="@color/white" />
+
+        <EditText
+            android:id="@+id/zk_mqtt_mima"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:background="@drawable/et_bg_ip"
+            android:text=""
             android:textColor="@color/white" />
 
     </LinearLayout>

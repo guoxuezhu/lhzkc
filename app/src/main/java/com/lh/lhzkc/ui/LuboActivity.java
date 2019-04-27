@@ -6,8 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 
+import com.lh.lhzkc.MyApplication;
 import com.lh.lhzkc.R;
 import com.lh.lhzkc.utils.HttpUtil;
+import com.lh.lhzkc.utils.MqttManager;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -32,25 +34,25 @@ public class LuboActivity extends Activity {
 
     @OnClick(R.id.luzhi)
     public void luzhi() {
-        HttpUtil.myPost("LUB1");
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "LUB1".getBytes());
     }
 
     @OnClick(R.id.zanting)
     public void zanting() {
-        HttpUtil.myPost("LUB2");
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "LUB2".getBytes());
     }
 
     @OnClick(R.id.tingzhi)
     public void tingzhi() {
-        HttpUtil.myPost("LUB3");
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "LUB3".getBytes());
     }
 
     @OnClick(R.id.zhibo)
     public void zhibo() {
         if (zhibo.isChecked()) {
-            HttpUtil.myPost("LUB4");
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "LUB4".getBytes());
         } else {
-            HttpUtil.myPost("LUB5");
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "LUB5".getBytes());
         }
     }
 

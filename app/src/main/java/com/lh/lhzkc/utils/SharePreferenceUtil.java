@@ -49,4 +49,24 @@ public class SharePreferenceUtil {
     public String getzkname() {
         return sp.getString("zkname", "");
     }
+
+
+
+    public void setMqttuser(String mqttuser) {
+        editor.putString("mqttuser", mqttuser);
+        editor.commit();
+    }
+    public String getMqttuser() {  // cmt7p9p/zk_user_1
+        return sp.getString("mqttuser", "cmt7p9p/zk_user_1");
+    }
+
+
+    public void setMqttMima(String mqttmima) {
+        editor.putString("mqttmima", mqttmima);
+        editor.commit();
+    }
+    public String getMqttMima() {  // vZakahehxugRHnZs
+        return sp.getString("mqttmima", "vZakahehxugRHnZs");
+    }
+
 }
