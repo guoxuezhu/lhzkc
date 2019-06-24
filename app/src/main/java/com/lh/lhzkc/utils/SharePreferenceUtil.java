@@ -56,8 +56,8 @@ public class SharePreferenceUtil {
         editor.putString("mqttuser", mqttuser);
         editor.commit();
     }
-    public String getMqttuser() {  // cmt7p9p/zk_user_1
-        return sp.getString("mqttuser", "cmt7p9p/zk_user_1");
+    public String getMqttuser() {
+        return sp.getString("mqttuser", "uc5xuva/admin");
     }
 
 
@@ -66,7 +66,7 @@ public class SharePreferenceUtil {
         editor.commit();
     }
     public String getMqttMima() {  // vZakahehxugRHnZs
-        return sp.getString("mqttmima", "vZakahehxugRHnZs");
+        return sp.getString("mqttmima", "aYBMf7Ci9eCKkx57");
     }
 
 }

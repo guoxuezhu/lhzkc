@@ -29,9 +29,9 @@ public class MainActivity extends Activity {
     @BindView(R.id.zk_mqtt_mima)
     EditText zk_mqtt_mima;
 
-    private String URL = "wss://cmt7p9p.mqtt.iot.gz.baidubce.com:8884/mqtt";
+    private String URL = "wss://uc5xuva.mqtt.iot.gz.baidubce.com:8884/mqtt";
 
-    private String TOPIC = "mytopic/DeviceId-numer";
+    private String TOPIC = "lhzktopic/device";
     private ProgressDialog progressDialog;
 
     Handler handler = new Handler() {
