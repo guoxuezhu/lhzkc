@@ -105,7 +105,7 @@ public class ShebeiActivity extends Activity {
 
     @OnClick(R.id.btn_qianmen_open)
     public void btn_qianmen_open() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS46".getBytes());
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MJD46".getBytes());
     }
 
     @OnClick(R.id.btn_houmen_open)
