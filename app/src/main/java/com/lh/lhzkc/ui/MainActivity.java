@@ -45,7 +45,7 @@ public class MainActivity extends Activity {
                         progressDialog = null;
                     }
                     Toast.makeText(MainActivity.this, "连接成功", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(MainActivity.this, HomeActivity.class));
+                    startActivity(new Intent(MainActivity.this, ShebeiActivity.class));
                     finish();
                     break;
                 case 2:
