@@ -27,6 +27,16 @@ public class ShebeiActivity extends Activity {
         ButterKnife.bind(this);
     }
 
+    @OnClick(R.id.btnshangke)
+    public void btnshangke() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS1".getBytes());
+    }
+
+    @OnClick(R.id.btnxiake)
+    public void btnxiake() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS2".getBytes());
+    }
+
     @OnClick(R.id.rbtn_tyj_open)
     public void rbtn_tyj_open() {
         MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS9".getBytes());
