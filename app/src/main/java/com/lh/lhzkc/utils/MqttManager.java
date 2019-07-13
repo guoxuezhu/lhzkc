@@ -104,6 +104,7 @@ public class MqttManager {
                 ELog.i("=doConnect=====" + "Connected to " + client.getServerURI() + " with client ID " + client.getClientId());
                 flag = true;
             } catch (Exception e) {
+                ELog.i("=doConnect===Exception==");
             }
         }
         return flag;

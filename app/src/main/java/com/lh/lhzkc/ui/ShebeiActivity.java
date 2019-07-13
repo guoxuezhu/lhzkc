@@ -2,6 +2,7 @@ package com.lh.lhzkc.ui;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Process;
 import android.widget.CheckBox;
 
 import com.lh.lhzkc.MyApplication;
@@ -110,6 +111,7 @@ public class ShebeiActivity extends Activity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        Process.killProcess(Process.myPid());//杀死进程，防止dialog.show()出现错误
         try {
             MqttManager.getInstance().disConnect();
         } catch (MqttException e) {
