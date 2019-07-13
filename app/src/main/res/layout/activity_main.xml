@@ -21,7 +21,7 @@
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:text="中控位置:"
+            android:text="中控名称:"
             android:textColor="@color/white"
             android:textSize="@dimen/text_size_20" />
 
@@ -30,61 +30,7 @@
             android:layout_width="200dp"
             android:layout_height="35dp"
             android:background="@drawable/et_bg_ip"
-            android:inputType="number"
             android:paddingLeft="@dimen/dp_5"
-            android:textColor="@color/white" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_10"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="MQTT用户:"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_size_20" />
-
-        <EditText
-            android:id="@+id/zk_mqtt_user"
-            android:layout_width="200dp"
-            android:layout_height="35dp"
-            android:background="@drawable/et_bg_ip"
-            android:paddingLeft="@dimen/dp_5"
-            android:text=""
-            android:textColor="@color/white" />
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_10"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="MQTT密码:"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_size_20" />
-
-        <EditText
-            android:id="@+id/zk_mqtt_mima"
-            android:layout_width="200dp"
-            android:layout_height="35dp"
-            android:background="@drawable/et_bg_ip"
-            android:paddingLeft="@dimen/dp_5"
-            android:text=""
             android:textColor="@color/white" />
 
     </LinearLayout>

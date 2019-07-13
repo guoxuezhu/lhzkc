@@ -24,10 +24,6 @@ public class MainActivity extends Activity {
 
     @BindView(R.id.zk_name)
     EditText zk_name;
-    @BindView(R.id.zk_mqtt_user)
-    EditText zk_mqtt_user;
-    @BindView(R.id.zk_mqtt_mima)
-    EditText zk_mqtt_mima;
 
     private String URL = "wss://uc5xuva.mqtt.iot.gz.baidubce.com:8884/mqtt";
 
@@ -71,8 +67,6 @@ public class MainActivity extends Activity {
 
 
         zk_name.setText("");
-        zk_mqtt_user.setText(MyApplication.prefs.getMqttuser());
-        zk_mqtt_mima.setText(MyApplication.prefs.getMqttMima());
 
 
     }
@@ -86,19 +80,10 @@ public class MainActivity extends Activity {
     @OnClick(R.id.btn_connect)
     public void btn_connect() {
         if (zk_name.getText().toString().trim().length() == 0) {
-            Toast.makeText(this, "请输入中控位置", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "请输入中控名称", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        if (zk_mqtt_user.getText().toString().trim().length() == 0) {
-            Toast.makeText(this, "请输入MQTT用户", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        if (zk_mqtt_mima.getText().toString().trim().length() == 0) {
-            Toast.makeText(this, "请输入MQTT密码", Toast.LENGTH_SHORT).show();
-            return;
-        }
         if (progressDialog == null) {
             progressDialog = new ProgressDialog(this);
         }
@@ -111,13 +96,10 @@ public class MainActivity extends Activity {
             public void run() {
                 super.run();
 
-                MyApplication.prefs.setMqttuser(zk_mqtt_user.getText().toString().trim());
-                MyApplication.prefs.setMqttMima(zk_mqtt_mima.getText().toString().trim());
                 MyApplication.prefs.setzkname(TOPIC + zk_name.getText().toString().trim());
 
-
-                boolean subscriber = MqttManager.getInstance().creatConnect(URL, MyApplication.prefs.getMqttuser(),
-                        MyApplication.prefs.getMqttMima(), MyApplication.prefs.getUdid());
+                boolean subscriber = MqttManager.getInstance().creatConnect(URL, "uc5xuva/admin",
+                        "aYBMf7Ci9eCKkx57", MyApplication.prefs.getUdid());
 
                 ELog.d("========111==========" + subscriber);
                 if (subscriber) {
@@ -133,5 +115,15 @@ public class MainActivity extends Activity {
 
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        handler = null;
+    }
 }
