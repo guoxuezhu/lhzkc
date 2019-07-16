@@ -11,6 +11,8 @@ import com.lh.lhzkc.utils.MqttManager;
 
 import org.eclipse.paho.client.mqttv3.MqttException;
 
+import android.os.Process;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -88,6 +90,7 @@ public class HomeActivity extends Activity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        Process.killProcess(Process.myPid());
         try {
             MqttManager.getInstance().disConnect();
         } catch (MqttException e) {
