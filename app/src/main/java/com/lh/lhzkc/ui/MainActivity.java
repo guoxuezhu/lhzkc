@@ -80,7 +80,7 @@ public class MainActivity extends Activity {
     @OnClick(R.id.btn_connect)
     public void btn_connect() {
         if (zk_name.getText().toString().trim().length() == 0) {
-            Toast.makeText(this, "请输入中控名称", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "请输入设备名称", Toast.LENGTH_SHORT).show();
             return;
         }
 

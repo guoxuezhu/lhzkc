@@ -38,7 +38,7 @@ android {
 
     android.applicationVariants.all { variant ->
         variant.outputs.all {
-            outputFileName = "中控操作-${variant.name}-${variant.versionName}.apk"
+            outputFileName = "设备操作-${variant.name}-${variant.versionName}.apk"
         }
     }
 
