@@ -27,15 +27,6 @@ import okhttp3.Response;
 public class HuanjingActivity extends Activity {
 
 
-    @BindView(R.id.tv_wsd_wd)
-    TextView tv_wsd_wd;
-    @BindView(R.id.tv_wsd_sd)
-    TextView tv_wsd_sd;
-    @BindView(R.id.tv_wsd_pm)
-    TextView tv_wsd_pm;
-
-    @BindView(R.id.huanjng_btn_kaiguan)
-    CheckBox huanjng_btn_kaiguan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,87 +35,56 @@ public class HuanjingActivity extends Activity {
 
         ButterKnife.bind(this);
 
-        InitView();
-
-    }
-
-    private void InitView() {
-
-        OkHttpClient okHttpClient = new OkHttpClient();
-        FormBody body = new FormBody.Builder()
-                .add("zkbtn", "wsd")
-                .build();
-
-        Request request = new Request.Builder()
-                .url("http://192.168.1.5:8099")
-                .post(body)
-                .build();
-        //3.创建一个call对象,参数就是Request请求对象
-        Call call = okHttpClient.newCall(request);
-
-        call.enqueue(new Callback() {
-            @Override
-            public void onFailure(Call call, IOException e) {
-                ELog.e("======wsd====onFailure=======" + e.toString());
-                tv_wsd_wd.setText("0");
-                tv_wsd_sd.setText("0");
-                tv_wsd_pm.setText("0");
-            }
-
-            @Override
-            public void onResponse(Call call, Response response) throws IOException {
-                String msg = response.body().string();
-                ELog.e("=======wsd===ok=======" + msg);
-                String[] msglist = msg.split(";");
-                tv_wsd_wd.setText(msglist[1]);
-                tv_wsd_sd.setText(msglist[2]);
-                tv_wsd_pm.setText("0");
-
-
-            }
-        });
-
     }
 
 
-    @OnClick(R.id.huanjng_btn_kaiguan)
-    public void huanjng_btn_kaiguan() {
-        if (huanjng_btn_kaiguan.isChecked()) {
-            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS39".getBytes());
-        } else {
-            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS48".getBytes());
-        }
+    @OnClick(R.id.btn_dg_allopen)
+    public void btn_dg_allopen() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "HBWHMBS13".getBytes());
     }
 
 
-    @OnClick(R.id.huanjng_btn_moshi)
-    public void huanjng_btn_moshi() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS40".getBytes());
+    @OnClick(R.id.btn_dg_allclosed)
+    public void btn_dg_allclosed() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "HBWHMBS14".getBytes());
     }
 
 
-    @OnClick(R.id.huanjng_btn_fengsu)
-    public void huanjng_btn_fengsu() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS41".getBytes());
+    @OnClick(R.id.rbtn_dg_open_1)
+    public void rbtn_dg_open_1() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "HBWHMBS15".getBytes());
     }
 
 
-    @OnClick(R.id.huanjng_btn_wd_jia)
-    public void huanjng_btn_wd_jia() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS43".getBytes());
+    @OnClick(R.id.rbtn_dg_close_1)
+    public void rbtn_dg_close_1() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "HBWHMBS16".getBytes());
     }
 
 
-    @OnClick(R.id.huanjng_btn_wd_jian)
-    public void huanjng_btn_wd_jian() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS44".getBytes());
+    @OnClick(R.id.rbtn_dg_open_2)
+    public void rbtn_dg_open_2() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "HBWHMBS17".getBytes());
     }
 
 
-    @OnClick(R.id.huanjng_btn_fengxiang)
-    public void huanjng_btn_fengxiang() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS42".getBytes());
+    @OnClick(R.id.rbtn_dg_close_2)
+    public void rbtn_dg_close_2() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "HBWHMBS18".getBytes());
     }
+
+
+    @OnClick(R.id.rbtn_dg_open_3)
+    public void rbtn_dg_open_3() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "HBWHMBS19".getBytes());
+    }
+
+
+    @OnClick(R.id.rbtn_dg_close_3)
+    public void rbtn_dg_close_3() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "HBWHMBS20".getBytes());
+    }
+
 
     @Override
     public void onBackPressed() {

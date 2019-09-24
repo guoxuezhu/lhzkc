@@ -4,55 +4,160 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/splash_bg"
+    android:background="@mipmap/main_bg"
     android:gravity="center"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     tools:context=".ui.DianyuanActivity">
 
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
-
-        <ImageButton
-            android:id="@+id/dy_all_open"
-            android:layout_width="@dimen/btn_bg_1"
-            android:layout_height="@dimen/btn_bg_1"
-            android:background="@drawable/btn_status_1"
-            android:scaleType="fitCenter"
-            android:src="@drawable/imgbtn_qk" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="全开"
-            android:textColor="@color/white" />
-    </LinearLayout>
+    <Button
+        android:id="@+id/btn_door_open"
+        android:layout_width="@dimen/shebei_btn_width"
+        android:layout_height="@dimen/shebei_btn_height"
+        android:background="@drawable/btn_status_2"
+        android:text="开门"
+        android:textColor="@color/black" />
 
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dp_50"
-        android:gravity="center_horizontal"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@drawable/layout_bg_1"
+        android:gravity="center"
         android:orientation="vertical">
 
-        <ImageButton
-            android:id="@+id/dy_all_close"
-            android:layout_width="@dimen/btn_bg_1"
-            android:layout_height="@dimen/btn_bg_1"
-            android:background="@drawable/btn_status_1"
-            android:scaleType="fitCenter"
-            android:src="@drawable/imgbtn_qg" />
-
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="全关"
-            android:textColor="@color/white" />
+            android:layout_marginTop="@dimen/dp_20"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btn_tyj_open"
+                android:layout_width="@dimen/shebei_btn_width"
+                android:layout_height="@dimen/shebei_btn_height"
+                android:background="@drawable/btn_status_2"
+                android:text="投影机开"
+                android:textColor="@color/black" />
+
+
+            <Button
+                android:id="@+id/btn_tyj_closed"
+                android:layout_width="@dimen/shebei_btn_width"
+                android:layout_height="@dimen/shebei_btn_height"
+                android:layout_marginLeft="@dimen/dp_50"
+                android:background="@drawable/btn_status_2"
+                android:text="投影机关"
+                android:textColor="@color/black" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btn_mb_sheng"
+                android:layout_width="@dimen/shebei_btn_width"
+                android:layout_height="@dimen/shebei_btn_height"
+                android:background="@drawable/btn_status_2"
+                android:text="幕布升"
+                android:textColor="@color/black" />
+
+
+            <Button
+                android:id="@+id/btn_mb_jiang"
+                android:layout_width="@dimen/shebei_btn_width"
+                android:layout_height="@dimen/shebei_btn_height"
+                android:layout_marginLeft="@dimen/dp_50"
+                android:background="@drawable/btn_status_2"
+                android:text="幕布降"
+                android:textColor="@color/black" />
+
+
+        </LinearLayout>
+
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@drawable/layout_bg_1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btn_kt_open"
+                android:layout_width="@dimen/shebei_btn_width"
+                android:layout_height="@dimen/shebei_btn_height"
+                android:background="@drawable/btn_status_2"
+                android:text="空调-开"
+                android:textColor="@color/black" />
+
+
+            <Button
+                android:id="@+id/btn_kt_closed"
+                android:layout_width="@dimen/shebei_btn_width"
+                android:layout_height="@dimen/shebei_btn_height"
+                android:layout_marginLeft="@dimen/dp_40"
+                android:background="@drawable/btn_status_2"
+                android:text="空调-关"
+                android:textColor="@color/black" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btn_kt_zidong"
+                android:layout_width="@dimen/shebei_btn_width"
+                android:layout_height="@dimen/shebei_btn_height"
+                android:background="@drawable/btn_status_2"
+                android:text="空调-自动"
+                android:textColor="@color/black" />
+
+
+            <Button
+                android:id="@+id/btn_kt_zhileng"
+                android:layout_width="@dimen/shebei_btn_width"
+                android:layout_height="@dimen/shebei_btn_height"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:background="@drawable/btn_status_2"
+                android:text="空调-制冷"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btn_kt_zhire"
+                android:layout_width="@dimen/shebei_btn_width"
+                android:layout_height="@dimen/shebei_btn_height"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:background="@drawable/btn_status_2"
+                android:text="空调-制热"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>

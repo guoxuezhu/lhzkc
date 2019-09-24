@@ -40,154 +40,63 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_margin="@dimen/dp_10"
+        android:layout_height="220dp"
+        android:layout_margin="@dimen/dp_30"
         android:background="@drawable/layout_bg_1"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="vertical">
+
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
 
             <Button
-                android:id="@+id/rbtn_tyj_open"
+                android:id="@+id/btn_chaunglian"
                 android:layout_width="@dimen/shebei_btn_width"
                 android:layout_height="@dimen/shebei_btn_height"
                 android:background="@drawable/btn_status_2"
-                android:text="投影开"
+                android:text="窗帘"
                 android:textColor="@color/black" />
 
-
             <Button
-                android:id="@+id/rbtn_tyj_close"
+                android:id="@+id/btn_dengguang"
                 android:layout_width="@dimen/shebei_btn_width"
                 android:layout_height="@dimen/shebei_btn_height"
-                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginLeft="@dimen/dp_20"
                 android:background="@drawable/btn_status_2"
-                android:text="投影关"
-                android:textColor="@color/black" />
-
-
-            <Button
-                android:id="@+id/rbtn_tyj_bu_open"
-                android:layout_width="@dimen/shebei_btn_width"
-                android:layout_height="@dimen/shebei_btn_height"
-                android:layout_marginTop="@dimen/dp_20"
-                android:background="@drawable/btn_status_2"
-                android:text="幕布升"
-                android:textColor="@color/black" />
-
-
-            <Button
-                android:id="@+id/rbtn_tyj_bu_close"
-                android:layout_width="@dimen/shebei_btn_width"
-                android:layout_height="@dimen/shebei_btn_height"
-                android:layout_marginTop="@dimen/dp_20"
-                android:background="@drawable/btn_status_2"
-                android:text="幕布降"
-                android:textColor="@color/black" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_20"
-            android:orientation="vertical">
-
-
-            <Button
-                android:id="@+id/rbtn_cl_1_open"
-                android:layout_width="@dimen/shebei_btn_width"
-                android:layout_height="@dimen/shebei_btn_height"
-                android:background="@drawable/btn_status_2"
-                android:text="窗帘开"
-                android:textColor="@color/black" />
-
-
-            <Button
-                android:id="@+id/rbtn_cl_1_close"
-                android:layout_width="@dimen/shebei_btn_width"
-                android:layout_height="@dimen/shebei_btn_height"
-                android:layout_marginTop="@dimen/dp_20"
-                android:background="@drawable/btn_status_2"
-                android:text="窗帘关"
-                android:textColor="@color/black" />
-
-
-            <Button
-                android:id="@+id/rbtn_dg_1_open"
-                android:layout_width="@dimen/shebei_btn_width"
-                android:layout_height="@dimen/shebei_btn_height"
-                android:layout_marginTop="@dimen/dp_20"
-                android:background="@drawable/btn_status_2"
-                android:text="灯光开"
-                android:textColor="@color/black" />
-
-
-            <Button
-                android:id="@+id/rbtn_dg_1_close"
-                android:layout_width="@dimen/shebei_btn_width"
-                android:layout_height="@dimen/shebei_btn_height"
-                android:layout_marginTop="@dimen/dp_20"
-                android:background="@drawable/btn_status_2"
-                android:text="灯光关"
+                android:text="灯光"
                 android:textColor="@color/black" />
 
 
         </LinearLayout>
 
-
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_20"
-            android:orientation="vertical">
-
-
-            <CheckBox
-                android:id="@+id/btnkt_kg"
-                android:layout_width="@dimen/shebei_btn_width"
-                android:layout_height="@dimen/shebei_btn_height"
-                android:background="@drawable/checked_status_1"
-                android:button="@null"
-                android:gravity="center"
-                android:text="空调开/关"
-                android:textColor="@color/black" />
-
-            <Button
-                android:id="@+id/btnkt_wdadd"
-                android:layout_width="@dimen/shebei_btn_width"
-                android:layout_height="@dimen/shebei_btn_height"
-                android:layout_marginTop="@dimen/dp_20"
-                android:background="@drawable/btn_status_2"
-                android:text="温度＋"
-                android:textColor="@color/black" />
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_height="wrap_content">
 
 
             <Button
-                android:id="@+id/btnkt_wdsub"
+                android:id="@+id/btn_xinfeng"
                 android:layout_width="@dimen/shebei_btn_width"
                 android:layout_height="@dimen/shebei_btn_height"
-                android:layout_marginTop="@dimen/dp_20"
                 android:background="@drawable/btn_status_2"
-                android:text="温度－"
+                android:text="新风"
                 android:textColor="@color/black" />
-
 
             <Button
-                android:id="@+id/btn_qianmen_open"
+                android:id="@+id/btn_qita"
                 android:layout_width="@dimen/shebei_btn_width"
                 android:layout_height="@dimen/shebei_btn_height"
-                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginLeft="@dimen/dp_20"
                 android:background="@drawable/btn_status_2"
-                android:text="开门"
+                android:text="其它"
                 android:textColor="@color/black" />
+
 
         </LinearLayout>
-
 
     </LinearLayout>
 

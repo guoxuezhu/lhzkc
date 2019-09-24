@@ -4,118 +4,263 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/splash_bg"
+    android:background="@mipmap/main_bg"
     android:gravity="center"
     android:orientation="vertical"
-    android:paddingTop="70dp"
     tools:context=".ui.ChangjingActivity">
 
-
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
         android:orientation="horizontal">
 
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/btn_shangke"
-                android:layout_width="@dimen/btn_bg_1"
-                android:layout_height="@dimen/btn_bg_1"
-                android:background="@drawable/btn_status_1"
-                android:scaleType="fitCenter"
-                android:src="@drawable/imgbtn_sk" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="上课"
-                android:textColor="@color/white" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_50"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
+        <Button
+            android:id="@+id/btn_cl_allopen"
+            android:layout_width="@dimen/shebei_btn_width"
+            android:layout_height="@dimen/shebei_btn_height"
+            android:background="@drawable/btn_status_2"
+            android:text="窗帘全开"
+            android:textColor="@color/black" />
 
 
-            <ImageButton
-                android:id="@+id/btn_xiake"
-                android:layout_width="@dimen/btn_bg_1"
-                android:layout_height="@dimen/btn_bg_1"
-                android:background="@drawable/btn_status_1"
-                android:scaleType="fitCenter"
-                android:src="@drawable/imgbtn_xk" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="下课"
-                android:textColor="@color/white" />
-        </LinearLayout>
+        <Button
+            android:id="@+id/btn_cl_allclosed"
+            android:layout_width="@dimen/shebei_btn_width"
+            android:layout_height="@dimen/shebei_btn_height"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:background="@drawable/btn_status_2"
+            android:text="窗帘全关"
+            android:textColor="@color/black" />
 
 
     </LinearLayout>
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@drawable/layout_bg_1"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
 
-        <LinearLayout
+        <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
+            android:layout_marginTop="@dimen/dp_20"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-            <ImageButton
-                android:id="@+id/btn_zixi"
-                android:layout_width="@dimen/btn_bg_1"
-                android:layout_height="@dimen/btn_bg_1"
-                android:background="@drawable/btn_status_1"
-                android:scaleType="fitCenter"
-                android:src="@drawable/imgbtn_zx" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="自习"
-                android:textColor="@color/white" />
-        </LinearLayout>
+            <RadioButton
+                android:id="@+id/rbtn_cl_open_1"
+                android:layout_width="@dimen/shebei_btn_width"
+                android:layout_height="@dimen/shebei_btn_height"
+                android:background="@drawable/checked_status_1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="窗帘1开"
+                android:textColor="@color/black" />
 
-        <LinearLayout
+            <RadioButton
+                android:id="@+id/rbtn_cl_stop_1"
+                android:layout_width="@dimen/shebei_btn_width"
+                android:layout_height="@dimen/shebei_btn_height"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@drawable/checked_status_1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="窗帘1停"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/rbtn_cl_close_1"
+                android:layout_width="@dimen/shebei_btn_width"
+                android:layout_height="@dimen/shebei_btn_height"
+                android:background="@drawable/checked_status_1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="窗帘1关"
+                android:textColor="@color/black" />
+
+
+        </RadioGroup>
+
+        <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_50"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-            <ImageButton
-                android:id="@+id/btn_xiuxi"
-                android:layout_width="@dimen/btn_bg_1"
-                android:layout_height="@dimen/btn_bg_1"
-                android:background="@drawable/btn_status_1"
-                android:scaleType="fitCenter"
-                android:src="@drawable/imgbtn_xx" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="休息"
-                android:textColor="@color/white" />
-        </LinearLayout>
+            <RadioButton
+                android:id="@+id/rbtn_cl_open_2"
+                android:layout_width="@dimen/shebei_btn_width"
+                android:layout_height="@dimen/shebei_btn_height"
+                android:background="@drawable/checked_status_1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="窗帘2开"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/rbtn_cl_stop_2"
+                android:layout_width="@dimen/shebei_btn_width"
+                android:layout_height="@dimen/shebei_btn_height"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@drawable/checked_status_1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="窗帘2停"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/rbtn_cl_close_2"
+                android:layout_width="@dimen/shebei_btn_width"
+                android:layout_height="@dimen/shebei_btn_height"
+                android:background="@drawable/checked_status_1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="窗帘2关"
+                android:textColor="@color/black" />
+
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <RadioButton
+                android:id="@+id/rbtn_cl_open_3"
+                android:layout_width="@dimen/shebei_btn_width"
+                android:layout_height="@dimen/shebei_btn_height"
+                android:background="@drawable/checked_status_1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="窗帘3开"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/rbtn_cl_stop_3"
+                android:layout_width="@dimen/shebei_btn_width"
+                android:layout_height="@dimen/shebei_btn_height"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@drawable/checked_status_1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="窗帘3停"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/rbtn_cl_close_3"
+                android:layout_width="@dimen/shebei_btn_width"
+                android:layout_height="@dimen/shebei_btn_height"
+                android:background="@drawable/checked_status_1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="窗帘3关"
+                android:textColor="@color/black" />
+
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <RadioButton
+                android:id="@+id/rbtn_cl_open_4"
+                android:layout_width="@dimen/shebei_btn_width"
+                android:layout_height="@dimen/shebei_btn_height"
+                android:background="@drawable/checked_status_1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="窗帘4开"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/rbtn_cl_stop_4"
+                android:layout_width="@dimen/shebei_btn_width"
+                android:layout_height="@dimen/shebei_btn_height"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@drawable/checked_status_1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="窗帘4停"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/rbtn_cl_close_4"
+                android:layout_width="@dimen/shebei_btn_width"
+                android:layout_height="@dimen/shebei_btn_height"
+                android:background="@drawable/checked_status_1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="窗帘4关"
+                android:textColor="@color/black" />
+
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <RadioButton
+                android:id="@+id/rbtn_cl_open_5"
+                android:layout_width="@dimen/shebei_btn_width"
+                android:layout_height="@dimen/shebei_btn_height"
+                android:background="@drawable/checked_status_1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="窗帘5开"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/rbtn_cl_stop_5"
+                android:layout_width="@dimen/shebei_btn_width"
+                android:layout_height="@dimen/shebei_btn_height"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@drawable/checked_status_1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="窗帘5停"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/rbtn_cl_close_5"
+                android:layout_width="@dimen/shebei_btn_width"
+                android:layout_height="@dimen/shebei_btn_height"
+                android:background="@drawable/checked_status_1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="窗帘5关"
+                android:textColor="@color/black" />
+
+
+        </RadioGroup>
 
 
     </LinearLayout>

@@ -23,15 +23,58 @@ public class DianyuanActivity extends Activity {
     }
 
 
-    @OnClick(R.id.dy_all_open)
-    public void dy_all_open() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS37".getBytes());
+    @OnClick(R.id.btn_door_open)
+    public void btn_door_open() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "HBWHMJD46".getBytes());
     }
 
-    @OnClick(R.id.dy_all_close)
-    public void dy_all_close() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS38".getBytes());
+    @OnClick(R.id.btn_tyj_open)
+    public void btn_tyj_open() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "HBWHMBS9".getBytes());
     }
+
+    @OnClick(R.id.btn_tyj_closed)
+    public void btn_tyj_closed() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "HBWHMBS10".getBytes());
+    }
+
+    @OnClick(R.id.btn_mb_sheng)
+    public void btn_mb_sheng() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "HBWHMBS11".getBytes());
+    }
+
+    @OnClick(R.id.btn_mb_jiang)
+    public void btn_mb_jiang() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "HBWHMBS12".getBytes());
+    }
+
+    @OnClick(R.id.btn_kt_open)
+    public void btn_kt_open() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "HBWHMBS39".getBytes());
+    }
+
+    @OnClick(R.id.btn_kt_closed)
+    public void btn_kt_closed() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "HBWHMBS40".getBytes());
+    }
+
+    @OnClick(R.id.btn_kt_zidong)
+    public void btn_kt_zidong() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "HBWHMBS41".getBytes());
+    }
+
+    @OnClick(R.id.btn_kt_zhileng)
+    public void btn_kt_zhileng() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "HBWHMBS42".getBytes());
+    }
+
+    @OnClick(R.id.btn_kt_zhire)
+    public void btn_kt_zhire() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "HBWHMBS43".getBytes());
+    }
+
+
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();

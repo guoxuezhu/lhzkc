@@ -4,100 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/splash_bg"
-    android:gravity="center_horizontal"
+    android:background="@mipmap/main_bg"
+    android:gravity="center"
     android:orientation="vertical"
-    android:paddingLeft="10dp"
-    android:paddingTop="200dp"
-    android:paddingRight="10dp"
     tools:context=".ui.HuanjingActivity">
 
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/layout_bg_1"
-        android:gravity="center_horizontal"
-        android:orientation="vertical"
-        android:padding="@dimen/dp_10">
+        android:orientation="horizontal">
 
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_dg_allopen"
+            android:layout_width="@dimen/shebei_btn_width"
+            android:layout_height="@dimen/shebei_btn_height"
+            android:background="@drawable/btn_status_2"
+            android:text="灯光全开"
+            android:textColor="@color/black" />
 
 
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:text="温度"
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_size_14" />
-
-
-            <TextView
-                android:id="@+id/tv_wsd_wd"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/et_bg_ip"
-                android:paddingLeft="@dimen/dp_5"
-                android:textColor="@color/white" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_10"
-            android:orientation="horizontal">
-
-
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:text="湿度"
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_size_14" />
-
-
-            <TextView
-                android:id="@+id/tv_wsd_sd"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/et_bg_ip"
-                android:paddingLeft="@dimen/dp_5"
-                android:textColor="@color/white" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_10"
-            android:orientation="horizontal">
-
-
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:text="PM2.5"
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_size_14" />
-
-
-            <TextView
-                android:id="@+id/tv_wsd_pm"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/et_bg_ip"
-                android:paddingLeft="@dimen/dp_5"
-                android:textColor="@color/white" />
-
-
-        </LinearLayout>
+        <Button
+            android:id="@+id/btn_dg_allclosed"
+            android:layout_width="@dimen/shebei_btn_width"
+            android:layout_height="@dimen/shebei_btn_height"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:background="@drawable/btn_status_2"
+            android:text="灯光全关"
+            android:textColor="@color/black" />
 
 
     </LinearLayout>
@@ -106,159 +41,114 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_10"
+        android:layout_margin="@dimen/dp_20"
         android:background="@drawable/layout_bg_1"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal"
-        android:padding="@dimen/dp_10">
+        android:gravity="center"
+        android:orientation="vertical">
 
 
-        <LinearLayout
+        <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
+            android:layout_marginTop="@dimen/dp_20"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-            <CheckBox
-                android:id="@+id/huanjng_btn_kaiguan"
-                android:layout_width="@dimen/btn_bg_2"
-                android:layout_height="@dimen/btn_bg_2"
+
+            <RadioButton
+                android:id="@+id/rbtn_dg_open_1"
+                android:layout_width="@dimen/shebei_btn_width"
+                android:layout_height="@dimen/shebei_btn_height"
+                android:background="@drawable/checked_status_1"
                 android:button="@null"
-                android:drawableLeft="@drawable/imgbtn_kt_kg"
-                android:drawableStart="@drawable/imgbtn_kt_kg"
-                android:padding="10dp"
-                android:background="@drawable/checked_status_2"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="空调开/关"
-                android:textColor="@color/white" />
-        </LinearLayout>
+                android:gravity="center"
+                android:text="灯光1开"
+                android:textColor="@color/black" />
 
 
-        <LinearLayout
+            <RadioButton
+                android:id="@+id/rbtn_dg_close_1"
+                android:layout_width="@dimen/shebei_btn_width"
+                android:layout_height="@dimen/shebei_btn_height"
+                android:layout_marginLeft="@dimen/dp_50"
+                android:background="@drawable/checked_status_1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="灯光1关"
+                android:textColor="@color/black" />
+
+
+        </RadioGroup>
+
+        <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_10"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
+            android:layout_marginTop="@dimen/dp_20"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-            <ImageButton
-                android:id="@+id/huanjng_btn_fengsu"
-                android:layout_width="@dimen/btn_bg_2"
-                android:layout_height="@dimen/btn_bg_2"
-                android:background="@drawable/btn_status_1"
-                android:scaleType="fitCenter"
-                android:src="@drawable/imgbtn_kt_fs" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="风速"
-                android:textColor="@color/white" />
-        </LinearLayout>
+            <RadioButton
+                android:id="@+id/rbtn_dg_open_2"
+                android:layout_width="@dimen/shebei_btn_width"
+                android:layout_height="@dimen/shebei_btn_height"
+                android:background="@drawable/checked_status_1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="灯光2开"
+                android:textColor="@color/black" />
 
-        <LinearLayout
+
+            <RadioButton
+                android:id="@+id/rbtn_dg_close_2"
+                android:layout_width="@dimen/shebei_btn_width"
+                android:layout_height="@dimen/shebei_btn_height"
+                android:layout_marginLeft="@dimen/dp_50"
+                android:background="@drawable/checked_status_1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="灯光2关"
+                android:textColor="@color/black" />
+
+
+        </RadioGroup>
+
+        <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_10"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/huanjng_btn_fengxiang"
-                android:layout_width="@dimen/btn_bg_2"
-                android:layout_height="@dimen/btn_bg_2"
-                android:background="@drawable/btn_status_1"
-                android:scaleType="fitCenter"
-                android:src="@drawable/imgbtn_kt_fx" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="风向"
-                android:textColor="@color/white" />
-        </LinearLayout>
-
-    </LinearLayout>
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:gravity="center"
+            android:orientation="horizontal">
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_10"
-        android:background="@drawable/layout_bg_1"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal"
-        android:padding="@dimen/dp_10">
+            <RadioButton
+                android:id="@+id/rbtn_dg_open_3"
+                android:layout_width="@dimen/shebei_btn_width"
+                android:layout_height="@dimen/shebei_btn_height"
+                android:background="@drawable/checked_status_1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="灯光3开"
+                android:textColor="@color/black" />
 
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/huanjng_btn_moshi"
-                android:layout_width="@dimen/btn_bg_2"
-                android:layout_height="@dimen/btn_bg_2"
-                android:background="@drawable/btn_status_1"
-                android:scaleType="fitCenter"
-                android:src="@drawable/imgbtn_kt_ms" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="模式"
-                android:textColor="@color/white" />
-        </LinearLayout>
+            <RadioButton
+                android:id="@+id/rbtn_dg_close_3"
+                android:layout_width="@dimen/shebei_btn_width"
+                android:layout_height="@dimen/shebei_btn_height"
+                android:layout_marginLeft="@dimen/dp_50"
+                android:background="@drawable/checked_status_1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="灯光3关"
+                android:textColor="@color/black" />
 
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_10"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
+        </RadioGroup>
 
-            <ImageButton
-                android:id="@+id/huanjng_btn_wd_jia"
-                android:layout_width="@dimen/btn_bg_2"
-                android:layout_height="@dimen/btn_bg_2"
-                android:background="@drawable/btn_status_1"
-                android:scaleType="fitCenter"
-                android:src="@drawable/imgbtn_kt_wd_jia" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="温度＋"
-                android:textColor="@color/white" />
-        </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_10"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/huanjng_btn_wd_jian"
-                android:layout_width="@dimen/btn_bg_2"
-                android:layout_height="@dimen/btn_bg_2"
-                android:background="@drawable/btn_status_1"
-                android:scaleType="fitCenter"
-                android:src="@drawable/imgbtn_kt_wd_jian" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="温度－"
-                android:textColor="@color/white" />
-        </LinearLayout>
 
     </LinearLayout>
 

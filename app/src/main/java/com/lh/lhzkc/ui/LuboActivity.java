@@ -17,9 +17,6 @@ import butterknife.OnClick;
 
 public class LuboActivity extends Activity {
 
-    @BindView(R.id.zhibo)
-    CheckBox zhibo;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,29 +33,34 @@ public class LuboActivity extends Activity {
         finish();
     }
 
-    @OnClick(R.id.luzhi)
-    public void luzhi() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "LUB1".getBytes());
+    @OnClick(R.id.btn_xinfeng_open)
+    public void btn_xinfeng_open() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "HBWHMBS60".getBytes());
     }
 
-    @OnClick(R.id.zanting)
-    public void zanting() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "LUB2".getBytes());
+    @OnClick(R.id.btn_xinfeng_closed)
+    public void btn_xinfeng_closed() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "HBWHMBS61".getBytes());
     }
 
-    @OnClick(R.id.tingzhi)
-    public void tingzhi() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "LUB3".getBytes());
+    @OnClick(R.id.btn_xinfeng_zidong)
+    public void btn_xinfeng_zidong() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "HBWHMBS33".getBytes());
     }
 
-    @OnClick(R.id.zhibo)
-    public void zhibo() {
-        if (zhibo.isChecked()) {
-            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "LUB4".getBytes());
-        } else {
-            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "LUB5".getBytes());
-        }
+    @OnClick(R.id.btn_xinfeng_sd_1)
+    public void btn_xinfeng_sd_1() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "HBWHMBS34".getBytes());
     }
 
+    @OnClick(R.id.btn_xinfeng_sd_2)
+    public void btn_xinfeng_sd_2() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "HBWHMBS35".getBytes());
+    }
+
+    @OnClick(R.id.btn_xinfeng_sd_3)
+    public void btn_xinfeng_sd_3() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "HBWHMBS36".getBytes());
+    }
 
 }

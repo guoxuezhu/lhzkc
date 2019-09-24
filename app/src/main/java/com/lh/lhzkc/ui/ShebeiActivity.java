@@ -1,6 +1,7 @@
 package com.lh.lhzkc.ui;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Process;
 import android.widget.CheckBox;
@@ -17,9 +18,6 @@ import butterknife.OnClick;
 
 public class ShebeiActivity extends Activity {
 
-    @BindView(R.id.btnkt_kg)
-    CheckBox btnkt_kg;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,77 +28,35 @@ public class ShebeiActivity extends Activity {
 
     @OnClick(R.id.btnshangke)
     public void btnshangke() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS1".getBytes());
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "HBWHMBS1".getBytes());
     }
 
     @OnClick(R.id.btnxiake)
     public void btnxiake() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS2".getBytes());
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "HBWHMBS2".getBytes());
     }
 
-    @OnClick(R.id.rbtn_tyj_open)
-    public void rbtn_tyj_open() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS9".getBytes());
+    @OnClick(R.id.btn_chaunglian)
+    public void btn_chaunglian() {
+        startActivity(new Intent(this, ChangjingActivity.class));
     }
 
-    @OnClick(R.id.rbtn_tyj_close)
-    public void rbtn_tyj_close() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS10".getBytes());
+    @OnClick(R.id.btn_dengguang)
+    public void btn_dengguang() {
+        startActivity(new Intent(this, HuanjingActivity.class));
     }
 
-    @OnClick(R.id.rbtn_tyj_bu_open)
-    public void rbtn_tyj_bu_open() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS11".getBytes());
+    @OnClick(R.id.btn_xinfeng)
+    public void btn_xinfeng() {
+        startActivity(new Intent(this, LuboActivity.class));
     }
 
-    @OnClick(R.id.rbtn_tyj_bu_close)
-    public void rbtn_tyj_bu_close() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS12".getBytes());
+    @OnClick(R.id.btn_qita)
+    public void btn_qita() {
+        startActivity(new Intent(this, DianyuanActivity.class));
     }
 
-    @OnClick(R.id.rbtn_cl_1_open)
-    public void rbtn_cl_1_open() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS5".getBytes());
-    }
 
-    @OnClick(R.id.rbtn_cl_1_close)
-    public void rbtn_cl_1_close() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS6".getBytes());
-    }
-
-    @OnClick(R.id.rbtn_dg_1_open)
-    public void rbtn_dg_1_open() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS13".getBytes());
-    }
-
-    @OnClick(R.id.rbtn_dg_1_close)
-    public void rbtn_dg_1_close() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS14".getBytes());
-    }
-
-    @OnClick(R.id.btn_qianmen_open)
-    public void btn_qianmen_open() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MJD46".getBytes());
-    }
-
-    @OnClick(R.id.btnkt_kg)
-    public void btnkt_kg() {
-        if (btnkt_kg.isChecked()) {
-            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS39".getBytes());
-        } else {
-            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS48".getBytes());
-        }
-    }
-
-    @OnClick(R.id.btnkt_wdadd)
-    public void btnkt_wdadd() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS43".getBytes());
-    }
-
-    @OnClick(R.id.btnkt_wdsub)
-    public void btnkt_wdsub() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS44".getBytes());
-    }
 
     @Override
     public void onBackPressed() {

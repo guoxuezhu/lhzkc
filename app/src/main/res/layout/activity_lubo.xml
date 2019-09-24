@@ -4,123 +4,94 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/splash_bg"
+    android:background="@mipmap/main_bg"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".ui.LuboActivity">
 
 
+
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:gravity="center"
         android:orientation="horizontal">
 
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/luzhi"
-                android:layout_width="@dimen/btn_bg_1"
-                android:layout_height="@dimen/btn_bg_1"
-                android:background="@drawable/btn_status_1"
-                android:scaleType="fitCenter"
-                android:src="@drawable/imgbtn_lb_lz" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="录制"
-                android:textColor="@color/white" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_50"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
+        <Button
+            android:id="@+id/btn_xinfeng_open"
+            android:layout_width="@dimen/shebei_btn_width"
+            android:layout_height="@dimen/shebei_btn_height"
+            android:background="@drawable/btn_status_2"
+            android:text="新风开"
+            android:textColor="@color/black" />
 
 
-            <ImageButton
-                android:id="@+id/zanting"
-                android:layout_width="@dimen/btn_bg_1"
-                android:layout_height="@dimen/btn_bg_1"
-                android:background="@drawable/btn_status_1"
-                android:scaleType="fitCenter"
-                android:src="@drawable/imgbtn_lb_zt" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="暂停"
-                android:textColor="@color/white" />
-        </LinearLayout>
+        <Button
+            android:id="@+id/btn_xinfeng_closed"
+            android:layout_width="@dimen/shebei_btn_width"
+            android:layout_height="@dimen/shebei_btn_height"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:background="@drawable/btn_status_2"
+            android:text="新风关"
+            android:textColor="@color/black" />
 
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:gravity="center"
+        android:layout_marginTop="@dimen/dp_20"
         android:orientation="horizontal">
 
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/tingzhi"
-                android:layout_width="@dimen/btn_bg_1"
-                android:layout_height="@dimen/btn_bg_1"
-                android:background="@drawable/btn_status_1"
-                android:scaleType="fitCenter"
-                android:src="@drawable/imgbtn_lb_tz" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="停止"
-                android:textColor="@color/white" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_50"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <CheckBox
-                android:id="@+id/zhibo"
-                android:layout_width="@dimen/btn_bg_1"
-                android:layout_height="@dimen/btn_bg_1"
-                android:button="@null"
-                android:drawableLeft="@drawable/lb_zb"
-                android:drawableStart="@drawable/lb_zb"
-                android:padding="10dp"
-                android:background="@drawable/checked_status_2"/>
+        <Button
+            android:id="@+id/btn_xinfeng_zidong"
+            android:layout_width="@dimen/shebei_btn_width"
+            android:layout_height="@dimen/shebei_btn_height"
+            android:background="@drawable/btn_status_2"
+            android:text="新风-自动"
+            android:textColor="@color/black" />
 
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="直播"
-                android:textColor="@color/white" />
-        </LinearLayout>
+        <Button
+            android:id="@+id/btn_xinfeng_sd_1"
+            android:layout_width="@dimen/shebei_btn_width"
+            android:layout_height="@dimen/shebei_btn_height"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:background="@drawable/btn_status_2"
+            android:text="新风-低速"
+            android:textColor="@color/black" />
 
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/btn_xinfeng_sd_2"
+            android:layout_width="@dimen/shebei_btn_width"
+            android:layout_height="@dimen/shebei_btn_height"
+            android:background="@drawable/btn_status_2"
+            android:text="新风-中速"
+            android:textColor="@color/black" />
+
+
+        <Button
+            android:id="@+id/btn_xinfeng_sd_3"
+            android:layout_width="@dimen/shebei_btn_width"
+            android:layout_height="@dimen/shebei_btn_height"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:background="@drawable/btn_status_2"
+            android:text="新风-高速"
+            android:textColor="@color/black" />
+
+
+    </LinearLayout>
 
 </LinearLayout>
