@@ -44,8 +44,8 @@
         android:layout_margin="@dimen/dp_20"
         android:background="@drawable/layout_bg_1"
         android:gravity="center"
-        android:orientation="vertical">
-
+        android:orientation="vertical"
+        android:visibility="gone">
 
         <RadioGroup
             android:layout_width="wrap_content"
@@ -147,10 +147,51 @@
 
         </RadioGroup>
 
+    </LinearLayout>
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_20"
+        android:background="@drawable/layout_bg_1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_20">
+
+
+        <Button
+            android:id="@+id/btn_dg_1"
+            android:layout_width="@dimen/shebei_btn_width"
+            android:layout_height="@dimen/shebei_btn_height"
+            android:background="@drawable/btn_status_2"
+            android:text="灯光1"
+            android:textColor="@color/black" />
+
+
+        <Button
+            android:id="@+id/btn_dg_2"
+            android:layout_width="@dimen/shebei_btn_width"
+            android:layout_height="@dimen/shebei_btn_height"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:background="@drawable/btn_status_2"
+            android:text="灯光2"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btn_dg_3"
+            android:layout_width="@dimen/shebei_btn_width"
+            android:layout_height="@dimen/shebei_btn_height"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:background="@drawable/btn_status_2"
+            android:text="灯光3"
+            android:textColor="@color/black" />
 
 
     </LinearLayout>
+
+
+
 
 
 </LinearLayout>

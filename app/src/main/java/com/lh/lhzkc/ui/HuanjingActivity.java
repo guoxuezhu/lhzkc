@@ -86,6 +86,24 @@ public class HuanjingActivity extends Activity {
     }
 
 
+    @OnClick(R.id.btn_dg_1)
+    public void btn_dg_1() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "HBWHMBS15".getBytes());
+    }
+
+
+    @OnClick(R.id.btn_dg_2)
+    public void btn_dg_2() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "HBWHMBS17".getBytes());
+    }
+
+
+    @OnClick(R.id.btn_dg_3)
+    public void btn_dg_3() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "HBWHMBS19".getBytes());
+    }
+
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();
