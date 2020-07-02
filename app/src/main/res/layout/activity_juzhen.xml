@@ -42,8 +42,7 @@
                 android:button="@null"
                 android:gravity="center"
                 android:text="老师电脑"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_size_10" />
+                android:textColor="@color/black"/>
 
 
             <CheckBox
@@ -55,8 +54,7 @@
                 android:button="@null"
                 android:gravity="center"
                 android:text="台式机"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_size_10" />
+                android:textColor="@color/black"/>
 
             <CheckBox
                 android:id="@+id/spbtn_all_zu_1"
@@ -67,8 +65,7 @@
                 android:button="@null"
                 android:gravity="center"
                 android:text="笔记本"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_size_10" />
+                android:textColor="@color/black" />
 
             <CheckBox
                 android:id="@+id/spbtn_all_zu_2"
@@ -79,8 +76,7 @@
                 android:button="@null"
                 android:gravity="center"
                 android:text="高拍仪"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_size_10" />
+                android:textColor="@color/black"/>
 
         </LinearLayout>
 
@@ -97,7 +93,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="250dp"
         android:orientation="horizontal">
 
 
@@ -127,8 +123,7 @@
                 android:button="@null"
                 android:gravity="center"
                 android:text="老师电脑"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_size_10" />
+                android:textColor="@color/black"/>
 
             <CheckBox
                 android:id="@+id/spbtn_dan_in_tsj"
@@ -139,8 +134,7 @@
                 android:button="@null"
                 android:gravity="center"
                 android:text="台式机"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_size_10" />
+                android:textColor="@color/black" />
 
 
             <CheckBox
@@ -152,8 +146,7 @@
                 android:button="@null"
                 android:gravity="center"
                 android:text="笔记本"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_size_10" />
+                android:textColor="@color/black"/>
 
             <CheckBox
                 android:id="@+id/spbtn_dan_in_gpy"
@@ -164,8 +157,7 @@
                 android:button="@null"
                 android:gravity="center"
                 android:text="高拍仪"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_size_10" />
+                android:textColor="@color/black"/>
         </LinearLayout>
 
 

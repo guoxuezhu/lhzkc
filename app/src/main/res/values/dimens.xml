@@ -12,11 +12,11 @@
     <dimen name="btn_bg_1">100dp</dimen>
     <dimen name="btn_bg_2">80dp</dimen>
 
-    <dimen name="shebei_btn_width">85dp</dimen>
-    <dimen name="shebei_btn_height">50dp</dimen>
+    <dimen name="shebei_btn_width">66dp</dimen>
+    <dimen name="shebei_btn_height">40dp</dimen>
 
-    <dimen name="juzhen_btn_width">60dp</dimen>
-    <dimen name="juzhen_btn_height">30dp</dimen>
+    <dimen name="juzhen_btn_width">66dp</dimen>
+    <dimen name="juzhen_btn_height">40dp</dimen>
 
     <dimen name="yinpin_btn_width">85dp</dimen>
     <dimen name="yinpin_btn_height">50dp</dimen>
