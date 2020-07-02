@@ -92,39 +92,39 @@ public class HuanjingActivity extends Activity {
         if (huanjng_btn_kaiguan.isChecked()) {
             MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS39".getBytes());
         } else {
-            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS48".getBytes());
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS40".getBytes());
         }
     }
 
 
     @OnClick(R.id.huanjng_btn_moshi)
     public void huanjng_btn_moshi() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS40".getBytes());
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS41".getBytes());
     }
 
 
     @OnClick(R.id.huanjng_btn_fengsu)
     public void huanjng_btn_fengsu() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS41".getBytes());
-    }
-
-
-    @OnClick(R.id.huanjng_btn_wd_jia)
-    public void huanjng_btn_wd_jia() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS43".getBytes());
-    }
-
-
-    @OnClick(R.id.huanjng_btn_wd_jian)
-    public void huanjng_btn_wd_jian() {
         MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS44".getBytes());
     }
 
 
-    @OnClick(R.id.huanjng_btn_fengxiang)
-    public void huanjng_btn_fengxiang() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS42".getBytes());
-    }
+//    @OnClick(R.id.huanjng_btn_wd_jia)
+//    public void huanjng_btn_wd_jia() {
+//        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS43".getBytes());
+//    }
+//
+//
+//    @OnClick(R.id.huanjng_btn_wd_jian)
+//    public void huanjng_btn_wd_jian() {
+//        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS44".getBytes());
+//    }
+//
+//
+//    @OnClick(R.id.huanjng_btn_fengxiang)
+//    public void huanjng_btn_fengxiang() {
+//        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS42".getBytes());
+//    }
 
     @Override
     public void onBackPressed() {

@@ -254,7 +254,6 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_dan_in_lubo)
     public void spbtn_dan_in_lubo() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS51".getBytes());
         spbtn_dan_in_lubo.setChecked(true);
         spbtn_dan_in_diannao.setChecked(false);
         spbtn_dan_in_touping.setChecked(false);
@@ -269,7 +268,6 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_dan_in_diannao)
     public void spbtn_dan_in_diannao() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS50".getBytes());
         spbtn_dan_in_lubo.setChecked(false);
         spbtn_dan_in_diannao.setChecked(true);
         spbtn_dan_in_touping.setChecked(false);
@@ -285,7 +283,6 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_dan_in_touping)
     public void spbtn_dan_in_touping() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS51".getBytes());
         spbtn_dan_in_lubo.setChecked(false);
         spbtn_dan_in_diannao.setChecked(false);
         spbtn_dan_in_touping.setChecked(true);
@@ -300,7 +297,6 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_dan_in_zu_1)
     public void spbtn_dan_in_zu_1() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS51".getBytes());
         spbtn_dan_in_lubo.setChecked(false);
         spbtn_dan_in_diannao.setChecked(false);
         spbtn_dan_in_touping.setChecked(false);
@@ -316,7 +312,6 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_dan_in_zu_2)
     public void spbtn_dan_in_zu_2() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS51".getBytes());
         spbtn_dan_in_lubo.setChecked(false);
         spbtn_dan_in_diannao.setChecked(false);
         spbtn_dan_in_touping.setChecked(false);
@@ -331,7 +326,6 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_dan_in_zu_3)
     public void spbtn_dan_in_zu_3() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS51".getBytes());
         spbtn_dan_in_lubo.setChecked(false);
         spbtn_dan_in_diannao.setChecked(false);
         spbtn_dan_in_touping.setChecked(false);
@@ -347,7 +341,6 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_dan_in_zu_4)
     public void spbtn_dan_in_zu_4() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS51".getBytes());
         spbtn_dan_in_lubo.setChecked(false);
         spbtn_dan_in_diannao.setChecked(false);
         spbtn_dan_in_touping.setChecked(false);
@@ -363,7 +356,6 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_dan_in_zu_5)
     public void spbtn_dan_in_zu_5() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS51".getBytes());
         spbtn_dan_in_lubo.setChecked(false);
         spbtn_dan_in_diannao.setChecked(false);
         spbtn_dan_in_touping.setChecked(false);
@@ -379,7 +371,6 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_dan_in_zu_6)
     public void spbtn_dan_in_zu_6() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS51".getBytes());
         spbtn_dan_in_lubo.setChecked(false);
         spbtn_dan_in_diannao.setChecked(false);
         spbtn_dan_in_touping.setChecked(false);

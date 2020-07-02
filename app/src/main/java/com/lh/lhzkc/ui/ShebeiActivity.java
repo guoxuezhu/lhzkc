@@ -22,6 +22,15 @@ public class ShebeiActivity extends Activity {
         ButterKnife.bind(this);
     }
 
+    @OnClick(R.id.rbtn_cl_open)
+    public void rbtn_cl_open() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS3".getBytes());
+    }
+
+    @OnClick(R.id.rbtn_cl_close)
+    public void rbtn_cl_close() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS4".getBytes());
+    }
 
     @OnClick(R.id.rbtn_cl_1_open)
     public void rbtn_cl_1_open() {
@@ -63,44 +72,44 @@ public class ShebeiActivity extends Activity {
         MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS12".getBytes());
     }
 
+    @OnClick(R.id.rbtn_dg_open)
+    public void rbtn_dg_open() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS13".getBytes());
+    }
+
+    @OnClick(R.id.rbtn_dg_close)
+    public void rbtn_dg_close() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS14".getBytes());
+    }
+
     @OnClick(R.id.rbtn_dg_1_open)
     public void rbtn_dg_1_open() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS13".getBytes());
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS15".getBytes());
     }
 
     @OnClick(R.id.rbtn_dg_1_close)
     public void rbtn_dg_1_close() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS14".getBytes());
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS16".getBytes());
     }
 
     @OnClick(R.id.rbtn_dg_2_open)
     public void rbtn_dg_2_open() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS15".getBytes());
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS17".getBytes());
     }
 
     @OnClick(R.id.rbtn_dg_2_close)
     public void rbtn_dg_2_close() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS16".getBytes());
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS18".getBytes());
     }
 
     @OnClick(R.id.rbtn_dg_3_open)
     public void rbtn_dg_3_open() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS17".getBytes());
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS19".getBytes());
     }
 
     @OnClick(R.id.rbtn_dg_3_close)
     public void rbtn_dg_3_close() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS18".getBytes());
-    }
-
-    @OnClick(R.id.rbtn_dg_4_open)
-    public void rbtn_dg_4_open() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS19".getBytes());
-    }
-
-    @OnClick(R.id.rbtn_dg_4_close)
-    public void rbtn_dg_4_close() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS10".getBytes());
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS20".getBytes());
     }
 
     @OnClick(R.id.btn_qianmen_open)

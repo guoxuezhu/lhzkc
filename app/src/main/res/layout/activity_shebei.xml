@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/splash_bg"
+    android:background="@mipmap/main_bg"
     android:gravity="center_horizontal"
     android:orientation="horizontal"
     android:paddingTop="200dp"
@@ -35,6 +35,23 @@
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
+            <Button
+                android:id="@+id/rbtn_cl_open"
+                android:layout_width="@dimen/shebei_btn_width"
+                android:layout_height="@dimen/shebei_btn_height"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/btn_status_2"
+                android:text="窗帘开"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/rbtn_cl_close"
+                android:layout_width="@dimen/shebei_btn_width"
+                android:layout_height="@dimen/shebei_btn_height"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/btn_status_2"
+                android:text="窗帘关"
+                android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/rbtn_cl_1_open"
@@ -184,6 +201,14 @@
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
+                <Button
+                    android:id="@+id/rbtn_dg_open"
+                    android:layout_width="@dimen/shebei_btn_width"
+                    android:layout_height="@dimen/shebei_btn_height"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:background="@drawable/btn_status_2"
+                    android:text="灯光开"
+                    android:textColor="@color/black" />
 
                 <Button
                     android:id="@+id/rbtn_dg_1_open"
@@ -210,19 +235,9 @@
                     android:layout_width="@dimen/shebei_btn_width"
                     android:layout_height="@dimen/shebei_btn_height"
                     android:layout_marginTop="@dimen/dp_10"
-                    android:background="@drawable/btn_status_2"
-                    android:text="灯光3开"
-                    android:textColor="@color/black" />
-
-
-                <Button
-                    android:id="@+id/rbtn_dg_4_open"
-                    android:layout_width="@dimen/shebei_btn_width"
-                    android:layout_height="@dimen/shebei_btn_height"
-                    android:layout_marginTop="@dimen/dp_10"
                     android:layout_marginBottom="@dimen/dp_10"
                     android:background="@drawable/btn_status_2"
-                    android:text="灯光4开"
+                    android:text="灯光3开"
                     android:textColor="@color/black" />
 
             </LinearLayout>
@@ -235,6 +250,15 @@
                 android:orientation="vertical">
 
                 <Button
+                    android:id="@+id/rbtn_dg_close"
+                    android:layout_width="@dimen/shebei_btn_width"
+                    android:layout_height="@dimen/shebei_btn_height"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:background="@drawable/btn_status_2"
+                    android:text="灯光关"
+                    android:textColor="@color/black" />
+
+                <Button
                     android:id="@+id/rbtn_dg_1_close"
                     android:layout_width="@dimen/shebei_btn_width"
                     android:layout_height="@dimen/shebei_btn_height"
@@ -242,7 +266,6 @@
                     android:background="@drawable/btn_status_2"
                     android:text="灯光1关"
                     android:textColor="@color/black" />
-
 
                 <Button
                     android:id="@+id/rbtn_dg_2_close"
@@ -259,19 +282,9 @@
                     android:layout_width="@dimen/shebei_btn_width"
                     android:layout_height="@dimen/shebei_btn_height"
                     android:layout_marginTop="@dimen/dp_10"
-                    android:background="@drawable/btn_status_2"
-                    android:text="灯光3关"
-                    android:textColor="@color/black" />
-
-
-                <Button
-                    android:id="@+id/rbtn_dg_4_close"
-                    android:layout_width="@dimen/shebei_btn_width"
-                    android:layout_height="@dimen/shebei_btn_height"
-                    android:layout_marginTop="@dimen/dp_10"
                     android:layout_marginBottom="@dimen/dp_10"
                     android:background="@drawable/btn_status_2"
-                    android:text="灯光4关"
+                    android:text="灯光3关"
                     android:textColor="@color/black" />
 
             </LinearLayout>
