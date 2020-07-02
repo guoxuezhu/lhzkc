@@ -4,10 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/splash_bg"
+    android:background="@mipmap/main_bg"
     android:gravity="center"
     android:orientation="vertical"
-    android:paddingTop="70dp"
     tools:context=".ui.ChangjingActivity">
 
 
@@ -70,6 +69,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
+        android:visibility="gone"
         android:gravity="center"
         android:orientation="horizontal">
 

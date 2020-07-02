@@ -1,15 +1,12 @@
 package com.lh.lhzkc.ui;
 
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.CheckBox;
 import android.widget.TextView;
 
 import com.lh.lhzkc.MyApplication;
 import com.lh.lhzkc.R;
 import com.lh.lhzkc.utils.ELog;
-import com.lh.lhzkc.utils.HttpUtil;
 import com.lh.lhzkc.utils.MqttManager;
 
 import java.io.IOException;
@@ -33,9 +30,6 @@ public class HuanjingActivity extends Activity {
     TextView tv_wsd_sd;
     @BindView(R.id.tv_wsd_pm)
     TextView tv_wsd_pm;
-
-    @BindView(R.id.huanjng_btn_kaiguan)
-    CheckBox huanjng_btn_kaiguan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,44 +81,74 @@ public class HuanjingActivity extends Activity {
     }
 
 
-    @OnClick(R.id.huanjng_btn_kaiguan)
-    public void huanjng_btn_kaiguan() {
-        if (huanjng_btn_kaiguan.isChecked()) {
-            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS39".getBytes());
-        } else {
-            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS48".getBytes());
-        }
+
+    @OnClick(R.id.rbtn_cl_open)
+    public void rbtn_cl_open() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS3".getBytes());
     }
 
 
-    @OnClick(R.id.huanjng_btn_moshi)
-    public void huanjng_btn_moshi() {
+    @OnClick(R.id.rbtn_cl_close)
+    public void rbtn_cl_close() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS4".getBytes());
+    }
+
+
+    @OnClick(R.id.rbtn_dg_open)
+    public void rbtn_dg_open() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS13".getBytes());
+    }
+
+
+    @OnClick(R.id.rbtn_dg_close)
+    public void rbtn_dg_close() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS14".getBytes());
+    }
+
+
+    @OnClick(R.id.rbtn_tyj_open)
+    public void rbtn_tyj_open() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS9".getBytes());
+    }
+
+    @OnClick(R.id.rbtn_tyj_close)
+    public void rbtn_tyj_close() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS10".getBytes());
+    }
+
+    @OnClick(R.id.rbtn_tyj_bu_open)
+    public void rbtn_tyj_bu_open() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS11".getBytes());
+    }
+
+    @OnClick(R.id.rbtn_tyj_bu_close)
+    public void rbtn_tyj_bu_close() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS12".getBytes());
+    }
+
+
+
+    @OnClick(R.id.rbtn_kt_open)
+    public void rbtn_kt_open() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS39".getBytes());
+    }
+
+    @OnClick(R.id.rbtn_kt_close)
+    public void rbtn_kt_close() {
         MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS40".getBytes());
     }
 
-
-    @OnClick(R.id.huanjng_btn_fengsu)
-    public void huanjng_btn_fengsu() {
+    @OnClick(R.id.rbtn_kt_ms)
+    public void rbtn_kt_ms() {
         MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS41".getBytes());
     }
 
-
-    @OnClick(R.id.huanjng_btn_wd_jia)
-    public void huanjng_btn_wd_jia() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS43".getBytes());
+    @OnClick(R.id.rbtn_mj_door)
+    public void rbtn_mj_door() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS46".getBytes());
     }
 
 
-    @OnClick(R.id.huanjng_btn_wd_jian)
-    public void huanjng_btn_wd_jian() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS44".getBytes());
-    }
-
-
-    @OnClick(R.id.huanjng_btn_fengxiang)
-    public void huanjng_btn_fengxiang() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS42".getBytes());
-    }
 
     @Override
     public void onBackPressed() {
