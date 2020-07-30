@@ -68,7 +68,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/home_btn_marginLeft"
-            android:visibility="gone"
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
@@ -167,6 +166,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
+            android:visibility="gone"
             android:orientation="vertical">
 
             <LinearLayout
