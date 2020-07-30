@@ -99,6 +99,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/home_btn_marginLeft"
             android:gravity="center_horizontal"
+            android:visibility="gone"
             android:orientation="vertical">
 
             <LinearLayout
@@ -195,6 +196,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/home_btn_marginLeft"
             android:gravity="center_horizontal"
+            android:visibility="gone"
             android:orientation="vertical">
 
             <LinearLayout
@@ -224,6 +226,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/home_btn_marginLeft"
             android:gravity="center_horizontal"
+            android:visibility="gone"
             android:orientation="vertical">
 
             <LinearLayout
