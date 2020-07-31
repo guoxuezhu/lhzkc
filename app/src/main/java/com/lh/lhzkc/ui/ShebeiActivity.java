@@ -23,6 +23,16 @@ public class ShebeiActivity extends Activity {
     }
 
 
+    @OnClick(R.id.rbtn_tyj_open)
+    public void rbtn_tyj_open() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS9".getBytes());
+    }
+
+    @OnClick(R.id.rbtn_tyj_close)
+    public void rbtn_tyj_close() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS10".getBytes());
+    }
+
     @OnClick(R.id.rbtn_cl_open)
     public void rbtn_cl_open() {
         MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS3".getBytes());

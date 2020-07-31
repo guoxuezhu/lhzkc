@@ -117,7 +117,32 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_10"
+        android:orientation="horizontal">
 
+        <Button
+            android:id="@+id/rbtn_tyj_open"
+            android:layout_width="@dimen/shebei_btn_width"
+            android:layout_height="@dimen/shebei_btn_height"
+            android:background="@drawable/btn_status_2"
+            android:text="投影机开"
+            android:textColor="@color/black" />
+
+
+        <Button
+            android:id="@+id/rbtn_tyj_close"
+            android:layout_width="@dimen/shebei_btn_width"
+            android:layout_height="@dimen/shebei_btn_height"
+            android:background="@drawable/btn_status_2"
+            android:layout_marginLeft="@dimen/shebei_btn_marginLeft"
+            android:text="投影机关"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
