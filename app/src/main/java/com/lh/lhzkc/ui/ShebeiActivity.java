@@ -84,32 +84,22 @@ public class ShebeiActivity extends Activity {
 
     @OnClick(R.id.rbtn_dg_1_open)
     public void rbtn_dg_1_open() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS15".getBytes());
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS62".getBytes());
     }
 
     @OnClick(R.id.rbtn_dg_1_close)
     public void rbtn_dg_1_close() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS16".getBytes());
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS63".getBytes());
     }
 
     @OnClick(R.id.rbtn_dg_2_open)
     public void rbtn_dg_2_open() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS17".getBytes());
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS64".getBytes());
     }
 
     @OnClick(R.id.rbtn_dg_2_close)
     public void rbtn_dg_2_close() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS18".getBytes());
-    }
-
-    @OnClick(R.id.rbtn_dg_3_open)
-    public void rbtn_dg_3_open() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS19".getBytes());
-    }
-
-    @OnClick(R.id.rbtn_dg_3_close)
-    public void rbtn_dg_3_close() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS20".getBytes());
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS65".getBytes());
     }
 
     @OnClick(R.id.btn_qianmen_open)
@@ -120,6 +110,16 @@ public class ShebeiActivity extends Activity {
     @OnClick(R.id.btn_houmen_open)
     public void btn_houmen_open() {
         MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS47".getBytes());
+    }
+
+    @OnClick(R.id.btn_dpytj_open)
+    public void btn_dpytj_open() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS5001".getBytes());
+    }
+
+    @OnClick(R.id.btn_dpytj_close)
+    public void btn_dpytj_close() {
+        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS5002".getBytes());
     }
 
     @Override

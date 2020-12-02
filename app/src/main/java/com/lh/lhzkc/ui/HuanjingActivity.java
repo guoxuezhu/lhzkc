@@ -56,7 +56,7 @@ public class HuanjingActivity extends Activity {
                 .build();
 
         Request request = new Request.Builder()
-                .url("http://192.168.1.5:8099")
+                .url("http://192.168.0.99:8099")
                 .post(body)
                 .build();
         //3.创建一个call对象,参数就是Request请求对象
