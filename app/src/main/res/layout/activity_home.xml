@@ -10,25 +10,6 @@
     tools:context=".ui.HomeActivity">
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="IP地址"
-        android:textColor="@color/white"
-        android:visibility="gone" />
-
-    <EditText
-        android:id="@+id/zk_ip"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/et_bg_ip"
-        android:digits="0123456789."
-        android:inputType="number"
-        android:paddingLeft="@dimen/dp_5"
-        android:textColor="@color/white"
-        android:visibility="gone" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -66,7 +66,7 @@ public class MainActivity extends Activity {
         getuuid();//每个客户端唯一标识
 
 
-        zk_name.setText("");
+        zk_name.setText(MyApplication.prefs.getzkname());
 
 
     }

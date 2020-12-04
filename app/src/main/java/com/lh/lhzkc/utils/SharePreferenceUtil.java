@@ -46,16 +46,17 @@ public class SharePreferenceUtil {
         editor.putString("zkname", zkname);
         editor.commit();
     }
+
     public String getzkname() {
         return sp.getString("zkname", "");
     }
-
 
 
     public void setMqttuser(String mqttuser) {
         editor.putString("mqttuser", mqttuser);
         editor.commit();
     }
+
     public String getMqttuser() {
         return sp.getString("mqttuser", "uc5xuva/admin");
     }
@@ -65,8 +66,17 @@ public class SharePreferenceUtil {
         editor.putString("mqttmima", mqttmima);
         editor.commit();
     }
+
     public String getMqttMima() {  // vZakahehxugRHnZs
         return sp.getString("mqttmima", "aYBMf7Ci9eCKkx57");
     }
 
+    public void setIsip(boolean isIp) {
+        editor.putBoolean("isIp", isIp);
+        editor.commit();
+    }
+
+    public boolean getIsip() {
+        return sp.getBoolean("isIp", false);
+    }
 }

@@ -17,18 +17,12 @@ public class HttpUtil {
 
 
     public static void myPost(String zkbtnType) {
-
-        if (MyApplication.prefs.getZKIP().equals("")) {
-            return;
-        }
-
         OkHttpClient okHttpClient = new OkHttpClient();
         FormBody body = new FormBody.Builder()
                 .add("zkbtn", zkbtnType)
                 .build();
 
         Request request = new Request.Builder()
-//                .url("http://192.168.1.5:8099")
                 .url("http://" + MyApplication.prefs.getZKIP() + ":8099")
                 .post(body)
                 .build();

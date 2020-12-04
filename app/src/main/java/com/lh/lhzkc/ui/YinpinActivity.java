@@ -37,63 +37,113 @@ public class YinpinActivity extends Activity {
 
     @OnClick(R.id.zyl_jia)
     public void zyl_jia() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS21".getBytes());
+        if (MyApplication.prefs.getIsip()) {
+            HttpUtil.myPost("MBS21");
+        } else {
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS21".getBytes());
+        }
     }
 
     @OnClick(R.id.zyl_jian)
     public void zyl_jian() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS22".getBytes());
+        if (MyApplication.prefs.getIsip()) {
+            HttpUtil.myPost("MBS22");
+        } else {
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS22".getBytes());
+        }
     }
 
     @OnClick(R.id.zyl_jingyin)
     public void zyl_jingyin() {
-        if (zyl_jingyin.isChecked()) {
-            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS23".getBytes());
+        if (MyApplication.prefs.getIsip()) {
+            if (mkf_jingyin.isChecked()) {
+                HttpUtil.myPost("MBS23");
+            } else {
+                HttpUtil.myPost("MBS24");
+            }
         } else {
-            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS24".getBytes());
+            if (mkf_jingyin.isChecked()) {
+                MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS23".getBytes());
+            } else {
+                MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS24".getBytes());
+            }
         }
     }
 
 
     @OnClick(R.id.yx_jia)
     public void yx_jia() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS25".getBytes());
+        if (MyApplication.prefs.getIsip()) {
+            HttpUtil.myPost("MBS25");
+        } else {
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS25".getBytes());
+        }
     }
 
 
     @OnClick(R.id.yx_jian)
     public void yx_jian() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS26".getBytes());
+        if (MyApplication.prefs.getIsip()) {
+            HttpUtil.myPost("MBS26");
+        } else {
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS26".getBytes());
+        }
     }
 
     @OnClick(R.id.yx_jingyin)
     public void yx_jingyin() {
-        if (yx_jingyin.isChecked()) {
-            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS27".getBytes());
+        if (MyApplication.prefs.getIsip()) {
+            if (mkf_jingyin.isChecked()) {
+                HttpUtil.myPost("MBS27");
+            } else {
+                HttpUtil.myPost("MBS28");
+            }
         } else {
-            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS28".getBytes());
+            if (mkf_jingyin.isChecked()) {
+                MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS27".getBytes());
+            } else {
+                MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS28".getBytes());
+            }
         }
     }
 
     @OnClick(R.id.mkf_jia)
     public void mkf_jia() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS29".getBytes());
+        if (MyApplication.prefs.getIsip()) {
+            HttpUtil.myPost("MBS29");
+        } else {
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS29".getBytes());
+        }
     }
 
 
     @OnClick(R.id.mkf_jian)
     public void mkf_jian() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS30".getBytes());
+        if (MyApplication.prefs.getIsip()) {
+            HttpUtil.myPost("MBS30");
+        } else {
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS30".getBytes());
+        }
     }
 
     @OnClick(R.id.mkf_jingyin)
     public void mkf_jingyin() {
-        if (mkf_jingyin.isChecked()) {
-            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS31".getBytes());
+        if (MyApplication.prefs.getIsip()) {
+            if (mkf_jingyin.isChecked()) {
+                HttpUtil.myPost("MBS31");
+            } else {
+                HttpUtil.myPost("MBS32");
+            }
         } else {
-            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS32".getBytes());
+            if (mkf_jingyin.isChecked()) {
+                MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS31".getBytes());
+            } else {
+                MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS32".getBytes());
+            }
         }
+
     }
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();

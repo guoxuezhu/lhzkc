@@ -38,25 +38,45 @@ public class LuboActivity extends Activity {
 
     @OnClick(R.id.luzhi)
     public void luzhi() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "LUB1".getBytes());
+        if (MyApplication.prefs.getIsip()) {
+            HttpUtil.myPost("LUB1");
+        } else {
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "LUB1".getBytes());
+        }
     }
 
     @OnClick(R.id.zanting)
     public void zanting() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "LUB2".getBytes());
+        if (MyApplication.prefs.getIsip()) {
+            HttpUtil.myPost("LUB2");
+        } else {
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "LUB2".getBytes());
+        }
     }
 
     @OnClick(R.id.tingzhi)
     public void tingzhi() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "LUB3".getBytes());
+        if (MyApplication.prefs.getIsip()) {
+            HttpUtil.myPost("LUB3");
+        } else {
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "LUB3".getBytes());
+        }
     }
 
     @OnClick(R.id.zhibo)
     public void zhibo() {
-        if (zhibo.isChecked()) {
-            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "LUB4".getBytes());
+        if (MyApplication.prefs.getIsip()) {
+            if (zhibo.isChecked()) {
+                HttpUtil.myPost("LUB4");
+            } else {
+                HttpUtil.myPost("LUB5");
+            }
         } else {
-            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "LUB5".getBytes());
+            if (zhibo.isChecked()) {
+                MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "LUB4".getBytes());
+            } else {
+                MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "LUB5".getBytes());
+            }
         }
     }
 

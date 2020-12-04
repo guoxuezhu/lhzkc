@@ -6,6 +6,7 @@ import android.widget.CheckBox;
 
 import com.lh.lhzkc.MyApplication;
 import com.lh.lhzkc.R;
+import com.lh.lhzkc.utils.HttpUtil;
 import com.lh.lhzkc.utils.MqttManager;
 
 import butterknife.BindView;
@@ -35,14 +36,12 @@ public class JuzhenActivity extends Activity {
     CheckBox spbtn_dan_in_gpy;
 
 
-
     @BindView(R.id.spbtn_dan_out_ty)
     CheckBox spbtn_dan_out_ty;
     @BindView(R.id.spbtn_dan_out_dp1)
     CheckBox spbtn_dan_out_dp1;
     @BindView(R.id.spbtn_dan_out_dp2)
     CheckBox spbtn_dan_out_dp2;
-
 
 
     @Override
@@ -53,6 +52,7 @@ public class JuzhenActivity extends Activity {
 
 
     }
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();
@@ -61,7 +61,11 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_all_diannao)
     public void spbtn_all_diannao() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "VIDC1".getBytes());
+        if (MyApplication.prefs.getIsip()) {
+            HttpUtil.myPost("VIDC1");
+        } else {
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "VIDC1".getBytes());
+        }
         spbtn_all_diannao.setChecked(true);
         spbtn_all_touping.setChecked(false);
         spbtn_all_zu_1.setChecked(false);
@@ -71,7 +75,11 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_all_touping)
     public void spbtn_all_touping() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "VIDC2".getBytes());
+        if (MyApplication.prefs.getIsip()) {
+            HttpUtil.myPost("VIDC2");
+        } else {
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "VIDC2".getBytes());
+        }
         spbtn_all_diannao.setChecked(false);
         spbtn_all_touping.setChecked(true);
         spbtn_all_zu_1.setChecked(false);
@@ -81,7 +89,11 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_all_zu_1)
     public void spbtn_all_zu_1() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "VIDC3".getBytes());
+        if (MyApplication.prefs.getIsip()) {
+            HttpUtil.myPost("VIDC3");
+        } else {
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "VIDC3".getBytes());
+        }
         spbtn_all_diannao.setChecked(false);
         spbtn_all_touping.setChecked(false);
         spbtn_all_zu_1.setChecked(true);
@@ -91,7 +103,11 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_all_zu_2)
     public void spbtn_all_zu_2() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "VIDC4".getBytes());
+        if (MyApplication.prefs.getIsip()) {
+            HttpUtil.myPost("VIDC4");
+        } else {
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "VIDC4".getBytes());
+        }
         spbtn_all_diannao.setChecked(false);
         spbtn_all_touping.setChecked(false);
         spbtn_all_zu_1.setChecked(false);
@@ -192,14 +208,26 @@ public class JuzhenActivity extends Activity {
     }
 
     private void sendDan(int i) {
-        if (spbtn_dan_in_lsdn.isChecked()) {
-            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, ("VIDA1," + i).getBytes());
-        } else if (spbtn_dan_in_tsj.isChecked()) {
-            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, ("VIDA2," + i).getBytes());
-        } else if (spbtn_dan_in_bjb.isChecked()) {
-            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, ("VIDA3," + i).getBytes());
-        } else if (spbtn_dan_in_gpy.isChecked()) {
-            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, ("VIDA4," + i).getBytes());
+        if (MyApplication.prefs.getIsip()) {
+            if (spbtn_dan_in_lsdn.isChecked()) {
+                HttpUtil.myPost("VIDA1," + i);
+            } else if (spbtn_dan_in_tsj.isChecked()) {
+                HttpUtil.myPost("VIDA2," + i);
+            } else if (spbtn_dan_in_bjb.isChecked()) {
+                HttpUtil.myPost("VIDA3," + i);
+            } else if (spbtn_dan_in_gpy.isChecked()) {
+                HttpUtil.myPost("VIDA4," + i);
+            }
+        } else {
+            if (spbtn_dan_in_lsdn.isChecked()) {
+                MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, ("VIDA1," + i).getBytes());
+            } else if (spbtn_dan_in_tsj.isChecked()) {
+                MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, ("VIDA2," + i).getBytes());
+            } else if (spbtn_dan_in_bjb.isChecked()) {
+                MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, ("VIDA3," + i).getBytes());
+            } else if (spbtn_dan_in_gpy.isChecked()) {
+                MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, ("VIDA4," + i).getBytes());
+            }
         }
     }
 

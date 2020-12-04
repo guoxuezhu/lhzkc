@@ -15,7 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.DianyuanActivity"></activity>
+        <activity android:name=".ui.IpselectActivity"></activity>
+        <activity android:name=".ui.DianyuanActivity" />
         <activity android:name=".ui.YinpinActivity" />
         <activity android:name=".ui.LuboActivity" />
         <activity android:name=".ui.JuzhenActivity" />

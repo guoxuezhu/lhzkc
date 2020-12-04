@@ -89,23 +89,39 @@ public class HuanjingActivity extends Activity {
 
     @OnClick(R.id.huanjng_btn_kaiguan)
     public void huanjng_btn_kaiguan() {
-        if (huanjng_btn_kaiguan.isChecked()) {
-            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS39".getBytes());
+        if (MyApplication.prefs.getIsip()) {
+            if (huanjng_btn_kaiguan.isChecked()) {
+                HttpUtil.myPost("MBS39");
+            } else {
+                HttpUtil.myPost("MBS40");
+            }
         } else {
-            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS40".getBytes());
+            if (huanjng_btn_kaiguan.isChecked()) {
+                MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS39".getBytes());
+            } else {
+                MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS40".getBytes());
+            }
         }
     }
 
 
     @OnClick(R.id.huanjng_btn_moshi)
     public void huanjng_btn_moshi() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS41".getBytes());
+        if (MyApplication.prefs.getIsip()) {
+            HttpUtil.myPost("MBS41");
+        } else {
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS41".getBytes());
+        }
     }
 
 
     @OnClick(R.id.huanjng_btn_fengsu)
     public void huanjng_btn_fengsu() {
-        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS44".getBytes());
+        if (MyApplication.prefs.getIsip()) {
+            HttpUtil.myPost("MBS44");
+        } else {
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS44".getBytes());
+        }
     }
 
 
