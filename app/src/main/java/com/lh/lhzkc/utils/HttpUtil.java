@@ -23,7 +23,7 @@ public class HttpUtil {
                 .build();
 
         Request request = new Request.Builder()
-                .url("http://" + MyApplication.prefs.getZKIP() + ":8099")
+                .url("http://" + MyApplication.prefs.getZKIP() + ":8099/api/zkczbtn")
                 .post(body)
                 .build();
         //3.创建一个call对象,参数就是Request请求对象

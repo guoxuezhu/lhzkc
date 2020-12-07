@@ -54,6 +54,15 @@ public class LuboActivity extends Activity {
         }
     }
 
+    @OnClick(R.id.jixu)
+    public void jixu() {
+        if (MyApplication.prefs.getIsip()) {
+            HttpUtil.myPost("LUB6");
+        } else {
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "LUB6".getBytes());
+        }
+    }
+
     @OnClick(R.id.tingzhi)
     public void tingzhi() {
         if (MyApplication.prefs.getIsip()) {

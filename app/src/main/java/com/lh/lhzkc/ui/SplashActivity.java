@@ -10,6 +10,7 @@ import com.lh.lhzkc.R;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class SplashActivity extends Activity {
@@ -18,7 +19,7 @@ public class SplashActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-
+        ButterKnife.bind(this);
 
 //        Timer timer = new Timer();
 //        timer.schedule(new TimerTask() {
@@ -34,7 +35,6 @@ public class SplashActivity extends Activity {
     public void btn_neiwang() {
         MyApplication.prefs.setIsip(true);
         startActivity(new Intent(SplashActivity.this, IpselectActivity.class));
-        finish();
     }
 
 
@@ -42,6 +42,5 @@ public class SplashActivity extends Activity {
     public void btn_waiwang() {
         MyApplication.prefs.setIsip(false);
         startActivity(new Intent(SplashActivity.this, MainActivity.class));
-        finish();
     }
 }

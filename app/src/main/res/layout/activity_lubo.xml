@@ -80,6 +80,28 @@
             android:orientation="vertical">
 
             <ImageButton
+                android:id="@+id/jixu"
+                android:layout_width="@dimen/btn_bg_1"
+                android:layout_height="@dimen/btn_bg_1"
+                android:background="@drawable/btn_status_1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/imgbtn_lb_jx" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="继续"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_50"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageButton
                 android:id="@+id/tingzhi"
                 android:layout_width="@dimen/btn_bg_1"
                 android:layout_height="@dimen/btn_bg_1"
@@ -94,10 +116,20 @@
                 android:textColor="@color/white" />
         </LinearLayout>
 
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_50"
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
@@ -105,11 +137,11 @@
                 android:id="@+id/zhibo"
                 android:layout_width="@dimen/btn_bg_1"
                 android:layout_height="@dimen/btn_bg_1"
+                android:background="@drawable/checked_status_2"
                 android:button="@null"
-                android:drawableLeft="@drawable/lb_zb"
                 android:drawableStart="@drawable/lb_zb"
-                android:padding="10dp"
-                android:background="@drawable/checked_status_2"/>
+                android:drawableLeft="@drawable/lb_zb"
+                android:padding="10dp" />
 
 
             <TextView
@@ -121,6 +153,5 @@
 
 
     </LinearLayout>
-
 
 </LinearLayout>

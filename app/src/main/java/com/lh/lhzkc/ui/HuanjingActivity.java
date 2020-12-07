@@ -44,7 +44,7 @@ public class HuanjingActivity extends Activity {
 
         ButterKnife.bind(this);
 
-        InitView();
+//        InitView();
 
     }
 
@@ -75,10 +75,10 @@ public class HuanjingActivity extends Activity {
             public void onResponse(Call call, Response response) throws IOException {
                 String msg = response.body().string();
                 ELog.e("=======wsd===ok=======" + msg);
-                String[] msglist = msg.split(";");
-                tv_wsd_wd.setText(msglist[1]);
-                tv_wsd_sd.setText(msglist[2]);
-                tv_wsd_pm.setText("0");
+//                String[] msglist = msg.split(";");
+//                tv_wsd_wd.setText(msglist[1]);
+//                tv_wsd_sd.setText(msglist[2]);
+//                tv_wsd_pm.setText("0");
 
 
             }
