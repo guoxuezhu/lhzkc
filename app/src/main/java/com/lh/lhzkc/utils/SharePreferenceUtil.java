@@ -58,7 +58,7 @@ public class SharePreferenceUtil {
     }
 
     public String getMqttuser() {
-        return sp.getString("mqttuser", "uc5xuva/admin");
+        return sp.getString("mqttuser", "");
     }
 
 

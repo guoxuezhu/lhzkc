@@ -66,7 +66,7 @@ public class MainActivity extends Activity {
         getuuid();//每个客户端唯一标识
 
 
-        zk_name.setText(MyApplication.prefs.getzkname());
+        zk_name.setText(MyApplication.prefs.getMqttuser());
 
 
     }
@@ -97,6 +97,7 @@ public class MainActivity extends Activity {
                 super.run();
 
                 MyApplication.prefs.setzkname(TOPIC + zk_name.getText().toString().trim());
+                MyApplication.prefs.setMqttuser(zk_name.getText().toString().trim());
 
                 boolean subscriber = MqttManager.getInstance().creatConnect(URL, "uc5xuva/admin",
                         "aYBMf7Ci9eCKkx57", MyApplication.prefs.getUdid());
