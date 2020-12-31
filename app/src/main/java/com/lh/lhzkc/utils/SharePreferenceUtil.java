@@ -62,13 +62,13 @@ public class SharePreferenceUtil {
     }
 
 
-    public void setMqttMima(String mqttmima) {
-        editor.putString("mqttmima", mqttmima);
+    public void setAppToken(String appToken) {
+        editor.putString("appToken", appToken);
         editor.commit();
     }
 
-    public String getMqttMima() {  // vZakahehxugRHnZs
-        return sp.getString("mqttmima", "aYBMf7Ci9eCKkx57");
+    public String getAppToken() {  // vZakahehxugRHnZs
+        return sp.getString("appToken", "");
     }
 
     public void setIsip(boolean isIp) {

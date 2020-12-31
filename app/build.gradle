@@ -16,14 +16,15 @@ android {
         applicationId "com.lh.lhzkc"
         minSdkVersion 16
         targetSdkVersion 28
-        versionCode 2
-        versionName "1.4.2"
+        versionCode 3
+        versionName "1.4.3"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
             buildConfigField 'boolean', 'JAVA_LOG_ENABLED', 'false'
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
@@ -38,7 +39,7 @@ android {
 
     android.applicationVariants.all { variant ->
         variant.outputs.all {
-            outputFileName = "设备操作-${variant.name}-${variant.versionName}.apk"
+            outputFileName = "设备操作-${variant.versionName}.apk"
         }
     }
 
@@ -57,9 +58,7 @@ dependencies {
     implementation 'com.jakewharton:butterknife:8.4.0'
     annotationProcessor "com.jakewharton:butterknife-compiler:8.4.0"
 
-
     implementation 'com.squareup.okhttp3:okhttp:3.11.0'
-
 
     implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.0'
     implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'

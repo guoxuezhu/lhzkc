@@ -1,7 +1,12 @@
 package com.lh.lhzkc.utils;
 
 
+import android.os.Handler;
+
 import com.lh.lhzkc.MyApplication;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.IOException;
 
@@ -16,10 +21,14 @@ import okhttp3.Response;
 public class HttpUtil {
 
 
-    public static void myPost(String zkbtnType) {
+    private static Handler mhandler;
+
+    public static void myPost(String zkbtnType, Handler handler) {
+        mhandler = handler;
         OkHttpClient okHttpClient = new OkHttpClient();
         FormBody body = new FormBody.Builder()
                 .add("zkbtn", zkbtnType)
+                .add("lh_zks_token", MyApplication.prefs.getAppToken())
                 .build();
 
         Request request = new Request.Builder()
@@ -33,15 +42,25 @@ public class HttpUtil {
             @Override
             public void onFailure(Call call, IOException e) {
                 ELog.e("======HttpUtil====onFailure=======" + e.toString());
+                mhandler.sendEmptyMessage(124);
             }
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 String responseText = response.body().string();
                 ELog.e("=======HttpUtil===ok=======" + responseText);
+                try {
+                    JSONObject jsonObject = new JSONObject(responseText);
+                    if (jsonObject.getString("code").equals("200")) {
+                        mhandler.sendEmptyMessage(123);
+                    } else {
+                        mhandler.sendEmptyMessage(125);
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    mhandler.sendEmptyMessage(125);
+                }
             }
         });
-
-
     }
 }

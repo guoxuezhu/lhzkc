@@ -5,16 +5,20 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.lh.lhzkc.R;
+import com.lh.lhzkc.utils.ELog;
 import com.lh.lhzkc.utils.MqttManager;
 
 import org.eclipse.paho.client.mqttv3.MqttException;
 
 import android.os.Process;
+import android.widget.Toast;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class HomeActivity extends Activity {
+
+    private long exitTime1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,20 +71,21 @@ public class HomeActivity extends Activity {
         startActivity(new Intent(this, DianyuanActivity.class));
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Process.killProcess(Process.myPid());
-        try {
-            MqttManager.getInstance().disConnect();
-        } catch (MqttException e) {
-            e.printStackTrace();
-        }
-    }
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
-        finish();
+        if ((System.currentTimeMillis() - exitTime1) > 2000) {
+            Toast.makeText(getApplicationContext(), "再按一次退出连接", Toast.LENGTH_SHORT).show();
+            exitTime1 = System.currentTimeMillis();
+        } else {
+            Process.killProcess(Process.myPid());
+            try {
+                MqttManager.getInstance().disConnect();
+            } catch (MqttException e) {
+                e.printStackTrace();
+            }
+            finish();
+        }
+        return;
     }
 }

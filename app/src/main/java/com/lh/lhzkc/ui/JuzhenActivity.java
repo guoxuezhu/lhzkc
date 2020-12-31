@@ -2,7 +2,10 @@ package com.lh.lhzkc.ui;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.widget.CheckBox;
+import android.widget.Toast;
 
 import com.lh.lhzkc.MyApplication;
 import com.lh.lhzkc.R;
@@ -43,6 +46,28 @@ public class JuzhenActivity extends Activity {
     @BindView(R.id.spbtn_dan_out_dp2)
     CheckBox spbtn_dan_out_dp2;
 
+    Handler jzhandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            switch (msg.what) {
+                case 123:
+                    MyToastshow("操作成功");
+                    break;
+                case 124:
+                    MyToastshow("连接失败,请检测网络");
+                    break;
+                case 125:
+                    MyToastshow("data Exception");
+                    break;
+            }
+        }
+    };
+
+    private void MyToastshow(String msg) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,13 +81,13 @@ public class JuzhenActivity extends Activity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        finish();
+        jzhandler = null;
     }
 
     @OnClick(R.id.spbtn_all_diannao)
     public void spbtn_all_diannao() {
         if (MyApplication.prefs.getIsip()) {
-            HttpUtil.myPost("VIDC1");
+            HttpUtil.myPost("VIDC1", jzhandler);
         } else {
             MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "VIDC1".getBytes());
         }
@@ -76,7 +101,7 @@ public class JuzhenActivity extends Activity {
     @OnClick(R.id.spbtn_all_touping)
     public void spbtn_all_touping() {
         if (MyApplication.prefs.getIsip()) {
-            HttpUtil.myPost("VIDC2");
+            HttpUtil.myPost("VIDC2", jzhandler);
         } else {
             MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "VIDC2".getBytes());
         }
@@ -90,7 +115,7 @@ public class JuzhenActivity extends Activity {
     @OnClick(R.id.spbtn_all_zu_1)
     public void spbtn_all_zu_1() {
         if (MyApplication.prefs.getIsip()) {
-            HttpUtil.myPost("VIDC3");
+            HttpUtil.myPost("VIDC3", jzhandler);
         } else {
             MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "VIDC3".getBytes());
         }
@@ -104,7 +129,7 @@ public class JuzhenActivity extends Activity {
     @OnClick(R.id.spbtn_all_zu_2)
     public void spbtn_all_zu_2() {
         if (MyApplication.prefs.getIsip()) {
-            HttpUtil.myPost("VIDC4");
+            HttpUtil.myPost("VIDC4", jzhandler);
         } else {
             MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "VIDC4".getBytes());
         }
@@ -210,13 +235,13 @@ public class JuzhenActivity extends Activity {
     private void sendDan(int i) {
         if (MyApplication.prefs.getIsip()) {
             if (spbtn_dan_in_lsdn.isChecked()) {
-                HttpUtil.myPost("VIDA1," + i);
+                HttpUtil.myPost("VIDA1," + i, jzhandler);
             } else if (spbtn_dan_in_tsj.isChecked()) {
-                HttpUtil.myPost("VIDA2," + i);
+                HttpUtil.myPost("VIDA2," + i, jzhandler);
             } else if (spbtn_dan_in_bjb.isChecked()) {
-                HttpUtil.myPost("VIDA3," + i);
+                HttpUtil.myPost("VIDA3," + i, jzhandler);
             } else if (spbtn_dan_in_gpy.isChecked()) {
-                HttpUtil.myPost("VIDA4," + i);
+                HttpUtil.myPost("VIDA4," + i, jzhandler);
             }
         } else {
             if (spbtn_dan_in_lsdn.isChecked()) {

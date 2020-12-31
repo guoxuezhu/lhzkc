@@ -1,10 +1,13 @@
 package com.lh.lhzkc.ui;
 
 import android.app.Activity;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.CheckBox;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.lh.lhzkc.MyApplication;
 import com.lh.lhzkc.R;
@@ -36,6 +39,28 @@ public class HuanjingActivity extends Activity {
 
     @BindView(R.id.huanjng_btn_kaiguan)
     CheckBox huanjng_btn_kaiguan;
+
+    Handler hjhandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            switch (msg.what) {
+                case 123:
+                    MyToastshow("操作成功");
+                    break;
+                case 124:
+                    MyToastshow("连接失败,请检测网络");
+                    break;
+                case 125:
+                    MyToastshow("data Exception");
+                    break;
+            }
+        }
+    };
+
+    private void MyToastshow(String msg) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,9 +116,9 @@ public class HuanjingActivity extends Activity {
     public void huanjng_btn_kaiguan() {
         if (MyApplication.prefs.getIsip()) {
             if (huanjng_btn_kaiguan.isChecked()) {
-                HttpUtil.myPost("MBS39");
+                HttpUtil.myPost("MBS39", hjhandler);
             } else {
-                HttpUtil.myPost("MBS40");
+                HttpUtil.myPost("MBS40", hjhandler);
             }
         } else {
             if (huanjng_btn_kaiguan.isChecked()) {
@@ -108,7 +133,7 @@ public class HuanjingActivity extends Activity {
     @OnClick(R.id.huanjng_btn_moshi)
     public void huanjng_btn_moshi() {
         if (MyApplication.prefs.getIsip()) {
-            HttpUtil.myPost("MBS41");
+            HttpUtil.myPost("MBS41", hjhandler);
         } else {
             MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS41".getBytes());
         }
@@ -118,7 +143,7 @@ public class HuanjingActivity extends Activity {
     @OnClick(R.id.huanjng_btn_fengsu)
     public void huanjng_btn_fengsu() {
         if (MyApplication.prefs.getIsip()) {
-            HttpUtil.myPost("MBS44");
+            HttpUtil.myPost("MBS44", hjhandler);
         } else {
             MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS44".getBytes());
         }
@@ -145,6 +170,6 @@ public class HuanjingActivity extends Activity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        finish();
+        hjhandler = null;
     }
 }

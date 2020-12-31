@@ -1,8 +1,11 @@
 package com.lh.lhzkc.ui;
 
 import android.app.Activity;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.lh.lhzkc.MyApplication;
 import com.lh.lhzkc.R;
@@ -13,6 +16,28 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class ShebeiActivity extends Activity {
+
+    Handler sbhandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            switch (msg.what) {
+                case 123:
+                    MyToastshow("操作成功");
+                    break;
+                case 124:
+                    MyToastshow("连接失败,请检测网络");
+                    break;
+                case 125:
+                    MyToastshow("data Exception");
+                    break;
+            }
+        }
+    };
+
+    private void MyToastshow(String msg) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +50,7 @@ public class ShebeiActivity extends Activity {
     @OnClick(R.id.rbtn_cl_open)
     public void rbtn_cl_open() {
         if (MyApplication.prefs.getIsip()) {
-            HttpUtil.myPost("MBS3");
+            HttpUtil.myPost("MBS3", sbhandler);
         } else {
             MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS3".getBytes());
         }
@@ -34,7 +59,7 @@ public class ShebeiActivity extends Activity {
     @OnClick(R.id.rbtn_cl_close)
     public void rbtn_cl_close() {
         if (MyApplication.prefs.getIsip()) {
-            HttpUtil.myPost("MBS4");
+            HttpUtil.myPost("MBS4", sbhandler);
         } else {
             MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS4".getBytes());
         }
@@ -43,7 +68,7 @@ public class ShebeiActivity extends Activity {
     @OnClick(R.id.rbtn_cl_1_open)
     public void rbtn_cl_1_open() {
         if (MyApplication.prefs.getIsip()) {
-            HttpUtil.myPost("MBS5");
+            HttpUtil.myPost("MBS5", sbhandler);
         } else {
             MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS5".getBytes());
         }
@@ -52,7 +77,7 @@ public class ShebeiActivity extends Activity {
     @OnClick(R.id.rbtn_cl_1_close)
     public void rbtn_cl_1_close() {
         if (MyApplication.prefs.getIsip()) {
-            HttpUtil.myPost("MBS6");
+            HttpUtil.myPost("MBS6", sbhandler);
         } else {
             MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS6".getBytes());
         }
@@ -61,7 +86,7 @@ public class ShebeiActivity extends Activity {
     @OnClick(R.id.rbtn_cl_2_open)
     public void rbtn_cl_2_open() {
         if (MyApplication.prefs.getIsip()) {
-            HttpUtil.myPost("MBS7");
+            HttpUtil.myPost("MBS7", sbhandler);
         } else {
             MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS7".getBytes());
         }
@@ -70,7 +95,7 @@ public class ShebeiActivity extends Activity {
     @OnClick(R.id.rbtn_cl_2_close)
     public void rbtn_cl_2_close() {
         if (MyApplication.prefs.getIsip()) {
-            HttpUtil.myPost("MBS8");
+            HttpUtil.myPost("MBS8", sbhandler);
         } else {
             MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS8".getBytes());
         }
@@ -79,7 +104,7 @@ public class ShebeiActivity extends Activity {
     @OnClick(R.id.rbtn_tyj_open)
     public void rbtn_tyj_open() {
         if (MyApplication.prefs.getIsip()) {
-            HttpUtil.myPost("MBS9");
+            HttpUtil.myPost("MBS9", sbhandler);
         } else {
             MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS9".getBytes());
         }
@@ -88,7 +113,7 @@ public class ShebeiActivity extends Activity {
     @OnClick(R.id.rbtn_tyj_close)
     public void rbtn_tyj_close() {
         if (MyApplication.prefs.getIsip()) {
-            HttpUtil.myPost("MBS10");
+            HttpUtil.myPost("MBS10", sbhandler);
         } else {
             MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS10".getBytes());
         }
@@ -97,7 +122,7 @@ public class ShebeiActivity extends Activity {
     @OnClick(R.id.rbtn_tyj_bu_open)
     public void rbtn_tyj_bu_open() {
         if (MyApplication.prefs.getIsip()) {
-            HttpUtil.myPost("MBS11");
+            HttpUtil.myPost("MBS11", sbhandler);
         } else {
             MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS11".getBytes());
         }
@@ -106,7 +131,7 @@ public class ShebeiActivity extends Activity {
     @OnClick(R.id.rbtn_tyj_bu_close)
     public void rbtn_tyj_bu_close() {
         if (MyApplication.prefs.getIsip()) {
-            HttpUtil.myPost("MBS12");
+            HttpUtil.myPost("MBS12", sbhandler);
         } else {
             MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS12".getBytes());
         }
@@ -115,7 +140,7 @@ public class ShebeiActivity extends Activity {
     @OnClick(R.id.rbtn_dg_open)
     public void rbtn_dg_open() {
         if (MyApplication.prefs.getIsip()) {
-            HttpUtil.myPost("MBS13");
+            HttpUtil.myPost("MBS13", sbhandler);
         } else {
             MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS13".getBytes());
         }
@@ -124,7 +149,7 @@ public class ShebeiActivity extends Activity {
     @OnClick(R.id.rbtn_dg_close)
     public void rbtn_dg_close() {
         if (MyApplication.prefs.getIsip()) {
-            HttpUtil.myPost("MBS14");
+            HttpUtil.myPost("MBS14", sbhandler);
         } else {
             MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS14".getBytes());
         }
@@ -133,7 +158,7 @@ public class ShebeiActivity extends Activity {
     @OnClick(R.id.rbtn_dg_1_open)
     public void rbtn_dg_1_open() {
         if (MyApplication.prefs.getIsip()) {
-            HttpUtil.myPost("MBS62");
+            HttpUtil.myPost("MBS62", sbhandler);
         } else {
             MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS62".getBytes());
         }
@@ -142,7 +167,7 @@ public class ShebeiActivity extends Activity {
     @OnClick(R.id.rbtn_dg_1_close)
     public void rbtn_dg_1_close() {
         if (MyApplication.prefs.getIsip()) {
-            HttpUtil.myPost("MBS63");
+            HttpUtil.myPost("MBS63", sbhandler);
         } else {
             MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS63".getBytes());
         }
@@ -151,7 +176,7 @@ public class ShebeiActivity extends Activity {
     @OnClick(R.id.rbtn_dg_2_open)
     public void rbtn_dg_2_open() {
         if (MyApplication.prefs.getIsip()) {
-            HttpUtil.myPost("MBS64");
+            HttpUtil.myPost("MBS64", sbhandler);
         } else {
             MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS64".getBytes());
         }
@@ -160,7 +185,7 @@ public class ShebeiActivity extends Activity {
     @OnClick(R.id.rbtn_dg_2_close)
     public void rbtn_dg_2_close() {
         if (MyApplication.prefs.getIsip()) {
-            HttpUtil.myPost("MBS65");
+            HttpUtil.myPost("MBS65", sbhandler);
         } else {
             MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS65".getBytes());
         }
@@ -169,7 +194,7 @@ public class ShebeiActivity extends Activity {
     @OnClick(R.id.btn_qianmen_open)
     public void btn_qianmen_open() {
         if (MyApplication.prefs.getIsip()) {
-            HttpUtil.myPost("MJD46");
+            HttpUtil.myPost("MJD46", sbhandler);
         } else {
             MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MJD46".getBytes());
         }
@@ -178,7 +203,7 @@ public class ShebeiActivity extends Activity {
     @OnClick(R.id.btn_houmen_open)
     public void btn_houmen_open() {
         if (MyApplication.prefs.getIsip()) {
-            HttpUtil.myPost("MBS47");
+            HttpUtil.myPost("MBS47", sbhandler);
         } else {
             MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS47".getBytes());
         }
@@ -187,7 +212,7 @@ public class ShebeiActivity extends Activity {
     @OnClick(R.id.btn_dpytj_open)
     public void btn_dpytj_open() {
         if (MyApplication.prefs.getIsip()) {
-            HttpUtil.myPost("MBS5001");
+            HttpUtil.myPost("MBS5001", sbhandler);
         } else {
             MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS5001".getBytes());
         }
@@ -196,7 +221,7 @@ public class ShebeiActivity extends Activity {
     @OnClick(R.id.btn_dpytj_close)
     public void btn_dpytj_close() {
         if (MyApplication.prefs.getIsip()) {
-            HttpUtil.myPost("MBS5002");
+            HttpUtil.myPost("MBS5002", sbhandler);
         } else {
             MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS5002".getBytes());
         }
@@ -205,6 +230,6 @@ public class ShebeiActivity extends Activity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        finish();
+        sbhandler = null;
     }
 }
