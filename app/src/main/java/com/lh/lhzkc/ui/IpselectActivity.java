@@ -64,7 +64,7 @@ public class IpselectActivity extends Activity {
         setContentView(R.layout.activity_ipselect);
         ButterKnife.bind(this);
 
-        zk_ip.setText(MyApplication.prefs.getZKIP());
+        zk_ip.setText("");
         user_name.setText("");
         user_password.setText("");
 
