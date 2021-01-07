@@ -81,13 +81,13 @@ public class YinpinActivity extends Activity {
     @OnClick(R.id.zyl_jingyin)
     public void zyl_jingyin() {
         if (MyApplication.prefs.getIsip()) {
-            if (mkf_jingyin.isChecked()) {
+            if (zyl_jingyin.isChecked()) {
                 HttpUtil.myPost("MBS23", yphandler);
             } else {
                 HttpUtil.myPost("MBS24", yphandler);
             }
         } else {
-            if (mkf_jingyin.isChecked()) {
+            if (zyl_jingyin.isChecked()) {
                 MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS23".getBytes());
             } else {
                 MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS24".getBytes());
@@ -118,13 +118,13 @@ public class YinpinActivity extends Activity {
     @OnClick(R.id.yx_jingyin)
     public void yx_jingyin() {
         if (MyApplication.prefs.getIsip()) {
-            if (mkf_jingyin.isChecked()) {
+            if (yx_jingyin.isChecked()) {
                 HttpUtil.myPost("MBS27", yphandler);
             } else {
                 HttpUtil.myPost("MBS28", yphandler);
             }
         } else {
-            if (mkf_jingyin.isChecked()) {
+            if (yx_jingyin.isChecked()) {
                 MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS27".getBytes());
             } else {
                 MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS28".getBytes());
