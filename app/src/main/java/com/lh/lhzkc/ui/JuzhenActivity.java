@@ -218,17 +218,17 @@ public class JuzhenActivity extends Activity {
 
     @OnClick(R.id.spbtn_dan_out_dp1)
     public void spbtn_dan_out_dp1() {
-        spbtn_dan_out_ty.setChecked(true);
-        spbtn_dan_out_dp1.setChecked(false);
+        spbtn_dan_out_ty.setChecked(false);
+        spbtn_dan_out_dp1.setChecked(true);
         spbtn_dan_out_dp2.setChecked(false);
         sendDan(2);
     }
 
     @OnClick(R.id.spbtn_dan_out_dp2)
     public void spbtn_dan_out_dp2() {
-        spbtn_dan_out_ty.setChecked(true);
+        spbtn_dan_out_ty.setChecked(false);
         spbtn_dan_out_dp1.setChecked(false);
-        spbtn_dan_out_dp2.setChecked(false);
+        spbtn_dan_out_dp2.setChecked(true);
         sendDan(3);
     }
 
