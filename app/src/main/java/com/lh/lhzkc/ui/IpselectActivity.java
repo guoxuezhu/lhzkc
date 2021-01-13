@@ -53,6 +53,9 @@ public class IpselectActivity extends Activity {
                 case 2:
                     Toast.makeText(IpselectActivity.this, "连接失败,请检测网络", Toast.LENGTH_SHORT).show();
                     break;
+                case 3:
+                    Toast.makeText(IpselectActivity.this, msg.obj.toString(), Toast.LENGTH_SHORT).show();
+                    break;
             }
         }
     };
@@ -126,6 +129,11 @@ public class IpselectActivity extends Activity {
                         ELog.i("===========apptoken=======" + apptoken);
                         MyApplication.prefs.setAppToken(apptoken);
                         iphandler.sendEmptyMessage(1);
+                    } else {
+                        Message message = new Message();
+                        message.obj = jsonObject.getString("message");
+                        message.what = 3;
+                        iphandler.sendMessage(message);
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
