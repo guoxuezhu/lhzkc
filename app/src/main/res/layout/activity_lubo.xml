@@ -147,7 +147,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="直播"
+                android:text="直播开/关"
                 android:textColor="@color/white" />
         </LinearLayout>
 

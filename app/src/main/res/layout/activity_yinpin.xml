@@ -58,7 +58,7 @@
             android:background="@drawable/checked_status_1"
             android:button="@null"
             android:gravity="center"
-            android:text="静音"
+            android:text="静音开/关"
             android:textColor="@color/black" />
 
     </LinearLayout>
