@@ -29,14 +29,8 @@ public class LuboActivity extends Activity {
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
             switch (msg.what) {
-                case 123:
-                    MyToastshow("操作成功");
-                    break;
                 case 124:
-                    MyToastshow("连接失败,请检测网络");
-                    break;
-                case 125:
-                    MyToastshow("data Exception");
+                    MyToastshow(msg.obj.toString());
                     break;
             }
         }

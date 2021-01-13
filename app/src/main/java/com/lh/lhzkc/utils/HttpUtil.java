@@ -2,6 +2,7 @@ package com.lh.lhzkc.utils;
 
 
 import android.os.Handler;
+import android.os.Message;
 
 import com.lh.lhzkc.MyApplication;
 
@@ -42,24 +43,32 @@ public class HttpUtil {
             @Override
             public void onFailure(Call call, IOException e) {
                 ELog.e("======HttpUtil====onFailure=======" + e.toString());
-                mhandler.sendEmptyMessage(124);
+                Message message = new Message();
+                message.obj = "连接失败,请检测网络";
+                message.what = 124;
+                mhandler.sendMessage(message);
             }
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 String responseText = response.body().string();
                 ELog.e("=======HttpUtil===ok=======" + responseText);
+                Message message = new Message();
                 try {
                     JSONObject jsonObject = new JSONObject(responseText);
                     if (jsonObject.getString("code").equals("200")) {
-                        mhandler.sendEmptyMessage(123);
+                        message.obj = "操作成功";
+                        message.what = 124;
                     } else {
-                        mhandler.sendEmptyMessage(125);
+                        message.obj = jsonObject.getString("message");
+                        message.what = 124;
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
-                    mhandler.sendEmptyMessage(125);
+                    message.obj = responseText;
+                    message.what = 124;
                 }
+                mhandler.sendMessage(message);
             }
         });
     }

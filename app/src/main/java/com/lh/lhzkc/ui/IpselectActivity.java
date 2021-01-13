@@ -100,7 +100,7 @@ public class IpselectActivity extends Activity {
             md5Password = Coder.hashMD5(queryString.getBytes("utf8"));
         } catch (Exception e) {
             e.printStackTrace();
-            Toast.makeText(this, "data Exception", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "帐号或者密码存在问题", Toast.LENGTH_SHORT).show();
             return;
         }
         RequestBody requestBody = new FormBody.Builder()
