@@ -30,6 +30,7 @@ public class HttpUtil {
         FormBody body = new FormBody.Builder()
                 .add("zkbtn", zkbtnType)
                 .add("lh_zks_token", MyApplication.prefs.getAppToken())
+                .add("user_name", MyApplication.prefs.getloginuser())
                 .build();
 
         Request request = new Request.Builder()

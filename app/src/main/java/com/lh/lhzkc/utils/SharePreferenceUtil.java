@@ -62,6 +62,16 @@ public class SharePreferenceUtil {
     }
 
 
+    public void setloginuser(String userName) {
+        editor.putString("userName", userName);
+        editor.commit();
+    }
+
+    public String getloginuser() {
+        return sp.getString("userName", "");
+    }
+
+
     public void setAppToken(String appToken) {
         editor.putString("appToken", appToken);
         editor.commit();

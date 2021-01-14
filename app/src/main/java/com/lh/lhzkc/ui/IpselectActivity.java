@@ -128,6 +128,7 @@ public class IpselectActivity extends Activity {
                         String apptoken = jsonObject.getString("data");
                         ELog.i("===========apptoken=======" + apptoken);
                         MyApplication.prefs.setAppToken(apptoken);
+                        MyApplication.prefs.setloginuser(user_name.getText().toString().trim());
                         iphandler.sendEmptyMessage(1);
                     } else {
                         Message message = new Message();
