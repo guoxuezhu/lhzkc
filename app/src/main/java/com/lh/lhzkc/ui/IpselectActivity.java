@@ -13,6 +13,7 @@ import com.lh.lhzkc.R;
 import com.lh.lhzkc.utils.Coder;
 import com.lh.lhzkc.utils.DisplayTools;
 import com.lh.lhzkc.utils.ELog;
+import com.lh.lhzkc.utils.HttpUtil;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -92,7 +93,9 @@ public class IpselectActivity extends Activity {
             return;
         }
 
-        OkHttpClient okHttpClient = new OkHttpClient();
+        OkHttpClient okHttpClient = new OkHttpClient.Builder()
+                .addInterceptor(new HttpUtil.SignInterceptor())
+                .build();
 
         String queryString = user_name.getText().toString().trim() + "SWQxcGJxM2RrRkoyOTAxNGU" + user_password.getText().toString().trim();
         String md5Password = "";
