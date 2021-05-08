@@ -13,222 +13,80 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:gravity="center"
         android:orientation="horizontal">
 
+        <Button
+            android:id="@+id/cj_btn_layout"
+            style="@style/button_1"
+            android:text="场景" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
+        <Button
+            android:id="@+id/jz_btn_layout"
+            style="@style/button_1"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="互动" />
 
-            <LinearLayout
-                android:id="@+id/cj_btn_layout"
-                android:layout_width="@dimen/home_btn_bg"
-                android:layout_height="@dimen/home_btn_bg"
-                android:background="@mipmap/cj_bg"
-                android:gravity="center">
-
-                <ImageView
-                    android:layout_width="@dimen/home_btn_img_bg"
-                    android:layout_height="@dimen/home_btn_img_bg"
-                    android:src="@mipmap/cj_img" />
-
-            </LinearLayout>
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="场景"
-                android:textColor="@color/white" />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/home_btn_marginLeft"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:id="@+id/jz_btn_layout"
-                android:layout_width="@dimen/home_btn_bg"
-                android:layout_height="@dimen/home_btn_bg"
-                android:background="@mipmap/jz_bg"
-                android:gravity="center">
-
-                <ImageView
-                    android:layout_width="@dimen/home_btn_img_bg"
-                    android:layout_height="@dimen/home_btn_img_bg"
-                    android:src="@mipmap/jz_img" />
-
-            </LinearLayout>
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="互动"
-                android:textColor="@color/white" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/home_btn_marginLeft"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:id="@+id/lb_btn_layout"
-                android:layout_width="@dimen/home_btn_bg"
-                android:layout_height="@dimen/home_btn_bg"
-                android:background="@mipmap/lb_bg"
-                android:gravity="center">
-
-                <ImageView
-                    android:layout_width="@dimen/home_btn_img_bg"
-                    android:layout_height="@dimen/home_btn_img_bg"
-                    android:src="@mipmap/lb_img" />
-
-            </LinearLayout>
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="录播"
-                android:textColor="@color/white" />
-        </LinearLayout>
+        <Button
+            android:id="@+id/sb_btn_layout"
+            style="@style/button_1"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="多媒体" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/dp_20"
         android:gravity="center"
         android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
+        <Button
+            android:id="@+id/dg_btn_layout"
+            style="@style/button_1"
+            android:text="灯光" />
 
-            <LinearLayout
-                android:id="@+id/sb_btn_layout"
-                android:layout_width="@dimen/home_btn_bg"
-                android:layout_height="@dimen/home_btn_bg"
-                android:background="@mipmap/sb_bg"
-                android:gravity="center">
+        <Button
+            android:id="@+id/cl_btn_layout"
+            style="@style/button_1"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="窗帘" />
 
-                <ImageView
-                    android:layout_width="@dimen/home_btn_img_bg"
-                    android:layout_height="@dimen/home_btn_img_bg"
-                    android:src="@mipmap/sb_img" />
+        <Button
+            android:id="@+id/hj_btn_layout"
+            style="@style/button_1"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="空调" />
 
-            </LinearLayout>
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="设备"
-                android:textColor="@color/white" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/home_btn_marginLeft"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:id="@+id/hj_btn_layout"
-                android:layout_width="@dimen/home_btn_bg"
-                android:layout_height="@dimen/home_btn_bg"
-                android:background="@mipmap/hj_bg"
-                android:gravity="center">
-
-                <ImageView
-                    android:layout_width="@dimen/home_btn_img_bg"
-                    android:layout_height="@dimen/home_btn_img_bg"
-                    android:src="@mipmap/hj_img" />
-
-            </LinearLayout>
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="环境"
-                android:textColor="@color/white" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/home_btn_marginLeft"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:id="@+id/yp_btn_layout"
-                android:layout_width="@dimen/home_btn_bg"
-                android:layout_height="@dimen/home_btn_bg"
-                android:background="@mipmap/yp_bg"
-                android:gravity="center">
-
-                <ImageView
-                    android:layout_width="@dimen/home_btn_img_bg"
-                    android:layout_height="@dimen/home_btn_img_bg"
-                    android:src="@mipmap/yp_img" />
-
-            </LinearLayout>
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="音频"
-                android:textColor="@color/white" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/home_btn_marginLeft"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:visibility="gone">
-
-            <LinearLayout
-                android:id="@+id/dy_btn_layout"
-                android:layout_width="@dimen/home_btn_bg"
-                android:layout_height="@dimen/home_btn_bg"
-                android:background="@mipmap/dy_bg"
-                android:gravity="center">
-
-                <ImageView
-                    android:layout_width="@dimen/home_btn_img_bg"
-                    android:layout_height="@dimen/home_btn_img_bg"
-                    android:src="@mipmap/dy_img" />
-
-            </LinearLayout>
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="电源"
-                android:textColor="@color/white" />
-        </LinearLayout>
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/lb_btn_layout"
+            style="@style/button_1"
+            android:text="录播" />
+
+        <Button
+            android:id="@+id/door_btn_layout"
+            style="@style/button_1"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="门禁" />
+
+        <Button
+            android:id="@+id/yp_btn_layout"
+            style="@style/button_1"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="音频" />
+
+    </LinearLayout>
+
 </LinearLayout>

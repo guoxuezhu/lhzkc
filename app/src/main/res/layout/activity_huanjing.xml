@@ -7,19 +7,19 @@
     android:background="@mipmap/main_bg"
     android:gravity="center"
     android:orientation="vertical"
-    android:paddingLeft="10dp"
-    android:paddingRight="10dp"
+    android:padding="10dp"
     tools:context=".ui.HuanjingActivity">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_10"
         android:background="@drawable/layout_bg_1"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:visibility="gone"
-        android:padding="@dimen/dp_10">
+        android:padding="@dimen/dp_10"
+        android:visibility="gone">
 
 
         <LinearLayout
@@ -107,161 +107,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/layout_bg_1"
-        android:gravity="center_horizontal"
+        android:gravity="center"
         android:orientation="horizontal"
         android:padding="@dimen/dp_10">
 
+        <CheckBox
+            android:id="@+id/huanjng_btn_kaiguan"
+            style="@style/check_box_1"
+            android:text="空调开/关" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <CheckBox
-                android:id="@+id/huanjng_btn_kaiguan"
-                android:layout_width="@dimen/btn_bg_2"
-                android:layout_height="@dimen/btn_bg_2"
-                android:button="@null"
-                android:drawableLeft="@drawable/imgbtn_kt_kg"
-                android:drawableStart="@drawable/imgbtn_kt_kg"
-                android:padding="10dp"
-                android:background="@drawable/checked_status_2"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="空调开/关"
-                android:textColor="@color/white" />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <CheckBox
+            android:id="@+id/huanjng_btn_fengsu"
+            style="@style/check_box_1"
             android:layout_marginLeft="@dimen/dp_10"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
+            android:text="空调风速" />
 
-            <ImageButton
-                android:id="@+id/huanjng_btn_fengsu"
-                android:layout_width="@dimen/btn_bg_2"
-                android:layout_height="@dimen/btn_bg_2"
-                android:background="@drawable/btn_status_1"
-                android:scaleType="fitCenter"
-                android:src="@drawable/imgbtn_kt_fs" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="空调风速"
-                android:textColor="@color/white" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
+        <CheckBox
+            android:id="@+id/huanjng_btn_moshi"
+            style="@style/check_box_1"
             android:layout_marginLeft="@dimen/dp_10"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/huanjng_btn_moshi"
-                android:layout_width="@dimen/btn_bg_2"
-                android:layout_height="@dimen/btn_bg_2"
-                android:background="@drawable/btn_status_1"
-                android:scaleType="fitCenter"
-                android:src="@drawable/imgbtn_kt_ms" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="空调自动"
-                android:textColor="@color/white" />
-        </LinearLayout>
+            android:text="空调自动" />
 
     </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_10"
-        android:background="@drawable/layout_bg_1"
-        android:gravity="center_horizontal"
-        android:visibility="gone"
-        android:orientation="horizontal"
-        android:padding="@dimen/dp_10">
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/huanjng_btn_fengxiang"
-                android:layout_width="@dimen/btn_bg_2"
-                android:layout_height="@dimen/btn_bg_2"
-                android:background="@drawable/btn_status_1"
-                android:scaleType="fitCenter"
-                android:src="@drawable/imgbtn_kt_fx" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="风向"
-                android:textColor="@color/white" />
-        </LinearLayout>
-
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_10"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/huanjng_btn_wd_jia"
-                android:layout_width="@dimen/btn_bg_2"
-                android:layout_height="@dimen/btn_bg_2"
-                android:background="@drawable/btn_status_1"
-                android:scaleType="fitCenter"
-                android:src="@drawable/imgbtn_kt_wd_jia" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="温度＋"
-                android:textColor="@color/white" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_10"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/huanjng_btn_wd_jian"
-                android:layout_width="@dimen/btn_bg_2"
-                android:layout_height="@dimen/btn_bg_2"
-                android:background="@drawable/btn_status_1"
-                android:scaleType="fitCenter"
-                android:src="@drawable/imgbtn_kt_wd_jian" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="温度－"
-                android:textColor="@color/white" />
-        </LinearLayout>
-
-    </LinearLayout>
-
 
 </LinearLayout>

@@ -7,8 +7,7 @@
     android:background="@mipmap/main_bg"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".ui.LuboActivity">
-
+    tools:context=".ui.DengActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,50 +16,55 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/luzhi"
-            style="@style/button_1"
-            android:text="录制" />
+            android:id="@+id/rbtn_dg_open"
+            style="@style/button_2"
+            android:text="灯光全开" />
 
         <Button
-            android:id="@+id/zanting"
-            style="@style/button_1"
+            android:id="@+id/rbtn_dg_close"
+            style="@style/button_2"
             android:layout_marginLeft="@dimen/dp_20"
-            android:text="暂停" />
+            android:text="灯光全关" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="@dimen/dp_20"
         android:gravity="center"
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/jixu"
-            style="@style/button_1"
-            android:text="继续" />
+            android:id="@+id/rbtn_dg_1_open"
+            style="@style/button_2"
+            android:text="黑板灯开" />
 
         <Button
-            android:id="@+id/tingzhi"
-            style="@style/button_1"
+            android:id="@+id/rbtn_dg_1_close"
+            style="@style/button_2"
             android:layout_marginLeft="@dimen/dp_20"
-            android:text="停止" />
+            android:text="黑板灯关" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="@dimen/dp_20"
         android:gravity="center"
         android:orientation="horizontal">
 
-        <CheckBox
-            android:id="@+id/zhibo"
-            style="@style/check_box_1"
-            android:text="直播"
-            app:buttonCompat="@null" />
+        <Button
+            android:id="@+id/rbtn_dg_2_open"
+            style="@style/button_2"
+            android:text="教室灯开" />
+
+        <Button
+            android:id="@+id/rbtn_dg_2_close"
+            style="@style/button_2"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:text="教室灯关" />
 
     </LinearLayout>
 

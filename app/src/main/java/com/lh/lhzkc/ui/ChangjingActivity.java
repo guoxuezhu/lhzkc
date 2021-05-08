@@ -17,12 +17,9 @@ public class ChangjingActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_changjing);
-
         ButterKnife.bind(this);
 
-
     }
-
 
     @OnClick(R.id.btn_shangke)
     public void btn_shangke() {
@@ -41,16 +38,6 @@ public class ChangjingActivity extends Activity {
             MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS2".getBytes());
         }
     }
-
-//    @OnClick(R.id.btn_zixi)
-//    public void btn_zixi() {
-//        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS3".getBytes());
-//    }
-//
-//    @OnClick(R.id.btn_xiuxi)
-//    public void btn_xiuxi() {
-//        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS4".getBytes());
-//    }
 
     @Override
     public void onBackPressed() {

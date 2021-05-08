@@ -20,7 +20,6 @@ public class HomeActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
         ButterKnife.bind(this);
 
     }
@@ -31,41 +30,45 @@ public class HomeActivity extends Activity {
         startActivity(new Intent(this, ChangjingActivity.class));
     }
 
-
     @OnClick(R.id.sb_btn_layout)
     public void sb_btn_layout() {
         startActivity(new Intent(this, ShebeiActivity.class));
     }
-
 
     @OnClick(R.id.lb_btn_layout)
     public void lb_btn_layout() {
         startActivity(new Intent(this, LuboActivity.class));
     }
 
-
     @OnClick(R.id.jz_btn_layout)
     public void jz_btn_layout() {
         startActivity(new Intent(this, JuzhenActivity.class));
     }
 
+    @OnClick(R.id.dg_btn_layout)
+    public void dg_btn_layout() {
+        startActivity(new Intent(this, DengActivity.class));
+    }
+
+    @OnClick(R.id.cl_btn_layout)
+    public void cl_btn_layout() {
+        startActivity(new Intent(this, ChuanglianActivity.class));
+    }
 
     @OnClick(R.id.hj_btn_layout)
     public void hj_btn_layout() {
         startActivity(new Intent(this, HuanjingActivity.class));
     }
 
-
-    @OnClick(R.id.yp_btn_layout)
-    public void yp_btn_layout() {
-        startActivity(new Intent(this, YinpinActivity.class));
+    @OnClick(R.id.door_btn_layout)
+    public void door_btn_layout() {
+        startActivity(new Intent(this, DoorActivity.class));
     }
 
-
-    @OnClick(R.id.dy_btn_layout)
-    public void dy_btn_layout() {
-        startActivity(new Intent(this, DianyuanActivity.class));
-    }
+//    @OnClick(R.id.yp_btn_layout)
+//    public void yp_btn_layout() {
+//        startActivity(new Intent(this, YinpinActivity.class));
+//    }
 
     @Override
     protected void onDestroy() {

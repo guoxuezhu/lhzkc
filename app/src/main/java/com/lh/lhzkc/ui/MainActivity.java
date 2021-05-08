@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.lh.lhzkc.MyApplication;
@@ -65,9 +64,7 @@ public class MainActivity extends Activity {
 
         getuuid();//每个客户端唯一标识
 
-
         zk_name.setText(MyApplication.prefs.getMqttuser());
-
 
     }
 
@@ -108,11 +105,8 @@ public class MainActivity extends Activity {
                 } else {
                     handler.sendEmptyMessage(2);
                 }
-
-
             }
         }.start();
-
 
     }
 

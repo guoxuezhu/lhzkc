@@ -1,5 +1,13 @@
 <resources>
 
+    <dimen name="btn_width_1">100dp</dimen>
+    <dimen name="btn_height_1">100dp</dimen>
+
+    <dimen name="btn_width_2">100dp</dimen>
+    <dimen name="btn_height_2">50dp</dimen>
+
+    <dimen name="btn_width_3">75dp</dimen>
+    <dimen name="btn_height_3">35dp</dimen>
 
     <dimen name="layout_padding_top">170dp</dimen>
 

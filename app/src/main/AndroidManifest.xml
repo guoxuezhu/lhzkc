@@ -13,18 +13,19 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/zk_icon"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
+        android:theme="@style/Theme.Lhzkc"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.IpselectActivity"></activity>
-        <activity android:name=".ui.DianyuanActivity" />
-        <activity android:name=".ui.YinpinActivity" />
+        <activity android:name=".ui.DoorActivity"></activity>
+        <activity android:name=".ui.DengActivity" />
+        <activity android:name=".ui.ChuanglianActivity" />
         <activity android:name=".ui.LuboActivity" />
         <activity android:name=".ui.JuzhenActivity" />
-        <activity android:name=".ui.ShebeiActivity" />
         <activity android:name=".ui.HuanjingActivity" />
         <activity android:name=".ui.ChangjingActivity" />
-        <activity android:name=".ui.MainActivity" />
         <activity android:name=".ui.HomeActivity" />
+        <activity android:name=".ui.ShebeiActivity" />
+        <activity android:name=".ui.IpselectActivity" />
+        <activity android:name=".ui.MainActivity" />
         <activity android:name=".ui.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,9 +1,7 @@
 package com.lh.lhzkc.ui;
 
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.CheckBox;
 
 import com.lh.lhzkc.MyApplication;
@@ -25,11 +23,9 @@ public class LuboActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lubo);
-
         ButterKnife.bind(this);
-
-
     }
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();

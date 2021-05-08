@@ -6,118 +6,18 @@
     android:layout_height="match_parent"
     android:background="@mipmap/main_bg"
     android:gravity="center"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     tools:context=".ui.ChangjingActivity">
 
+    <Button
+        android:id="@+id/btn_shangke"
+        style="@style/button_1"
+        android:text="上课" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/btn_shangke"
-                android:layout_width="@dimen/btn_bg_1"
-                android:layout_height="@dimen/btn_bg_1"
-                android:background="@drawable/btn_status_1"
-                android:scaleType="fitCenter"
-                android:src="@drawable/imgbtn_sk" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="上课"
-                android:textColor="@color/white" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_50"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-
-            <ImageButton
-                android:id="@+id/btn_xiake"
-                android:layout_width="@dimen/btn_bg_1"
-                android:layout_height="@dimen/btn_bg_1"
-                android:background="@drawable/btn_status_1"
-                android:scaleType="fitCenter"
-                android:src="@drawable/imgbtn_xk" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="下课"
-                android:textColor="@color/white" />
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:gravity="center"
-        android:visibility="gone"
-        android:orientation="horizontal">
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/btn_zixi"
-                android:layout_width="@dimen/btn_bg_1"
-                android:layout_height="@dimen/btn_bg_1"
-                android:background="@drawable/btn_status_1"
-                android:scaleType="fitCenter"
-                android:src="@drawable/imgbtn_zx" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="自习"
-                android:textColor="@color/white" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_50"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/btn_xiuxi"
-                android:layout_width="@dimen/btn_bg_1"
-                android:layout_height="@dimen/btn_bg_1"
-                android:background="@drawable/btn_status_1"
-                android:scaleType="fitCenter"
-                android:src="@drawable/imgbtn_xx" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="休息"
-                android:textColor="@color/white" />
-        </LinearLayout>
-
-
-    </LinearLayout>
-
+    <Button
+        android:id="@+id/btn_xiake"
+        style="@style/button_1"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:text="下课" />
 
 </LinearLayout>

@@ -4,19 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/splash_bg"
+    android:background="@mipmap/main_bg"
     android:gravity="center"
     android:orientation="horizontal"
-    tools:context=".ui.SplashActivity">
+    tools:context=".ui.DoorActivity">
 
     <Button
-        android:id="@+id/btn_neiwang"
-        style="@style/button_2"
-        android:text="内网控制" />
+        android:id="@+id/btn_qianmen_open"
+        style="@style/button_1"
+        android:text="前门开" />
 
     <Button
-        android:id="@+id/btn_waiwang"
-        style="@style/button_2"
-        android:layout_marginLeft="@dimen/dp_20"
-        android:text="外网控制" />
+        android:id="@+id/btn_houmen_open"
+        style="@style/button_1"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:text="后门开" />
+
 </LinearLayout>
