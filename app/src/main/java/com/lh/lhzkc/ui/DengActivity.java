@@ -42,36 +42,36 @@ public class DengActivity extends Activity {
     @OnClick(R.id.rbtn_dg_1_open)
     public void rbtn_dg_1_open() {
         if (MyApplication.prefs.getIsip()) {
-            HttpUtil.myPost("MBS62");
+            HttpUtil.myPost("MBS3001");
         } else {
-            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS62".getBytes());
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS3001".getBytes());
         }
     }
 
     @OnClick(R.id.rbtn_dg_1_close)
     public void rbtn_dg_1_close() {
         if (MyApplication.prefs.getIsip()) {
-            HttpUtil.myPost("MBS63");
+            HttpUtil.myPost("MBS3002");
         } else {
-            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS63".getBytes());
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS3002".getBytes());
         }
     }
 
     @OnClick(R.id.rbtn_dg_2_open)
     public void rbtn_dg_2_open() {
         if (MyApplication.prefs.getIsip()) {
-            HttpUtil.myPost("MBS64");
+            HttpUtil.myPost("MBS3003");
         } else {
-            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS64".getBytes());
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS3003".getBytes());
         }
     }
 
     @OnClick(R.id.rbtn_dg_2_close)
     public void rbtn_dg_2_close() {
         if (MyApplication.prefs.getIsip()) {
-            HttpUtil.myPost("MBS65");
+            HttpUtil.myPost("MBS3004");
         } else {
-            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS65".getBytes());
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS3004".getBytes());
         }
     }
 

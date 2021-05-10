@@ -42,36 +42,36 @@ public class ChuanglianActivity extends Activity {
     @OnClick(R.id.rbtn_cl_1_open)
     public void rbtn_cl_1_open() {
         if (MyApplication.prefs.getIsip()) {
-            HttpUtil.myPost("MBS5");
+            HttpUtil.myPost("MBS1001");
         } else {
-            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS5".getBytes());
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS1001".getBytes());
         }
     }
 
     @OnClick(R.id.rbtn_cl_1_close)
     public void rbtn_cl_1_close() {
         if (MyApplication.prefs.getIsip()) {
-            HttpUtil.myPost("MBS6");
+            HttpUtil.myPost("MBS1002");
         } else {
-            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS6".getBytes());
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS1002".getBytes());
         }
     }
 
     @OnClick(R.id.rbtn_cl_2_open)
     public void rbtn_cl_2_open() {
         if (MyApplication.prefs.getIsip()) {
-            HttpUtil.myPost("MBS7");
+            HttpUtil.myPost("MBS1004");
         } else {
-            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS7".getBytes());
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS1004".getBytes());
         }
     }
 
     @OnClick(R.id.rbtn_cl_2_close)
     public void rbtn_cl_2_close() {
         if (MyApplication.prefs.getIsip()) {
-            HttpUtil.myPost("MBS8");
+            HttpUtil.myPost("MBS1005");
         } else {
-            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS8".getBytes());
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS1005".getBytes());
         }
     }
 

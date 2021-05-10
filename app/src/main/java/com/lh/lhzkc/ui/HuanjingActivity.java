@@ -104,42 +104,51 @@ public class HuanjingActivity extends Activity {
     }
 
 
-    @OnClick(R.id.huanjng_btn_moshi)
-    public void huanjng_btn_moshi() {
+    @OnClick(R.id.huanjng_btn_leng)
+    public void huanjng_btn_leng() {
         if (MyApplication.prefs.getIsip()) {
-            HttpUtil.myPost("MBS41");
+            HttpUtil.myPost("MBS2002");
         } else {
-            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS41".getBytes());
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS2002".getBytes());
         }
     }
 
 
-    @OnClick(R.id.huanjng_btn_fengsu)
-    public void huanjng_btn_fengsu() {
+    @OnClick(R.id.huanjng_btn_re)
+    public void huanjng_btn_re() {
         if (MyApplication.prefs.getIsip()) {
-            HttpUtil.myPost("MBS44");
+            HttpUtil.myPost("MBS2003");
         } else {
-            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS44".getBytes());
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS2003".getBytes());
         }
     }
 
+    @OnClick(R.id.huanjng_btn_fengsu_1)
+    public void huanjng_btn_fengsu_1() {
+        if (MyApplication.prefs.getIsip()) {
+            HttpUtil.myPost("MBS2004");
+        } else {
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS2004".getBytes());
+        }
+    }
 
-//    @OnClick(R.id.huanjng_btn_wd_jia)
-//    public void huanjng_btn_wd_jia() {
-//        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS43".getBytes());
-//    }
-//
-//
-//    @OnClick(R.id.huanjng_btn_wd_jian)
-//    public void huanjng_btn_wd_jian() {
-//        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS44".getBytes());
-//    }
-//
-//
-//    @OnClick(R.id.huanjng_btn_fengxiang)
-//    public void huanjng_btn_fengxiang() {
-//        MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS42".getBytes());
-//    }
+    @OnClick(R.id.huanjng_btn_fengsu_2)
+    public void huanjng_btn_fengsu_2() {
+        if (MyApplication.prefs.getIsip()) {
+            HttpUtil.myPost("MBS2005");
+        } else {
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS2005".getBytes());
+        }
+    }
+
+    @OnClick(R.id.huanjng_btn_fengsu_3)
+    public void huanjng_btn_fengsu_3() {
+        if (MyApplication.prefs.getIsip()) {
+            HttpUtil.myPost("MBS2006");
+        } else {
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "MBS2006".getBytes());
+        }
+    }
 
     @Override
     public void onBackPressed() {
