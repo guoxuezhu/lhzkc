@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/main_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_10"
+    tools:context=".ui.YinpinActivity">
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_10">
+
+        <RadioButton
+            android:id="@+id/yp_scht"
+            style="@style/check_box_2"
+            android:text="手持话筒"
+            app:buttonCompat="@null" />
+
+        <RadioButton
+            android:id="@+id/yp_tdht"
+            style="@style/check_box_2"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="头戴话筒"
+            app:buttonCompat="@null" />
+
+        <RadioButton
+            android:id="@+id/yp_kjyl"
+            style="@style/check_box_2"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="课件声音"
+            app:buttonCompat="@null" />
+
+        <RadioButton
+            android:id="@+id/yp_hxht"
+            style="@style/check_box_2"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="幻象话筒"
+            app:buttonCompat="@null" />
+
+    </RadioGroup>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <SeekBar
+            android:id="@+id/seek_bar_yl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:max="22"
+            android:maxHeight="30dp"
+            android:minHeight="30dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:progressDrawable="@drawable/seek_bar_style"
+            android:thumb="@drawable/seek_bar_thumb" />
+
+    </LinearLayout>
+
+</LinearLayout>

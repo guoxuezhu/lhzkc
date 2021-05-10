@@ -65,10 +65,15 @@ public class HomeActivity extends Activity {
         startActivity(new Intent(this, DoorActivity.class));
     }
 
-//    @OnClick(R.id.yp_btn_layout)
-//    public void yp_btn_layout() {
-//        startActivity(new Intent(this, YinpinActivity.class));
-//    }
+    @OnClick(R.id.dfs_btn_layout)
+    public void dfs_btn_layout() {
+        startActivity(new Intent(this, DianfsActivity.class));
+    }
+
+    @OnClick(R.id.yp_btn_layout)
+    public void yp_btn_layout() {
+        startActivity(new Intent(this, YinpinActivity.class));
+    }
 
     @Override
     protected void onDestroy() {
