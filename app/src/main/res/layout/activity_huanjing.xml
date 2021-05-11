@@ -116,15 +116,15 @@
             style="@style/check_box_1"
             android:text="空调开/关" />
 
-        <CheckBox
+        <Button
             android:id="@+id/huanjng_btn_leng"
-            style="@style/check_box_1"
+            style="@style/button_1"
             android:layout_marginLeft="@dimen/dp_10"
             android:text="空调制冷" />
 
-        <CheckBox
+        <Button
             android:id="@+id/huanjng_btn_re"
-            style="@style/check_box_1"
+            style="@style/button_1"
             android:layout_marginLeft="@dimen/dp_10"
             android:text="空调制热" />
 
@@ -140,20 +140,20 @@
         android:orientation="horizontal"
         android:padding="@dimen/dp_10">
 
-        <CheckBox
+        <Button
             android:id="@+id/huanjng_btn_fengsu_1"
-            style="@style/check_box_1"
+            style="@style/button_1"
             android:text="风速低" />
 
-        <CheckBox
+        <Button
             android:id="@+id/huanjng_btn_fengsu_2"
-            style="@style/check_box_1"
+            style="@style/button_1"
             android:layout_marginLeft="@dimen/dp_10"
             android:text="风速中" />
 
-        <CheckBox
+        <Button
             android:id="@+id/huanjng_btn_fengsu_3"
-            style="@style/check_box_1"
+            style="@style/button_1"
             android:layout_marginLeft="@dimen/dp_10"
             android:text="风速高" />
 
