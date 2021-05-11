@@ -87,7 +87,7 @@ public class IpselectActivity extends Activity {
                 .add("user_password", md5Password)
                 .build();
         Request request = new Request.Builder()
-                .url("http://" + MyApplication.prefs.getZKIP() + ":8099/api/lh_zk_login")
+                .url("http://" + zk_ip.getText().toString().trim() + ":8099/api/lh_zk_login")
                 .post(body)
                 .build();
         okHttpClient.newCall(request).enqueue(new Callback() {
@@ -123,11 +123,5 @@ public class IpselectActivity extends Activity {
             }
         });
     }
-
-
-    private void baocunIp() {
-
-    }
-
 
 }

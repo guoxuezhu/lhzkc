@@ -4,7 +4,9 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.lh.lhzkc.MyApplication;
 import com.lh.lhzkc.R;
+import com.lh.lhzkc.utils.HttpUtil;
 import com.lh.lhzkc.utils.MqttManager;
 
 import org.eclipse.paho.client.mqttv3.MqttException;
@@ -78,6 +80,13 @@ public class HomeActivity extends Activity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+        if (!MyApplication.prefs.getIsip()) {
+            try {
+                MqttManager.getInstance().disConnect();
+            } catch (MqttException e) {
+                e.printStackTrace();
+            }
+        }
         finish();
     }
 }
