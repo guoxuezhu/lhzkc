@@ -29,25 +29,25 @@
         <CheckBox
             android:id="@+id/spbtn_all_diannao"
             style="@style/check_box_2"
-            android:text="老师电脑" />
+            android:text="电脑1" />
 
         <CheckBox
             android:id="@+id/spbtn_all_touping"
             style="@style/check_box_2"
             android:layout_marginLeft="@dimen/dp_10"
-            android:text="台式机" />
+            android:text="电脑2" />
 
         <CheckBox
             android:id="@+id/spbtn_all_zu_1"
             style="@style/check_box_2"
             android:layout_marginLeft="@dimen/dp_10"
-            android:text="笔记本" />
+            android:text="电脑3" />
 
         <CheckBox
             android:id="@+id/spbtn_all_zu_2"
             style="@style/check_box_2"
             android:layout_marginLeft="@dimen/dp_10"
-            android:text="高拍仪" />
+            android:text="电脑4" />
 
     </LinearLayout>
 
@@ -85,25 +85,25 @@
                 android:id="@+id/spbtn_dan_in_lsdn"
                 style="@style/check_box_2"
                 android:layout_marginTop="@dimen/dp_10"
-                android:text="老师电脑" />
+                android:text="电脑1" />
 
             <CheckBox
                 android:id="@+id/spbtn_dan_in_tsj"
                 style="@style/check_box_2"
                 android:layout_marginTop="@dimen/dp_10"
-                android:text="台式机" />
+                android:text="电脑2" />
 
             <CheckBox
                 android:id="@+id/spbtn_dan_in_bjb"
                 style="@style/check_box_2"
                 android:layout_marginTop="@dimen/dp_10"
-                android:text="笔记本" />
+                android:text="电脑3" />
 
             <CheckBox
                 android:id="@+id/spbtn_dan_in_gpy"
                 style="@style/check_box_2"
                 android:layout_marginTop="@dimen/dp_10"
-                android:text="高拍仪" />
+                android:text="电脑4" />
         </LinearLayout>
 
 
@@ -128,19 +128,19 @@
                 android:id="@+id/spbtn_dan_out_ty"
                 style="@style/check_box_2"
                 android:layout_marginTop="@dimen/dp_10"
-                android:text="投影" />
+                android:text="大屏1" />
 
             <CheckBox
                 android:id="@+id/spbtn_dan_out_dp1"
                 style="@style/check_box_2"
                 android:layout_marginTop="@dimen/dp_10"
-                android:text="大屏1" />
+                android:text="大屏2" />
 
             <CheckBox
                 android:id="@+id/spbtn_dan_out_dp2"
                 style="@style/check_box_2"
                 android:layout_marginTop="@dimen/dp_10"
-                android:text="大屏2" />
+                android:text="大屏3" />
 
         </LinearLayout>
 

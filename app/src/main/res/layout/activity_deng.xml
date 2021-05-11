@@ -38,13 +38,13 @@
         <Button
             android:id="@+id/rbtn_dg_1_open"
             style="@style/button_2"
-            android:text="黑板灯开" />
+            android:text="灯1开" />
 
         <Button
             android:id="@+id/rbtn_dg_1_close"
             style="@style/button_2"
             android:layout_marginLeft="@dimen/dp_20"
-            android:text="黑板灯关" />
+            android:text="灯1关" />
 
     </LinearLayout>
 
@@ -58,13 +58,13 @@
         <Button
             android:id="@+id/rbtn_dg_2_open"
             style="@style/button_2"
-            android:text="教室灯开" />
+            android:text="灯2开" />
 
         <Button
             android:id="@+id/rbtn_dg_2_close"
             style="@style/button_2"
             android:layout_marginLeft="@dimen/dp_20"
-            android:text="教室灯关" />
+            android:text="灯2关" />
 
     </LinearLayout>
 
