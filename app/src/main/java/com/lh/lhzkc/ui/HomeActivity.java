@@ -76,17 +76,6 @@ public class HomeActivity extends Activity {
     }
 
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Process.killProcess(Process.myPid());
-        try {
-            MqttManager.getInstance().disConnect();
-        } catch (MqttException e) {
-            e.printStackTrace();
-        }
-    }
-
-    @Override
     public void onBackPressed() {
         super.onBackPressed();
         finish();

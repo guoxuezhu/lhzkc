@@ -79,4 +79,21 @@ public class SharePreferenceUtil {
     public boolean getIsip() {
         return sp.getBoolean("isIp", false);
     }
+
+    public void setLoginName(String loginName) {
+        editor.putString("loginName", loginName);
+        editor.commit();
+    }
+
+    public String getLoginName() {
+        return sp.getString("loginName", "lhcctvadmin");
+    }
+
+    public void setToken(String token) {
+        editor.putString("token", token);
+        editor.commit();
+    }
+    public String getToken() {
+        return sp.getString("token", "");
+    }
 }

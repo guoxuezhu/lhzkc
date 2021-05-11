@@ -17,7 +17,8 @@ public class HttpUtil {
         OkHttpClient okHttpClient = new OkHttpClient();
         FormBody body = new FormBody.Builder()
                 .add("zkbtn", zkbtnType)
-                .add("login_user_name", "lhcctvadmin")
+                .add("lh_zks_token", MyApplication.prefs.getToken())
+                .add("login_user_name", MyApplication.prefs.getLoginName())
                 .build();
         Request request = new Request.Builder()
                 .url("http://" + MyApplication.prefs.getZKIP() + ":8099/api/zkczbtn")
