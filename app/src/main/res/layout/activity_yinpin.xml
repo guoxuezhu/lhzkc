@@ -35,7 +35,7 @@
             android:id="@+id/yp_kjyl"
             style="@style/check_box_2"
             android:layout_marginLeft="@dimen/dp_10"
-            android:text="课件声音"
+            android:text="视频声音"
             app:buttonCompat="@null" />
 
         <RadioButton

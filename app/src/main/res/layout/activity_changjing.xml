@@ -12,12 +12,12 @@
     <Button
         android:id="@+id/btn_shangke"
         style="@style/button_1"
-        android:text="上课" />
+        android:text="上班" />
 
     <Button
         android:id="@+id/btn_xiake"
         style="@style/button_1"
         android:layout_marginLeft="@dimen/dp_20"
-        android:text="下课" />
+        android:text="下班" />
 
 </LinearLayout>
