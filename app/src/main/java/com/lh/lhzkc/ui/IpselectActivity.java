@@ -12,11 +12,13 @@ import com.lh.lhzkc.MyApplication;
 import com.lh.lhzkc.R;
 import com.lh.lhzkc.utils.Coder;
 import com.lh.lhzkc.utils.ELog;
+import com.lh.lhzkc.utils.HttpUtil;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.HashMap;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -81,14 +83,22 @@ public class IpselectActivity extends Activity {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
         OkHttpClient okHttpClient = new OkHttpClient();
-        FormBody body = new FormBody.Builder()
-                .add("user_name", zk_login_name.getText().toString().trim())
-                .add("user_password", md5Password)
-                .build();
+        HashMap<String, String> params = new HashMap<String, String>();
+        params.put("user_name", zk_login_name.getText().toString().trim());
+        params.put("user_password", md5Password);
+
+        HashMap<String, String> mapstr = HttpUtil.getSignString(params);
+
+        FormBody.Builder body = new FormBody.Builder();
+        for (String key : mapstr.keySet()) {
+            body.add(key, mapstr.get(key));
+        }
+
         Request request = new Request.Builder()
                 .url("http://" + zk_ip.getText().toString().trim() + ":8099/api/lh_zk_login")
-                .post(body)
+                .post(body.build())
                 .build();
         okHttpClient.newCall(request).enqueue(new Callback() {
             @Override
