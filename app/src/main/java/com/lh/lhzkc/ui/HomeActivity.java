@@ -26,6 +26,14 @@ public class HomeActivity extends Activity {
 
     }
 
+    @OnClick(R.id.mb_btn_layout)
+    public void mb_btn_layout() {
+        if (MyApplication.prefs.getIsip()) {
+            HttpUtil.myPost("SKJAA");
+        } else {
+            MqttManager.getInstance().publish(MyApplication.prefs.getzkname(), 0, "SKJAA" .getBytes());
+        }
+    }
 
     @OnClick(R.id.cj_btn_layout)
     public void cj_btn_layout() {

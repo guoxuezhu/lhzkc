@@ -42,7 +42,11 @@ public class ZksDataAdapter extends RecyclerView.Adapter<ZksDataAdapter.ZksInfoV
         ZksInfo zksInfo = datas.get(position);
         holder.tv_zks_name.setText(zksInfo.zkname);
         holder.tv_zks_ip.setText(zksInfo.zkip);
-        holder.tv_zks_status.setText(zksInfo.zkstatus);
+        if (zksInfo.zkstatus.equals("1")) {
+            holder.tv_zks_status.setText("外网开启");
+        } else {
+            holder.tv_zks_status.setText("外网关闭");
+        }
         holder.setItem(zksInfo);
     }
 

@@ -91,8 +91,12 @@ public class DevicesActivity extends Activity implements ZksDataAdapter.CallBack
             MyApplication.prefs.setZKIP(zksInfo.zkip);
             startActivity(new Intent(DevicesActivity.this, IpselectActivity.class));
         } else {
-            MyApplication.prefs.setMqttuser(zksInfo.zkname);
-            startActivity(new Intent(DevicesActivity.this, MainActivity.class));
+            if (zksInfo.zkstatus.equals("1")) {
+                MyApplication.prefs.setMqttuser(zksInfo.zkname);
+                startActivity(new Intent(DevicesActivity.this, MainActivity.class));
+            } else {
+                Toast.makeText(DevicesActivity.this, "中控外网处于关闭状态，无法使用", Toast.LENGTH_LONG).show();
+            }
         }
     }
 
@@ -127,7 +131,8 @@ public class DevicesActivity extends Activity implements ZksDataAdapter.CallBack
                         ELog.e("=======getZksDatas===jsonArray.length()=======" + jsonArray.length());
                         for (int i = 0; i < jsonArray.length(); i++) {
                             JSONObject zksjson = jsonArray.getJSONObject(i);
-                            zksInfos.add(new ZksInfo(zksjson.getString("title"), zksjson.getString("ip"), zksjson.getString("status")));
+                            zksInfos.add(new ZksInfo(zksjson.getString("title"), zksjson.getString("ip"),
+                                    zksjson.getString("show")));
                         }
                         ELog.e("=======getZksDatas===zksInfos=====" + zksInfos.toString());
                         devicesHandler.sendEmptyMessage(22);

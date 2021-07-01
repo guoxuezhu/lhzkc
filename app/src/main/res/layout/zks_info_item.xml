@@ -17,7 +17,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="名称"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="@dimen/text_size_16" />
 
         <TextView
@@ -27,7 +27,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="ip"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="@dimen/text_size_16" />
 
         <TextView
@@ -37,7 +37,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="状态"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="@dimen/text_size_16" />
 
     </LinearLayout>
@@ -64,5 +64,6 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:layout_marginTop="@dimen/dp_10"
         android:background="@color/xian" />
 </LinearLayout>

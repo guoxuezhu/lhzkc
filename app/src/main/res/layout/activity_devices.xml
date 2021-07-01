@@ -6,8 +6,13 @@
     android:layout_height="match_parent"
     android:background="@mipmap/main_bg"
     android:gravity="center"
+    android:orientation="vertical"
     tools:context=".ui.DevicesActivity">
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/xian" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/devices_recyclerView"
