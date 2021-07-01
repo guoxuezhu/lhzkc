@@ -15,7 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Lhzkc"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.YinpinActivity"></activity>
+        <activity android:name=".ui.DevicesActivity"></activity>
+        <activity android:name=".ui.YinpinActivity" />
         <activity android:name=".ui.DianfsActivity" />
         <activity android:name=".ui.DoorActivity" />
         <activity android:name=".ui.DengActivity" />

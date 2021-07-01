@@ -3,18 +3,17 @@ package com.lh.lhzkc.ui;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Process;
 
-import com.lh.lhzkc.MyApplication;
 import com.lh.lhzkc.R;
-import com.lh.lhzkc.utils.MqttManager;
 
-import org.eclipse.paho.client.mqttv3.MqttException;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 public class SplashActivity extends Activity {
+
+    private Timer timer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,29 +21,19 @@ public class SplashActivity extends Activity {
         setContentView(R.layout.activity_splash);
         ButterKnife.bind(this);
 
-    }
-
-    @OnClick(R.id.btn_neiwang)
-    public void btn_neiwang() {
-        MyApplication.prefs.setIsip(true);
-        startActivity(new Intent(SplashActivity.this, IpselectActivity.class));
-    }
-
-
-    @OnClick(R.id.btn_waiwang)
-    public void btn_waiwang() {
-        MyApplication.prefs.setIsip(false);
-        startActivity(new Intent(SplashActivity.this, MainActivity.class));
+        timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                startActivity(new Intent(SplashActivity.this, DevicesActivity.class));
+                finish();
+                timer.cancel();
+            }
+        }, 1500);
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Process.killProcess(Process.myPid());
-        try {
-            MqttManager.getInstance().disConnect();
-        } catch (MqttException e) {
-            e.printStackTrace();
-        }
     }
 }
