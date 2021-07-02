@@ -125,10 +125,7 @@ public class DevicesActivity extends Activity implements ZksDataAdapter.CallBack
                     JSONObject jsonObject = new JSONObject(responseText);
                     if (jsonObject.getInt("flag") == 1) {
                         JSONObject dataObject = jsonObject.getJSONObject("data");
-                        int count = dataObject.getInt("count");
                         JSONArray jsonArray = dataObject.getJSONArray("rows");
-                        ELog.e("=======getZksDatas===count=======" + count);
-                        ELog.e("=======getZksDatas===jsonArray.length()=======" + jsonArray.length());
                         for (int i = 0; i < jsonArray.length(); i++) {
                             JSONObject zksjson = jsonArray.getJSONObject(i);
                             zksInfos.add(new ZksInfo(zksjson.getString("title"), zksjson.getString("ip"),
